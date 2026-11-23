@@ -1,0 +1,355 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+@prefix ecoct: <http://ns.inria.fr/ecocontrol/ontology/> .
+
+ecoct: a owl:Ontology .
+
+# -----------------------------------------------------------
+# --- Relations between plants, disorders and symptoms
+# -----------------------------------------------------------
+
+ecoct:Affliction a owl:Class ;
+    rdfs:label "affliction" ;
+    rdfs:comment "An affliction is the result of a disease that affects a plant (or a plant part, possibly at a development stage) and eventually kills it or not." ;
+    skos:example "Septoriosis affects soft wheat.", "Rose leaf affected by black spot disease.", "Brown spot is a harmful disease caused by Alternaria alternata, a pathogenic fungus. It is moderately infectious but not lethal for potato (Solanum tuberosum)." .
+
+ecoct:Manifestation a owl:Class ;
+    rdfs:label "manifestation" ;
+    rdfs:comment "A symptom is the manifestation of a disease for a particular plant (or a plant part, possibly at a development stage)." ;
+    skos:example "Symptoms manifest as the appearance of punctiform spots visible on both sides of the orange tree leaf.", "Leaf chlorosis affects the leaf of the grapevine." .
+
+ecoct:BioticDisorder a owl:Class ;
+    rdfs:label "biotic disorder" ;
+    rdfs:comment "An animal or a microbe (possibly at a development stage) causes a disease for a host plant (or a plant part, possibly at a development stage). Constraint: either the disease or the plant must be explicitly known (both cannot be anonymous at the same time)." ;
+    skos:example "Xylella fastidiosa causes Pierce's disease of the grapevine.", "The citrus mite causes acoriosis of the lemon tree." .
+
+ecoct:AbioticDisorder a owl:Class ;
+    rdfs:label "abiotic disorder" ;
+    rdfs:comment "An abiotic factor causes a disorder for a plant (or a plant part, possibly at a development stage)." ;
+    skos:example "The leaves burned/dried because of frost.", "The plants are affected by leaf chlorosis, it is due to lack of sunlight." .
+
+ecoct:Attacks a owl:Class ;
+    rdfs:label "attacks" ;
+    rdfs:comment "A pest (possibly at a development stage) attacks a target plant (or a plant part, possibly at a development stage)." ;
+    skos:example "The larvae of the Eastern pine shoot borer feed on Pinus species, mainly Pinus strobus and Pinus sylvestris." .
+
+# -----------------------------------------------------------
+# --- Interactions insect-insect and insect-plant
+# -----------------------------------------------------------
+
+ecoct:IsNaturalEnemyOf a owl:Class ;
+    rdfs:label "is natural enemy of" ;
+    rdfs:comment "An animal (possibly at a development stage) is a natural enemy of another animal (possibly at a development stage)." .
+
+ecoct:PreysOn a owl:Class ;
+    rdfs:subClassOf ecoct:IsNaturalEnemyOf ;
+    rdfs:label "preys on" ;
+    rdfs:comment "An animal (possibly at a development stage) is a predator of an animal (possibly at a development stage). The relation is brief, unlike parasitoidism, which lasts for the duration of the parasitoid's stage." ;
+    skos:example "Aeolothrips intermedius Bagnall, a cosmopolitan insect whose larvae and adults consume phytophagous thrips." .
+
+ecoct:IsParasiteOf a owl:Class ;
+    rdfs:subClassOf ecoct:IsNaturalEnemyOf ;
+    rdfs:label "is parasite of" ;
+    rdfs:comment "An animal (possibly at a development stage) is a parasite of an animal (possibly at a development stage). Lethality is not necessary for the parasite (unlike parasitoidism), even though the host may die in some cases." ;
+    skos:example "Trichogramma brassicae, a small parasitoid wasp, which parasitizes the eggs of certain pest insects, notably the corn borer (Ostrinia nubilalis)." .
+
+ecoct:IsHyperParasiteOf a owl:Class ;
+    rdfs:subClassOf ecoct:IsParasiteOf ;
+    rdfs:label "is hyper-parasite of" ;
+    rdfs:comment "An animal (possibly at a development stage) is a parasite of an animal (possibly at a development stage), itself a parasite of another animal." .
+
+ecoct:IsParasitoidOf a owl:Class ;
+    rdfs:subClassOf ecoct:IsNaturalEnemyOf ;
+    rdfs:label "is parasitoid of" ;
+    rdfs:comment "An animal (possibly at a development stage) is a parasitoid of an animal (possibly at a development stage) that it inevitably kills during or at the end of its development. An insect is said to be host of its parasitoid. Likewise, a parasitoid is host of its hyperparasitoid. Parasitoidism is a special case of parasitism in conjunction with predation (but different from PreysOn, which implies a brief relation). Lethality is the norm (majority of cases). If the host does not die, this usually means the death of the parasitoid." ;
+    skos:example "Trichogramma wasps are released in crops to control the corn borer.", "Ageniaspis citricola is a wasp parasite of the citrus leafminer larva, Phyllocnistis citrella." .
+
+ecoct:IsHyperParasitoidOf a owl:Class ;
+    rdfs:subClassOf ecoct:IsParasitoidOf ;
+    rdfs:label "is hyper-parasitoid of" ;
+    rdfs:comment "An animal (possibly at a development stage) is a parasitoid of an animal (possibly at a development stage) that is itself a parasitoid." ;
+    skos:example "Dendrocerus carpenteri, a small wasp that parasitizes other parasitoid wasps, particularly Aphidius species, which are primary parasitoids of aphids." .
+
+ecoct:IsCommensalOf a owl:Class ;
+    rdfs:label "is commensal of" ;
+    rdfs:comment "An animal or microbe is a commensal of an animal. The commensal (the species that benefits from the association) may obtain from the host nutrients, shelter, support or a means of locomotion. The host is not significantly affected." ;
+    skos:example "Some epiphytic bacteria, such as Pseudomonas spp., use the exudates present on the surface of the leaves of a cultivated plant as a source of nutrients and as a habitat, without significantly affecting the plant.", "Vector insects are possibly hosts of commensal microbes (rare), actually more often mutualists or parasites, rather than strict commensals." .
+
+ecoct:IsVectorOf a owl:Class ;
+    rdfs:subClassOf ecoct:IsCommensalOf ;
+    rdfs:label "is vector of" ;
+    rdfs:comment "An animal is a vector of an animal/microbe (transmitted) for a host plant. The transmitted organism may be pathogenic (but not necessarily) for the host plant. Vector is understood here in the biotic sense, not to be confused with an abiotic vector, which is a means of dissemination (of a pest or pathogen). Vector is a type of commensalism: the transmitted animal is commensal of the vector animal." ;
+    skos:example "Xylella fastidiosa is a bacterium that spreads from one plant to another through sap-sucking insects, such as leafhoppers, which feed on plant sap and transmit the bacterium as they move between plants." .
+
+ecoct:IsHostPlantOf a owl:Class ;
+    rdfs:label "is host plant of" ;
+    rdfs:comment "Generic relation between a plant and the organism that it harbors." .
+
+ecoct:IsRefugeOf a owl:Class ;
+    rdfs:subClassOf ecoct:IsHostPlantOf ;
+    rdfs:label "is refuge of" ;
+    rdfs:comment "A refuge plant is a non-cultivated plant, offering habitat, food (sap, alternative prey) or protection (egg-laying site) to a harmful or beneficial insect, during unfavorable conditions (cold, drought, temporary absence of the crop). The insect can be a pest, a vector (itself host of the pest or pathogen of something else), or a parasitoid of a pest." ;
+    skos:example "The psyllid Cacopsylla pruni, vector of the phytoplasma 'Candidatus Phytoplasma prunorum', leaves Prunus in summer and uses conifers such as Norway spruce (Picea abies) as overwintering hosts; in early spring, adults return to fruit trees of the genus Prunus, such as plum (Prunus domestica), where they reproduce and can transmit the phytoplasma.", "During winter, the hazel (Corylus avellana) is a refuge for predatory mites (Phytoseiidae) of phytophagous mites such as the red mite (Panonychus ulmi); in spring, the predatory mites can colonize the grapevine (Vitis vinifera) and take part in regulation." .
+
+ecoct:IsReservoirOf a owl:Class ;
+    rdfs:subClassOf ecoct:IsHostPlantOf ;
+    rdfs:label "is reservoir of" ;
+    rdfs:comment "A reservoir plant is a non-cultivated plant: wild, become wild (e.g. abandoned vine crop), or adventice, which harbors and maintains (often permanently or cyclically) a potential source of contamination for cultivated plants. This excludes auxiliary plants, which have a positive role and are used for it. In ecology, the term alternative host plant is rather used (more general than refuge or reservoir)." ;
+    skos:example "Wild, abandoned vines or infected vine regrowth (Vitis vinifera subsp. sylvestris): they can constitute reservoirs of the flavescence dorée phytoplasma Candidatus Phytoplasma vitis and harbor its vector insect, Scaphoideus titanus." .
+
+ecoct:IsBeneficialPlantOf a owl:Class ;
+    rdfs:subClassOf ecoct:IsHostPlantOf ;
+    rdfs:label "is beneficial plant of" ;
+    rdfs:comment "Cultivated or non-cultivated plant, intentionally introduced or encouraged or maintained, providing an agronomic or ecological benefit for a crop (called beneficiary). Examples: protecting crops from a bioaggressor, either by directly attracting the bioaggressor (trap plant) to draw it away from the crops, or by attracting auxiliary insects (predators, parasitoids, food insects of vectors, etc.)." ;
+    skos:example "The flowers of yarrow (Achillea millefolium) provide nectar and pollen to various auxiliary insects, such as bees or hoverflies and some parasitoids. Hoverfly larvae can then consume aphids present on the crops. Bees allow the pollination of the beneficiary crop." .
+
+ecoct:IsPrimaryHostPlantOf a owl:Class ;
+    rdfs:subClassOf ecoct:IsHostPlantOf ;
+    rdfs:label "is primary host plant of" ;
+    rdfs:comment "Main cultivated plant on which a pest, a pathogen or an organism develops, reproduces or causes damage in an optimal way. Often the target crop or the most susceptible plant." ;
+    skos:example "For Candidatus Phytoplasma vitis, the flavescence dorée phytoplasma, the primary host is the cultivated grapevine (Vitis vinifera)." .
+
+ecoct:IsAlternativeHostPlantOf a owl:Class ;
+    rdfs:subClassOf ecoct:IsHostPlantOf ;
+    rdfs:label "is alternative host plant of" ;
+    rdfs:comment "Secondary plant that supports a pest, a pathogen or an organism during at least one stage of its life cycle, in the absence of the primary host plant. Often used during an unfavorable period (e.g. winter) or for a specific phase of the cycle (e.g. sexual reproduction for some pathogens)." .
+
+# -----------------------------------------------------------
+# --- Parameter classes
+# -----------------------------------------------------------
+
+ecoct:Disorder a owl:Class ;
+    rdfs:label "disorder" ;
+    rdfs:comment "Pathological state resulting from a biotic cause (disease) or an abiotic or physiological cause (nutritional disorder, drought)." .
+
+ecoct:Disease a owl:Class ;
+    rdfs:subClassOf ecoct:Disorder ;
+    rdfs:label "disease" ;
+    rdfs:comment "Pathological state resulting from a biotic cause." .
+
+ecoct:Taxon a owl:Class ;
+    rdfs:label "taxon" ;
+    rdfs:comment "To be completed" .
+
+ecoct:TaxonInStage a owl:Class ;
+    rdfs:subClassOf ecoct:Taxon ;
+    rdfs:label "taxon in stage" ;
+    rdfs:comment "A taxon at a certain development stage." .
+
+ecoct:DevelopmentStage a owl:Class ;
+    rdfs:label "development stage" ;
+    rdfs:comment "To be completed" .
+
+ecoct:PlantPart a owl:Class ;
+    rdfs:label "plant part" ;
+    rdfs:comment "To be completed" .
+
+ecoct:Symptom a owl:Class ;
+    rdfs:label "symptom" ;
+    rdfs:comment "To be completed" .
+
+ecoct:AbioticFactor a owl:Class ;
+    rdfs:label "abiotic factor" ;
+    rdfs:comment "To be completed" .
+
+ecoct:TimeInterval a owl:Class ;
+    rdfs:label "time interval" ;
+    rdfs:comment "To be completed" .
+
+ecoct:Season a owl:Class ;
+    rdfs:label "season" ;
+    rdfs:comment "To be completed" .
+
+ecoct:Period a owl:Class ;
+    rdfs:label "period" ;
+    rdfs:comment "To be completed" .
+
+###########################################################
+# Properties
+###########################################################
+
+ecoct:disorder a owl:ObjectProperty ;
+    rdfs:label "disorder" ;
+    rdfs:comment "To be completed" ;
+    rdfs:domain [ a owl:Class ; owl:unionOf ( ecoct:Affliction ecoct:AbioticDisorder ) ] ;
+    rdfs:range ecoct:Disorder .
+
+ecoct:affects a owl:ObjectProperty ;
+    rdfs:label "affects" ;
+    rdfs:comment "To be completed" ;
+    rdfs:domain [ a owl:Class ; owl:unionOf ( ecoct:Affliction ecoct:Manifestation ) ] ;
+    rdfs:range [ a owl:Class ; owl:unionOf ( ecoct:Taxon ecoct:PlantPart ecoct:TaxonInStage ) ] .
+
+ecoct:hasLethality a owl:DatatypeProperty ;
+    rdfs:label "has lethality" ;
+    rdfs:range xsd:decimal ;
+    rdfs:domain [ a owl:Class ; owl:unionOf ( ecoct:Affliction ecoct:IsNaturalEnemyOf ) ] ;
+    rdfs:comment "To be completed" .
+
+ecoct:sign a owl:ObjectProperty ;
+    rdfs:label "sign" ;
+    rdfs:comment "To be completed" ;
+    rdfs:domain ecoct:Manifestation ;
+    rdfs:range ecoct:Symptom .
+
+ecoct:hasDiagnosis a owl:ObjectProperty ;
+    rdfs:label "has diagnosis" ;
+    rdfs:comment "To be completed" ;
+    rdfs:domain ecoct:Manifestation ;
+    rdfs:range ecoct:Disorder .
+
+ecoct:agent a owl:ObjectProperty ;
+    rdfs:label "agent" ;
+    rdfs:comment "To be completed" ;
+    rdfs:domain ecoct:BioticDisorder ;
+    rdfs:range [ a owl:Class ; owl:unionOf ( ecoct:Taxon ecoct:TaxonInStage ) ] .
+
+ecoct:disease a owl:ObjectProperty ;
+    rdfs:label "disease" ;
+    rdfs:comment "To be completed" ;
+    rdfs:domain ecoct:BioticDisorder ;
+    rdfs:range ecoct:Disease .
+
+ecoct:host a owl:ObjectProperty ;
+    rdfs:label "host" ;
+    rdfs:comment "To be completed" .
+
+ecoct:hostPlant a owl:ObjectProperty ;
+    rdfs:label "host plant" ;
+    rdfs:subPropertyOf ecoct:host ;
+    rdfs:comment "To be completed" ;
+    rdfs:domain [
+        a owl:Class ;
+        owl:unionOf ( ecoct:BioticDisorder ecoct:Attacks ecoct:IsVectorOf ecoct:IsHostPlantOf )
+    ] ;
+    rdfs:range [ a owl:Class ; owl:unionOf ( ecoct:Taxon ecoct:PlantPart ecoct:TaxonInStage ) ] .
+
+ecoct:hostAnimal a owl:ObjectProperty ;
+    rdfs:label "host animal" ;
+    rdfs:subPropertyOf ecoct:host ;
+    rdfs:comment "To be completed" ;
+    rdfs:domain [ a owl:Class ; owl:unionOf ( ecoct:IsNaturalEnemyOf ecoct:IsCommensalOf ) ] ;
+    rdfs:range [ a owl:Class ; owl:unionOf ( ecoct:Taxon ecoct:TaxonInStage ) ] .
+
+ecoct:cause a owl:ObjectProperty ;
+    rdfs:label "cause" ;
+    rdfs:comment "To be completed" ;
+    rdfs:domain ecoct:AbioticDisorder ;
+    rdfs:range ecoct:AbioticFactor .
+
+ecoct:object a owl:ObjectProperty ;
+    rdfs:label "object" ;
+    rdfs:comment "To be completed" ;
+    rdfs:domain ecoct:AbioticDisorder ;
+    rdfs:range [ a owl:Class ; owl:unionOf ( ecoct:Taxon ecoct:PlantPart ecoct:TaxonInStage ) ] .
+
+ecoct:pest a owl:ObjectProperty ;
+    rdfs:label "pest" ;
+    rdfs:comment "a species, strain or biotype of plant, animal, or pathogenic agent injurious to plants or plant products" ;
+    rdfs:domain ecoct:Attacks ;
+    rdfs:range [ a owl:Class ; owl:unionOf ( ecoct:Taxon ecoct:TaxonInStage ) ] .
+
+ecoct:predator a owl:ObjectProperty ;
+    rdfs:label "predator" ;
+    rdfs:comment "To be completed" ;
+    rdfs:domain ecoct:PreysOn ;
+    rdfs:range [ a owl:Class ; owl:unionOf ( ecoct:Taxon ecoct:TaxonInStage ) ] .
+
+ecoct:prey a owl:ObjectProperty ;
+    rdfs:label "prey" ;
+    rdfs:comment "To be completed" ;
+    rdfs:domain ecoct:PreysOn ;
+    rdfs:range [ a owl:Class ; owl:unionOf ( ecoct:Taxon ecoct:TaxonInStage ) ] .
+
+ecoct:parasite a owl:ObjectProperty ;
+    rdfs:label "parasite" ;
+    rdfs:comment "To be completed" ;
+    rdfs:domain ecoct:IsParasiteOf ;
+    rdfs:range [ a owl:Class ; owl:unionOf ( ecoct:Taxon ecoct:TaxonInStage ) ] .
+
+ecoct:hyperparasite a owl:ObjectProperty ;
+    rdfs:label "hyperparasite" ;
+    rdfs:comment "To be completed" ;
+    rdfs:domain ecoct:IsHyperParasiteOf ;
+    rdfs:range [ a owl:Class ; owl:unionOf ( ecoct:Taxon ecoct:TaxonInStage ) ] .
+
+ecoct:parasitoid a owl:ObjectProperty ;
+    rdfs:label "parasitoid" ;
+    rdfs:comment "To be completed" ;
+    rdfs:domain ecoct:IsParasitoidOf ;
+    rdfs:range [ a owl:Class ; owl:unionOf ( ecoct:Taxon ecoct:TaxonInStage ) ] .
+
+ecoct:hyperparasitoid a owl:ObjectProperty ;
+    rdfs:label "hyperparasitoid" ;
+    rdfs:comment "To be completed" ;
+    rdfs:domain ecoct:IsHyperParasitoidOf ;
+    rdfs:range [ a owl:Class ; owl:unionOf ( ecoct:Taxon ecoct:TaxonInStage ) ] .
+
+ecoct:commensal a owl:ObjectProperty ;
+    rdfs:label "commensal" ;
+    rdfs:comment "To be completed" ;
+    rdfs:domain ecoct:IsCommensalOf ;
+    rdfs:range [ a owl:Class ; owl:unionOf ( ecoct:Taxon ecoct:TaxonInStage ) ] .
+
+ecoct:vector a owl:ObjectProperty ;
+    rdfs:label "vector" ;
+    rdfs:comment "To be completed" ;
+    rdfs:domain ecoct:IsVectorOf ;
+    rdfs:range [ a owl:Class ; owl:unionOf ( ecoct:Taxon ecoct:TaxonInStage ) ] .
+
+ecoct:transmitted a owl:ObjectProperty ;
+    rdfs:label "transmitted" ;
+    rdfs:comment "To be completed" ;
+    rdfs:domain ecoct:IsVectorOf ;
+    rdfs:range [ a owl:Class ; owl:unionOf ( ecoct:Taxon ecoct:TaxonInStage ) ] .
+
+ecoct:harbored a owl:ObjectProperty ;
+    rdfs:label "harbored" ;
+    rdfs:comment "To be completed" ;
+    rdfs:domain ecoct:IsHostPlantOf ;
+    rdfs:range [ a owl:Class ; owl:unionOf ( ecoct:Taxon ecoct:TaxonInStage ) ] .
+
+ecoct:periodicity a owl:ObjectProperty ;
+    rdfs:label "periodicity" ;
+    rdfs:comment "To be completed" ;
+    rdfs:domain ecoct:IsRefugeOf ;
+    rdfs:range [ a owl:Class ; owl:unionOf ( ecoct:TimeInterval ecoct:Season ecoct:Period ) ] .
+
+ecoct:beneficiary a owl:ObjectProperty ;
+    rdfs:label "beneficiary" ;
+    rdfs:comment "The (other) crop that receives the agronomic or ecological benefit." ;
+    rdfs:domain ecoct:IsBeneficialPlantOf ;
+    rdfs:range ecoct:Taxon .
+
+ecoct:enemy a owl:ObjectProperty ;
+    rdfs:label "enemy" ;
+    rdfs:comment "To be completed" ;
+    rdfs:domain ecoct:IsNaturalEnemyOf ;
+    rdfs:range [ a owl:Class ; owl:unionOf ( ecoct:Taxon ecoct:TaxonInStage ) ] .
+
+ecoct:target a owl:ObjectProperty ;
+    rdfs:label "target" ;
+    rdfs:comment "To be completed" ;
+    rdfs:domain ecoct:IsNaturalEnemyOf ;
+    rdfs:range [ a owl:Class ; owl:unionOf ( ecoct:Taxon ecoct:TaxonInStage ) ] .
+
+ecoct:stageOf a owl:ObjectProperty ;
+    rdfs:label "stage of" ;
+    rdfs:comment "To be completed" ;
+    rdfs:domain ecoct:TaxonInStage ;
+    rdfs:range ecoct:Taxon .
+
+ecoct:hasStage a owl:ObjectProperty ;
+    rdfs:label "has stage" ;
+    rdfs:comment "To be completed" ;
+    rdfs:domain ecoct:TaxonInStage ;
+    rdfs:range ecoct:DevelopmentStage .
+
+ecoct:partOf a owl:ObjectProperty ;
+    rdfs:label "part of" ;
+    rdfs:comment "To be completed" ;
+    rdfs:domain ecoct:PlantPart ;
+    rdfs:range ecoct:Taxon .
