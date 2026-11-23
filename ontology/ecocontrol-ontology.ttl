@@ -78,7 +78,6 @@ eco:IsVectorOf a owl:Class ;
     rdfs:comment "An animal is a vector of an animal/microbe (transmitted) for a host plant. The transmitted organism may be pathogenic (but not necessarily) for the host plant. Vector is understood here in the biotic sense, not to be confused with an abiotic vector, which is a means of dissemination (of a pest or pathogen). Vector is a type of commensalism: the transmitted animal is commensal of the vector animal." ;
     skos:example "Xylella fastidiosa is a bacterium that spreads from one plant to another through sap-sucking insects, such as leafhoppers, which feed on plant sap and transmit the bacterium as they move between plants." .
 
-
 # -----------------------------------------------------------
 # --- Interactions insect-plant
 # -----------------------------------------------------------
@@ -150,6 +149,11 @@ eco:PlantPart a owl:Class ;
     rdfs:label "plant part" ;
     rdfs:comment "A part of a plant." .
 
+eco:PlantOrPlantPart a owl:Class ;
+    owl:unionOf ( eco:Taxon eco:PlantPart ) ;
+    rdfs:label "plant or plant part" ;
+    rdfs:comment "Either a plant or a part of a plant." .
+
 eco:Symptom a owl:Class ;
     rdfs:label "symptom" ;
     rdfs:comment "A sign of a disease or disorder." .
@@ -176,7 +180,7 @@ eco:affects a owl:ObjectProperty ;
     rdfs:label "affects" ;
     rdfs:comment "The plant (or a plant part, possibly at a development stage) that is affected by an affliction or manifestation." ;
     rdfs:domain [ a owl:Class ; owl:unionOf ( eco:Affliction eco:Manifestation ) ] ;
-    rdfs:range [ a owl:Class ; owl:unionOf ( eco:Taxon eco:PlantPart eco:TaxonInStage ) ] .
+    rdfs:range eco:PlantOrPlantPart .
 
 eco:sign a owl:ObjectProperty ;
     rdfs:label "sign" ;
@@ -194,7 +198,7 @@ eco:agent a owl:ObjectProperty ;
     rdfs:label "agent" ;
     rdfs:comment "The organism causing a disease." ;
     rdfs:domain eco:BioticDisorder ;
-    rdfs:range [ a owl:Class ; owl:unionOf ( eco:Taxon eco:TaxonInStage ) ] .
+    rdfs:range eco:Taxon .
 
 eco:disease a owl:ObjectProperty ;
     rdfs:label "disease" ;
@@ -215,14 +219,14 @@ eco:hostPlant a owl:ObjectProperty ;
         a owl:Class ;
         owl:unionOf ( eco:BioticDisorder eco:Attacks eco:IsVectorOf eco:IsHostPlantOf )
     ] ;
-    rdfs:range [ a owl:Class ; owl:unionOf ( eco:Taxon eco:PlantPart eco:TaxonInStage ) ] .
+    rdfs:range eco:PlantOrPlantPart .
 
 eco:hostAnimal a owl:ObjectProperty ;
     rdfs:label "host animal" ;
     rdfs:subPropertyOf eco:host ;
     rdfs:comment "The animal that harbors another organism." ;
     rdfs:domain [ a owl:Class ; owl:unionOf ( eco:IsNaturalEnemyOf eco:IsCommensalOf ) ] ;
-    rdfs:range [ a owl:Class ; owl:unionOf ( eco:Taxon eco:TaxonInStage ) ] .
+    rdfs:range eco:Taxon .
 
 eco:cause a owl:ObjectProperty ;
     rdfs:label "cause" ;
@@ -234,67 +238,67 @@ eco:object a owl:ObjectProperty ;
     rdfs:label "object" ;
     rdfs:comment "The plant (or a plant part) that is affected by an abiotic factor." ;
     rdfs:domain eco:AbioticDisorder ;
-    rdfs:range [ a owl:Class ; owl:unionOf ( eco:Taxon eco:PlantPart eco:TaxonInStage ) ] .
+    rdfs:range eco:PlantOrPlantPart .
 
 eco:pest a owl:ObjectProperty ;
     rdfs:label "pest" ;
     rdfs:comment "The organism that attacks a plant." ;
     rdfs:domain eco:Attacks ;
-    rdfs:range [ a owl:Class ; owl:unionOf ( eco:Taxon eco:TaxonInStage ) ] .
+    rdfs:range eco:Taxon .
 
 eco:predator a owl:ObjectProperty ;
     rdfs:label "predator" ;
     rdfs:domain eco:PreysOn ;
-    rdfs:range [ a owl:Class ; owl:unionOf ( eco:Taxon eco:TaxonInStage ) ] .
+    rdfs:range eco:Taxon .
 
 eco:prey a owl:ObjectProperty ;
     rdfs:label "prey" ;
     rdfs:domain eco:PreysOn ;
-    rdfs:range [ a owl:Class ; owl:unionOf ( eco:Taxon eco:TaxonInStage ) ] .
+    rdfs:range eco:Taxon .
 
 eco:parasite a owl:ObjectProperty ;
     rdfs:label "parasite" ;
     rdfs:domain eco:IsParasiteOf ;
-    rdfs:range [ a owl:Class ; owl:unionOf ( eco:Taxon eco:TaxonInStage ) ] .
+    rdfs:range eco:Taxon .
 
 eco:hyperparasite a owl:ObjectProperty ;
     rdfs:label "hyperparasite" ;
     rdfs:domain eco:IsHyperParasiteOf ;
-    rdfs:range [ a owl:Class ; owl:unionOf ( eco:Taxon eco:TaxonInStage ) ] .
+    rdfs:range eco:Taxon .
 
 eco:parasitoid a owl:ObjectProperty ;
     rdfs:label "parasitoid" ;
     rdfs:domain eco:IsParasitoidOf ;
-    rdfs:range [ a owl:Class ; owl:unionOf ( eco:Taxon eco:TaxonInStage ) ] .
+    rdfs:range eco:Taxon .
 
 eco:hyperparasitoid a owl:ObjectProperty ;
     rdfs:label "hyperparasitoid" ;
     rdfs:domain eco:IsHyperParasitoidOf ;
-    rdfs:range [ a owl:Class ; owl:unionOf ( eco:Taxon eco:TaxonInStage ) ] .
+    rdfs:range eco:Taxon .
 
 eco:commensal a owl:ObjectProperty ;
     rdfs:label "commensal" ;
     rdfs:comment "The organism that benefits from the relationship." ;
     rdfs:domain eco:IsCommensalOf ;
-    rdfs:range [ a owl:Class ; owl:unionOf ( eco:Taxon eco:TaxonInStage ) ] .
+    rdfs:range eco:Taxon .
 
 eco:vector a owl:ObjectProperty ;
     rdfs:label "vector" ;
     rdfs:comment "Transmitting organism." ;
     rdfs:domain eco:IsVectorOf ;
-    rdfs:range [ a owl:Class ; owl:unionOf ( eco:Taxon eco:TaxonInStage ) ] .
+    rdfs:range eco:Taxon .
 
 eco:transmitted a owl:ObjectProperty ;
     rdfs:label "transmitted" ;
     rdfs:comment "The organism that is transmitted by a vector." ;
     rdfs:domain eco:IsVectorOf ;
-    rdfs:range [ a owl:Class ; owl:unionOf ( eco:Taxon eco:TaxonInStage ) ] .
+    rdfs:range eco:Taxon .
 
 eco:harbored a owl:ObjectProperty ;
     rdfs:label "harbored" ;
     rdfs:comment "The organism that is harbored." ;
     rdfs:domain eco:IsHostPlantOf ;
-    rdfs:range [ a owl:Class ; owl:unionOf ( eco:Taxon eco:TaxonInStage ) ] .
+    rdfs:range eco:Taxon .
 
 eco:periodicity a owl:ObjectProperty ;
     rdfs:label "periodicity" ;
@@ -311,13 +315,13 @@ eco:beneficiary a owl:ObjectProperty ;
 eco:enemy a owl:ObjectProperty ;
     rdfs:label "enemy" ;
     rdfs:domain eco:IsNaturalEnemyOf ;
-    rdfs:range [ a owl:Class ; owl:unionOf ( eco:Taxon eco:TaxonInStage ) ] .
+    rdfs:range eco:Taxon .
 
 eco:target a owl:ObjectProperty ;
     rdfs:label "target" ;
     rdfs:comment "To be completed" ;
     rdfs:domain eco:IsNaturalEnemyOf ;
-    rdfs:range [ a owl:Class ; owl:unionOf ( eco:Taxon eco:TaxonInStage ) ] .
+    rdfs:range eco:Taxon .
 
 eco:stageOf a owl:ObjectProperty ;
     rdfs:label "stage of" ;
@@ -345,4 +349,3 @@ eco:hasLethality a owl:DatatypeProperty ;
     rdfs:range xsd:decimal ;
     rdfs:domain [ a owl:Class ; owl:unionOf ( eco:Affliction eco:IsNaturalEnemyOf ) ] ;
     rdfs:comment "To be completed" .
-
