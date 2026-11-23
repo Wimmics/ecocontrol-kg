@@ -54,15 +54,7 @@
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
-        <rdfs:range>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://ns.inria.fr/ecocontrol/ontology/PlantPart"/>
-                    <rdf:Description rdf:about="http://ns.inria.fr/ecocontrol/ontology/Taxon"/>
-                    <rdf:Description rdf:about="http://ns.inria.fr/ecocontrol/ontology/TaxonInStage"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:range>
+        <rdfs:range rdf:resource="http://ns.inria.fr/ecocontrol/ontology/PlantOrPlantPart"/>
         <rdfs:comment>The plant (or a plant part, possibly at a development stage) that is affected by an affliction or manifestation.</rdfs:comment>
         <rdfs:label>affects</rdfs:label>
     </owl:ObjectProperty>
@@ -74,14 +66,7 @@
 
     <owl:ObjectProperty rdf:about="http://ns.inria.fr/ecocontrol/ontology/agent">
         <rdfs:domain rdf:resource="http://ns.inria.fr/ecocontrol/ontology/BioticDisorder"/>
-        <rdfs:range>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://ns.inria.fr/ecocontrol/ontology/Taxon"/>
-                    <rdf:Description rdf:about="http://ns.inria.fr/ecocontrol/ontology/TaxonInStage"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:range>
+        <rdfs:range rdf:resource="http://ns.inria.fr/ecocontrol/ontology/Taxon"/>
         <rdfs:comment>The organism causing a disease.</rdfs:comment>
         <rdfs:label>agent</rdfs:label>
     </owl:ObjectProperty>
@@ -117,14 +102,7 @@
 
     <owl:ObjectProperty rdf:about="http://ns.inria.fr/ecocontrol/ontology/commensal">
         <rdfs:domain rdf:resource="http://ns.inria.fr/ecocontrol/ontology/IsCommensalOf"/>
-        <rdfs:range>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://ns.inria.fr/ecocontrol/ontology/Taxon"/>
-                    <rdf:Description rdf:about="http://ns.inria.fr/ecocontrol/ontology/TaxonInStage"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:range>
+        <rdfs:range rdf:resource="http://ns.inria.fr/ecocontrol/ontology/Taxon"/>
         <rdfs:comment>The organism that benefits from the relationship.</rdfs:comment>
         <rdfs:label>commensal</rdfs:label>
     </owl:ObjectProperty>
@@ -167,14 +145,7 @@
 
     <owl:ObjectProperty rdf:about="http://ns.inria.fr/ecocontrol/ontology/enemy">
         <rdfs:domain rdf:resource="http://ns.inria.fr/ecocontrol/ontology/IsNaturalEnemyOf"/>
-        <rdfs:range>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://ns.inria.fr/ecocontrol/ontology/Taxon"/>
-                    <rdf:Description rdf:about="http://ns.inria.fr/ecocontrol/ontology/TaxonInStage"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:range>
+        <rdfs:range rdf:resource="http://ns.inria.fr/ecocontrol/ontology/Taxon"/>
         <rdfs:label>enemy</rdfs:label>
     </owl:ObjectProperty>
     
@@ -185,14 +156,7 @@
 
     <owl:ObjectProperty rdf:about="http://ns.inria.fr/ecocontrol/ontology/harbored">
         <rdfs:domain rdf:resource="http://ns.inria.fr/ecocontrol/ontology/IsHostPlantOf"/>
-        <rdfs:range>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://ns.inria.fr/ecocontrol/ontology/Taxon"/>
-                    <rdf:Description rdf:about="http://ns.inria.fr/ecocontrol/ontology/TaxonInStage"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:range>
+        <rdfs:range rdf:resource="http://ns.inria.fr/ecocontrol/ontology/Taxon"/>
         <rdfs:comment>The organism that is harbored.</rdfs:comment>
         <rdfs:label>harbored</rdfs:label>
     </owl:ObjectProperty>
@@ -247,14 +211,7 @@
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
-        <rdfs:range>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://ns.inria.fr/ecocontrol/ontology/Taxon"/>
-                    <rdf:Description rdf:about="http://ns.inria.fr/ecocontrol/ontology/TaxonInStage"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:range>
+        <rdfs:range rdf:resource="http://ns.inria.fr/ecocontrol/ontology/Taxon"/>
         <rdfs:comment>The animal that harbors another organism.</rdfs:comment>
         <rdfs:label>host animal</rdfs:label>
     </owl:ObjectProperty>
@@ -276,15 +233,7 @@
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
-        <rdfs:range>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://ns.inria.fr/ecocontrol/ontology/PlantPart"/>
-                    <rdf:Description rdf:about="http://ns.inria.fr/ecocontrol/ontology/Taxon"/>
-                    <rdf:Description rdf:about="http://ns.inria.fr/ecocontrol/ontology/TaxonInStage"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:range>
+        <rdfs:range rdf:resource="http://ns.inria.fr/ecocontrol/ontology/PlantOrPlantPart"/>
         <rdfs:comment>The plant that harbors another organism.</rdfs:comment>
         <rdfs:label>host plant</rdfs:label>
     </owl:ObjectProperty>
@@ -296,14 +245,7 @@
 
     <owl:ObjectProperty rdf:about="http://ns.inria.fr/ecocontrol/ontology/hyperparasite">
         <rdfs:domain rdf:resource="http://ns.inria.fr/ecocontrol/ontology/IsHyperParasiteOf"/>
-        <rdfs:range>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://ns.inria.fr/ecocontrol/ontology/Taxon"/>
-                    <rdf:Description rdf:about="http://ns.inria.fr/ecocontrol/ontology/TaxonInStage"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:range>
+        <rdfs:range rdf:resource="http://ns.inria.fr/ecocontrol/ontology/Taxon"/>
         <rdfs:label>hyperparasite</rdfs:label>
     </owl:ObjectProperty>
     
@@ -314,14 +256,7 @@
 
     <owl:ObjectProperty rdf:about="http://ns.inria.fr/ecocontrol/ontology/hyperparasitoid">
         <rdfs:domain rdf:resource="http://ns.inria.fr/ecocontrol/ontology/IsHyperParasitoidOf"/>
-        <rdfs:range>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://ns.inria.fr/ecocontrol/ontology/Taxon"/>
-                    <rdf:Description rdf:about="http://ns.inria.fr/ecocontrol/ontology/TaxonInStage"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:range>
+        <rdfs:range rdf:resource="http://ns.inria.fr/ecocontrol/ontology/Taxon"/>
         <rdfs:label>hyperparasitoid</rdfs:label>
     </owl:ObjectProperty>
     
@@ -332,15 +267,7 @@
 
     <owl:ObjectProperty rdf:about="http://ns.inria.fr/ecocontrol/ontology/object">
         <rdfs:domain rdf:resource="http://ns.inria.fr/ecocontrol/ontology/AbioticDisorder"/>
-        <rdfs:range>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://ns.inria.fr/ecocontrol/ontology/PlantPart"/>
-                    <rdf:Description rdf:about="http://ns.inria.fr/ecocontrol/ontology/Taxon"/>
-                    <rdf:Description rdf:about="http://ns.inria.fr/ecocontrol/ontology/TaxonInStage"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:range>
+        <rdfs:range rdf:resource="http://ns.inria.fr/ecocontrol/ontology/PlantOrPlantPart"/>
         <rdfs:comment>The plant (or a plant part) that is affected by an abiotic factor.</rdfs:comment>
         <rdfs:label>object</rdfs:label>
     </owl:ObjectProperty>
@@ -352,14 +279,7 @@
 
     <owl:ObjectProperty rdf:about="http://ns.inria.fr/ecocontrol/ontology/parasite">
         <rdfs:domain rdf:resource="http://ns.inria.fr/ecocontrol/ontology/IsParasiteOf"/>
-        <rdfs:range>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://ns.inria.fr/ecocontrol/ontology/Taxon"/>
-                    <rdf:Description rdf:about="http://ns.inria.fr/ecocontrol/ontology/TaxonInStage"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:range>
+        <rdfs:range rdf:resource="http://ns.inria.fr/ecocontrol/ontology/Taxon"/>
         <rdfs:label>parasite</rdfs:label>
     </owl:ObjectProperty>
     
@@ -370,14 +290,7 @@
 
     <owl:ObjectProperty rdf:about="http://ns.inria.fr/ecocontrol/ontology/parasitoid">
         <rdfs:domain rdf:resource="http://ns.inria.fr/ecocontrol/ontology/IsParasitoidOf"/>
-        <rdfs:range>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://ns.inria.fr/ecocontrol/ontology/Taxon"/>
-                    <rdf:Description rdf:about="http://ns.inria.fr/ecocontrol/ontology/TaxonInStage"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:range>
+        <rdfs:range rdf:resource="http://ns.inria.fr/ecocontrol/ontology/Taxon"/>
         <rdfs:label>parasitoid</rdfs:label>
     </owl:ObjectProperty>
     
@@ -418,14 +331,7 @@
 
     <owl:ObjectProperty rdf:about="http://ns.inria.fr/ecocontrol/ontology/pest">
         <rdfs:domain rdf:resource="http://ns.inria.fr/ecocontrol/ontology/Attacks"/>
-        <rdfs:range>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://ns.inria.fr/ecocontrol/ontology/Taxon"/>
-                    <rdf:Description rdf:about="http://ns.inria.fr/ecocontrol/ontology/TaxonInStage"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:range>
+        <rdfs:range rdf:resource="http://ns.inria.fr/ecocontrol/ontology/Taxon"/>
         <rdfs:comment>The organism that attacks a plant.</rdfs:comment>
         <rdfs:label>pest</rdfs:label>
     </owl:ObjectProperty>
@@ -437,14 +343,7 @@
 
     <owl:ObjectProperty rdf:about="http://ns.inria.fr/ecocontrol/ontology/predator">
         <rdfs:domain rdf:resource="http://ns.inria.fr/ecocontrol/ontology/PreysOn"/>
-        <rdfs:range>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://ns.inria.fr/ecocontrol/ontology/Taxon"/>
-                    <rdf:Description rdf:about="http://ns.inria.fr/ecocontrol/ontology/TaxonInStage"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:range>
+        <rdfs:range rdf:resource="http://ns.inria.fr/ecocontrol/ontology/Taxon"/>
         <rdfs:label>predator</rdfs:label>
     </owl:ObjectProperty>
     
@@ -455,14 +354,7 @@
 
     <owl:ObjectProperty rdf:about="http://ns.inria.fr/ecocontrol/ontology/prey">
         <rdfs:domain rdf:resource="http://ns.inria.fr/ecocontrol/ontology/PreysOn"/>
-        <rdfs:range>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://ns.inria.fr/ecocontrol/ontology/Taxon"/>
-                    <rdf:Description rdf:about="http://ns.inria.fr/ecocontrol/ontology/TaxonInStage"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:range>
+        <rdfs:range rdf:resource="http://ns.inria.fr/ecocontrol/ontology/Taxon"/>
         <rdfs:label>prey</rdfs:label>
     </owl:ObjectProperty>
     
@@ -497,14 +389,7 @@
 
     <owl:ObjectProperty rdf:about="http://ns.inria.fr/ecocontrol/ontology/target">
         <rdfs:domain rdf:resource="http://ns.inria.fr/ecocontrol/ontology/IsNaturalEnemyOf"/>
-        <rdfs:range>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://ns.inria.fr/ecocontrol/ontology/Taxon"/>
-                    <rdf:Description rdf:about="http://ns.inria.fr/ecocontrol/ontology/TaxonInStage"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:range>
+        <rdfs:range rdf:resource="http://ns.inria.fr/ecocontrol/ontology/Taxon"/>
         <rdfs:comment>To be completed</rdfs:comment>
         <rdfs:label>target</rdfs:label>
     </owl:ObjectProperty>
@@ -516,14 +401,7 @@
 
     <owl:ObjectProperty rdf:about="http://ns.inria.fr/ecocontrol/ontology/transmitted">
         <rdfs:domain rdf:resource="http://ns.inria.fr/ecocontrol/ontology/IsVectorOf"/>
-        <rdfs:range>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://ns.inria.fr/ecocontrol/ontology/Taxon"/>
-                    <rdf:Description rdf:about="http://ns.inria.fr/ecocontrol/ontology/TaxonInStage"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:range>
+        <rdfs:range rdf:resource="http://ns.inria.fr/ecocontrol/ontology/Taxon"/>
         <rdfs:comment>The organism that is transmitted by a vector.</rdfs:comment>
         <rdfs:label>transmitted</rdfs:label>
     </owl:ObjectProperty>
@@ -535,14 +413,7 @@
 
     <owl:ObjectProperty rdf:about="http://ns.inria.fr/ecocontrol/ontology/vector">
         <rdfs:domain rdf:resource="http://ns.inria.fr/ecocontrol/ontology/IsVectorOf"/>
-        <rdfs:range>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://ns.inria.fr/ecocontrol/ontology/Taxon"/>
-                    <rdf:Description rdf:about="http://ns.inria.fr/ecocontrol/ontology/TaxonInStage"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:range>
+        <rdfs:range rdf:resource="http://ns.inria.fr/ecocontrol/ontology/Taxon"/>
         <rdfs:comment>Transmitting organism.</rdfs:comment>
         <rdfs:label>vector</rdfs:label>
     </owl:ObjectProperty>
@@ -851,6 +722,24 @@
     <owl:Class rdf:about="http://ns.inria.fr/ecocontrol/ontology/Periodicity">
         <rdfs:comment>A period of time, e.g. a seasonal, a month of the year, or other type of repetition.</rdfs:comment>
         <rdfs:label>time periodicity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ns.inria.fr/ecocontrol/ontology/PlantOrPlantPart -->
+
+
+    <owl:Class rdf:about="http://ns.inria.fr/ecocontrol/ontology/PlantOrPlantPart">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://ns.inria.fr/ecocontrol/ontology/PlantPart"/>
+                    <rdf:Description rdf:about="http://ns.inria.fr/ecocontrol/ontology/Taxon"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:comment>Either a plant or a part of a plant.</rdfs:comment>
+        <rdfs:label>plant or plant part</rdfs:label>
     </owl:Class>
     
 

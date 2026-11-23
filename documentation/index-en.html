@@ -94,13 +94,7 @@ $(function(){
 <div>
 <span>Draft</span>
 </div>
-</div><div id="toc"></div> 
-
-<!--INTRODUCTION SECTION-->
-    <div id="introduction"><h2 id="intro" class="list">Introduction <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
-<span class="markdown"><p></p></span>
-</div>
-  
+</div><div id="toc"></div>  
 
 <!--OVERVIEW SECTION-->
     <div id="overview"><h2 id="overv" class="list">EcoControl-KG Ontology: Overview <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
@@ -196,8 +190,11 @@ This ontology has the following classes and properties.</span>
          title="http://ns.inria.fr/ecocontrol/ontology/Manifestation">manifestation</a>
    </li>
    <li>
-      <a href="#PlantPart"
-         title="http://ns.inria.fr/ecocontrol/ontology/PlantPart">plant part</a>
+      <a href="#PlantOrPlantPart"
+         title="http://ns.inria.fr/ecocontrol/ontology/PlantOrPlantPart">plant or plant part</a>
+   </li>
+   <li>
+      <a href="#PlantPart" title="http://ns.inria.fr/ecocontrol/ontology/PlantPart">plant part</a>
    </li>
    <li>
       <a href="#PreysOn" title="http://ns.inria.fr/ecocontrol/ontology/PreysOn">preys on</a>
@@ -321,14 +318,6 @@ This ontology has the following classes and properties.</span>
       <a href="#hasLethality"
          title="http://ns.inria.fr/ecocontrol/ontology/hasLethality">has lethality</a>
    </li>
-</ul><h4>Annotation Properties</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    class="hlist">
-   <li>
-      <a href="#http://www.w3.org/2004/02/skos/core#example" title="http://www.w3.org/2004/02/skos/core#example">
-         <span>example</span>
-      </a>
-   </li>
 </ul><iframe src="webvowl/index.html"></iframe> 
 </div>
   
@@ -367,6 +356,7 @@ This section provides details for each class and property defined by EcoControl-
   <li><a href="#IsReservoirOf" title="http://ns.inria.fr/ecocontrol/ontology/IsReservoirOf">is reservoir of</a></li>
   <li><a href="#IsVectorOf" title="http://ns.inria.fr/ecocontrol/ontology/IsVectorOf">is vector of</a></li>
   <li><a href="#Manifestation" title="http://ns.inria.fr/ecocontrol/ontology/Manifestation">manifestation</a></li>
+  <li><a href="#PlantOrPlantPart" title="http://ns.inria.fr/ecocontrol/ontology/PlantOrPlantPart">plant or plant part</a></li>
   <li><a href="#PlantPart" title="http://ns.inria.fr/ecocontrol/ontology/PlantPart">plant part</a></li>
   <li><a href="#PreysOn" title="http://ns.inria.fr/ecocontrol/ontology/PreysOn">preys on</a></li>
   <li><a href="#Symptom" title="http://ns.inria.fr/ecocontrol/ontology/Symptom">symptom</a></li>
@@ -924,6 +914,27 @@ This section provides details for each class and property defined by EcoControl-
    </dd>
   </dl>
  </div>
+ <div class="entity" id="PlantOrPlantPart">
+  <h3>plant or plant part<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://ns.inria.fr/ecocontrol/ontology/PlantOrPlantPart</p>
+  <div class="comment">
+   <span class="markdown">Either a plant or a part of a plant.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    is equivalent to
+   </dt>
+   <dd>
+    <a href="#PlantPart" title="http://ns.inria.fr/ecocontrol/ontology/PlantPart">plant part</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#Taxon" title="http://ns.inria.fr/ecocontrol/ontology/Taxon">taxon</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#affects" title="http://ns.inria.fr/ecocontrol/ontology/affects">affects</a> <sup class="type-op" title="object property">op</sup>, <a href="#hostPlant" title="http://ns.inria.fr/ecocontrol/ontology/hostPlant">host plant</a> <sup class="type-op" title="object property">op</sup>, <a href="#object" title="http://ns.inria.fr/ecocontrol/ontology/object">object</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
  <div class="entity" id="PlantPart">
   <h3>plant part<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
   <p><strong>IRI:</strong> http://ns.inria.fr/ecocontrol/ontology/PlantPart</p>
@@ -936,12 +947,6 @@ This section provides details for each class and property defined by EcoControl-
    </dt>
    <dd>
     <a href="#partOf" title="http://ns.inria.fr/ecocontrol/ontology/partOf">part of</a> <sup class="type-op" title="object property">op</sup>
-   </dd>
-   <dt>
-    is in range of
-   </dt>
-   <dd>
-    <a href="#affects" title="http://ns.inria.fr/ecocontrol/ontology/affects">affects</a> <sup class="type-op" title="object property">op</sup>, <a href="#hostPlant" title="http://ns.inria.fr/ecocontrol/ontology/hostPlant">host plant</a> <sup class="type-op" title="object property">op</sup>, <a href="#object" title="http://ns.inria.fr/ecocontrol/ontology/object">object</a> <sup class="type-op" title="object property">op</sup>
    </dd>
   </dl>
  </div>
@@ -1006,7 +1011,7 @@ This section provides details for each class and property defined by EcoControl-
     is in range of
    </dt>
    <dd>
-    <a href="#affects" title="http://ns.inria.fr/ecocontrol/ontology/affects">affects</a> <sup class="type-op" title="object property">op</sup>, <a href="#agent" title="http://ns.inria.fr/ecocontrol/ontology/agent">agent</a> <sup class="type-op" title="object property">op</sup>, <a href="#beneficiary" title="http://ns.inria.fr/ecocontrol/ontology/beneficiary">beneficiary</a> <sup class="type-op" title="object property">op</sup>, <a href="#commensal" title="http://ns.inria.fr/ecocontrol/ontology/commensal">commensal</a> <sup class="type-op" title="object property">op</sup>, <a href="#enemy" title="http://ns.inria.fr/ecocontrol/ontology/enemy">enemy</a> <sup class="type-op" title="object property">op</sup>, <a href="#harbored" title="http://ns.inria.fr/ecocontrol/ontology/harbored">harbored</a> <sup class="type-op" title="object property">op</sup>, <a href="#host" title="http://ns.inria.fr/ecocontrol/ontology/host">host</a> <sup class="type-op" title="object property">op</sup>, <a href="#hostAnimal" title="http://ns.inria.fr/ecocontrol/ontology/hostAnimal">host animal</a> <sup class="type-op" title="object property">op</sup>, <a href="#hostPlant" title="http://ns.inria.fr/ecocontrol/ontology/hostPlant">host plant</a> <sup class="type-op" title="object property">op</sup>, <a href="#hyperparasite" title="http://ns.inria.fr/ecocontrol/ontology/hyperparasite">hyperparasite</a> <sup class="type-op" title="object property">op</sup>, <a href="#hyperparasitoid" title="http://ns.inria.fr/ecocontrol/ontology/hyperparasitoid">hyperparasitoid</a> <sup class="type-op" title="object property">op</sup>, <a href="#object" title="http://ns.inria.fr/ecocontrol/ontology/object">object</a> <sup class="type-op" title="object property">op</sup>, <a href="#parasite" title="http://ns.inria.fr/ecocontrol/ontology/parasite">parasite</a> <sup class="type-op" title="object property">op</sup>, <a href="#parasitoid" title="http://ns.inria.fr/ecocontrol/ontology/parasitoid">parasitoid</a> <sup class="type-op" title="object property">op</sup>, <a href="#partOf" title="http://ns.inria.fr/ecocontrol/ontology/partOf">part of</a> <sup class="type-op" title="object property">op</sup>, <a href="#pest" title="http://ns.inria.fr/ecocontrol/ontology/pest">pest</a> <sup class="type-op" title="object property">op</sup>, <a href="#predator" title="http://ns.inria.fr/ecocontrol/ontology/predator">predator</a> <sup class="type-op" title="object property">op</sup>, <a href="#prey" title="http://ns.inria.fr/ecocontrol/ontology/prey">prey</a> <sup class="type-op" title="object property">op</sup>, <a href="#stageOf" title="http://ns.inria.fr/ecocontrol/ontology/stageOf">stage of</a> <sup class="type-op" title="object property">op</sup>, <a href="#target" title="http://ns.inria.fr/ecocontrol/ontology/target">target</a> <sup class="type-op" title="object property">op</sup>, <a href="#transmitted" title="http://ns.inria.fr/ecocontrol/ontology/transmitted">transmitted</a> <sup class="type-op" title="object property">op</sup>, <a href="#vector" title="http://ns.inria.fr/ecocontrol/ontology/vector">vector</a> <sup class="type-op" title="object property">op</sup>
+    <a href="#agent" title="http://ns.inria.fr/ecocontrol/ontology/agent">agent</a> <sup class="type-op" title="object property">op</sup>, <a href="#beneficiary" title="http://ns.inria.fr/ecocontrol/ontology/beneficiary">beneficiary</a> <sup class="type-op" title="object property">op</sup>, <a href="#commensal" title="http://ns.inria.fr/ecocontrol/ontology/commensal">commensal</a> <sup class="type-op" title="object property">op</sup>, <a href="#enemy" title="http://ns.inria.fr/ecocontrol/ontology/enemy">enemy</a> <sup class="type-op" title="object property">op</sup>, <a href="#harbored" title="http://ns.inria.fr/ecocontrol/ontology/harbored">harbored</a> <sup class="type-op" title="object property">op</sup>, <a href="#host" title="http://ns.inria.fr/ecocontrol/ontology/host">host</a> <sup class="type-op" title="object property">op</sup>, <a href="#hostAnimal" title="http://ns.inria.fr/ecocontrol/ontology/hostAnimal">host animal</a> <sup class="type-op" title="object property">op</sup>, <a href="#hyperparasite" title="http://ns.inria.fr/ecocontrol/ontology/hyperparasite">hyperparasite</a> <sup class="type-op" title="object property">op</sup>, <a href="#hyperparasitoid" title="http://ns.inria.fr/ecocontrol/ontology/hyperparasitoid">hyperparasitoid</a> <sup class="type-op" title="object property">op</sup>, <a href="#parasite" title="http://ns.inria.fr/ecocontrol/ontology/parasite">parasite</a> <sup class="type-op" title="object property">op</sup>, <a href="#parasitoid" title="http://ns.inria.fr/ecocontrol/ontology/parasitoid">parasitoid</a> <sup class="type-op" title="object property">op</sup>, <a href="#partOf" title="http://ns.inria.fr/ecocontrol/ontology/partOf">part of</a> <sup class="type-op" title="object property">op</sup>, <a href="#pest" title="http://ns.inria.fr/ecocontrol/ontology/pest">pest</a> <sup class="type-op" title="object property">op</sup>, <a href="#predator" title="http://ns.inria.fr/ecocontrol/ontology/predator">predator</a> <sup class="type-op" title="object property">op</sup>, <a href="#prey" title="http://ns.inria.fr/ecocontrol/ontology/prey">prey</a> <sup class="type-op" title="object property">op</sup>, <a href="#stageOf" title="http://ns.inria.fr/ecocontrol/ontology/stageOf">stage of</a> <sup class="type-op" title="object property">op</sup>, <a href="#target" title="http://ns.inria.fr/ecocontrol/ontology/target">target</a> <sup class="type-op" title="object property">op</sup>, <a href="#transmitted" title="http://ns.inria.fr/ecocontrol/ontology/transmitted">transmitted</a> <sup class="type-op" title="object property">op</sup>, <a href="#vector" title="http://ns.inria.fr/ecocontrol/ontology/vector">vector</a> <sup class="type-op" title="object property">op</sup>
    </dd>
   </dl>
  </div>
@@ -1028,12 +1033,6 @@ This section provides details for each class and property defined by EcoControl-
    </dt>
    <dd>
     <a href="#hasStage" title="http://ns.inria.fr/ecocontrol/ontology/hasStage">has stage</a> <sup class="type-op" title="object property">op</sup>, <a href="#stageOf" title="http://ns.inria.fr/ecocontrol/ontology/stageOf">stage of</a> <sup class="type-op" title="object property">op</sup>
-   </dd>
-   <dt>
-    is in range of
-   </dt>
-   <dd>
-    <a href="#affects" title="http://ns.inria.fr/ecocontrol/ontology/affects">affects</a> <sup class="type-op" title="object property">op</sup>, <a href="#agent" title="http://ns.inria.fr/ecocontrol/ontology/agent">agent</a> <sup class="type-op" title="object property">op</sup>, <a href="#commensal" title="http://ns.inria.fr/ecocontrol/ontology/commensal">commensal</a> <sup class="type-op" title="object property">op</sup>, <a href="#enemy" title="http://ns.inria.fr/ecocontrol/ontology/enemy">enemy</a> <sup class="type-op" title="object property">op</sup>, <a href="#harbored" title="http://ns.inria.fr/ecocontrol/ontology/harbored">harbored</a> <sup class="type-op" title="object property">op</sup>, <a href="#hostAnimal" title="http://ns.inria.fr/ecocontrol/ontology/hostAnimal">host animal</a> <sup class="type-op" title="object property">op</sup>, <a href="#hostPlant" title="http://ns.inria.fr/ecocontrol/ontology/hostPlant">host plant</a> <sup class="type-op" title="object property">op</sup>, <a href="#hyperparasite" title="http://ns.inria.fr/ecocontrol/ontology/hyperparasite">hyperparasite</a> <sup class="type-op" title="object property">op</sup>, <a href="#hyperparasitoid" title="http://ns.inria.fr/ecocontrol/ontology/hyperparasitoid">hyperparasitoid</a> <sup class="type-op" title="object property">op</sup>, <a href="#object" title="http://ns.inria.fr/ecocontrol/ontology/object">object</a> <sup class="type-op" title="object property">op</sup>, <a href="#parasite" title="http://ns.inria.fr/ecocontrol/ontology/parasite">parasite</a> <sup class="type-op" title="object property">op</sup>, <a href="#parasitoid" title="http://ns.inria.fr/ecocontrol/ontology/parasitoid">parasitoid</a> <sup class="type-op" title="object property">op</sup>, <a href="#pest" title="http://ns.inria.fr/ecocontrol/ontology/pest">pest</a> <sup class="type-op" title="object property">op</sup>, <a href="#predator" title="http://ns.inria.fr/ecocontrol/ontology/predator">predator</a> <sup class="type-op" title="object property">op</sup>, <a href="#prey" title="http://ns.inria.fr/ecocontrol/ontology/prey">prey</a> <sup class="type-op" title="object property">op</sup>, <a href="#target" title="http://ns.inria.fr/ecocontrol/ontology/target">target</a> <sup class="type-op" title="object property">op</sup>, <a href="#transmitted" title="http://ns.inria.fr/ecocontrol/ontology/transmitted">transmitted</a> <sup class="type-op" title="object property">op</sup>, <a href="#vector" title="http://ns.inria.fr/ecocontrol/ontology/vector">vector</a> <sup class="type-op" title="object property">op</sup>
    </dd>
   </dl>
  </div>
@@ -1103,7 +1102,7 @@ This section provides details for each class and property defined by EcoControl-
      has range
     </dt>
     <dd>
-     <a href="#PlantPart" title="http://ns.inria.fr/ecocontrol/ontology/PlantPart">plant part</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#Taxon" title="http://ns.inria.fr/ecocontrol/ontology/Taxon">taxon</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#TaxonInStage" title="http://ns.inria.fr/ecocontrol/ontology/TaxonInStage">taxon in stage</a> <sup class="type-c" title="class">c</sup>
+     <a href="#PlantOrPlantPart" title="http://ns.inria.fr/ecocontrol/ontology/PlantOrPlantPart">plant or plant part</a> <sup class="type-c" title="class">c</sup>
     </dd>
    </dl>
   </div>
@@ -1126,7 +1125,7 @@ This section provides details for each class and property defined by EcoControl-
      has range
     </dt>
     <dd>
-     <a href="#Taxon" title="http://ns.inria.fr/ecocontrol/ontology/Taxon">taxon</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#TaxonInStage" title="http://ns.inria.fr/ecocontrol/ontology/TaxonInStage">taxon in stage</a> <sup class="type-c" title="class">c</sup>
+     <a href="#Taxon" title="http://ns.inria.fr/ecocontrol/ontology/Taxon">taxon</a> <sup class="type-c" title="class">c</sup>
     </dd>
    </dl>
   </div>
@@ -1195,7 +1194,7 @@ This section provides details for each class and property defined by EcoControl-
      has range
     </dt>
     <dd>
-     <a href="#Taxon" title="http://ns.inria.fr/ecocontrol/ontology/Taxon">taxon</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#TaxonInStage" title="http://ns.inria.fr/ecocontrol/ontology/TaxonInStage">taxon in stage</a> <sup class="type-c" title="class">c</sup>
+     <a href="#Taxon" title="http://ns.inria.fr/ecocontrol/ontology/Taxon">taxon</a> <sup class="type-c" title="class">c</sup>
     </dd>
    </dl>
   </div>
@@ -1261,7 +1260,7 @@ This section provides details for each class and property defined by EcoControl-
      has range
     </dt>
     <dd>
-     <a href="#Taxon" title="http://ns.inria.fr/ecocontrol/ontology/Taxon">taxon</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#TaxonInStage" title="http://ns.inria.fr/ecocontrol/ontology/TaxonInStage">taxon in stage</a> <sup class="type-c" title="class">c</sup>
+     <a href="#Taxon" title="http://ns.inria.fr/ecocontrol/ontology/Taxon">taxon</a> <sup class="type-c" title="class">c</sup>
     </dd>
    </dl>
   </div>
@@ -1284,7 +1283,7 @@ This section provides details for each class and property defined by EcoControl-
      has range
     </dt>
     <dd>
-     <a href="#Taxon" title="http://ns.inria.fr/ecocontrol/ontology/Taxon">taxon</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#TaxonInStage" title="http://ns.inria.fr/ecocontrol/ontology/TaxonInStage">taxon in stage</a> <sup class="type-c" title="class">c</sup>
+     <a href="#Taxon" title="http://ns.inria.fr/ecocontrol/ontology/Taxon">taxon</a> <sup class="type-c" title="class">c</sup>
     </dd>
    </dl>
   </div>
@@ -1382,7 +1381,7 @@ This section provides details for each class and property defined by EcoControl-
      has range
     </dt>
     <dd>
-     <a href="#Taxon" title="http://ns.inria.fr/ecocontrol/ontology/Taxon">taxon</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#TaxonInStage" title="http://ns.inria.fr/ecocontrol/ontology/TaxonInStage">taxon in stage</a> <sup class="type-c" title="class">c</sup>
+     <a href="#Taxon" title="http://ns.inria.fr/ecocontrol/ontology/Taxon">taxon</a> <sup class="type-c" title="class">c</sup>
     </dd>
    </dl>
   </div>
@@ -1411,7 +1410,7 @@ This section provides details for each class and property defined by EcoControl-
      has range
     </dt>
     <dd>
-     <a href="#PlantPart" title="http://ns.inria.fr/ecocontrol/ontology/PlantPart">plant part</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#Taxon" title="http://ns.inria.fr/ecocontrol/ontology/Taxon">taxon</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#TaxonInStage" title="http://ns.inria.fr/ecocontrol/ontology/TaxonInStage">taxon in stage</a> <sup class="type-c" title="class">c</sup>
+     <a href="#PlantOrPlantPart" title="http://ns.inria.fr/ecocontrol/ontology/PlantOrPlantPart">plant or plant part</a> <sup class="type-c" title="class">c</sup>
     </dd>
    </dl>
   </div>
@@ -1431,7 +1430,7 @@ This section provides details for each class and property defined by EcoControl-
      has range
     </dt>
     <dd>
-     <a href="#Taxon" title="http://ns.inria.fr/ecocontrol/ontology/Taxon">taxon</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#TaxonInStage" title="http://ns.inria.fr/ecocontrol/ontology/TaxonInStage">taxon in stage</a> <sup class="type-c" title="class">c</sup>
+     <a href="#Taxon" title="http://ns.inria.fr/ecocontrol/ontology/Taxon">taxon</a> <sup class="type-c" title="class">c</sup>
     </dd>
    </dl>
   </div>
@@ -1451,7 +1450,7 @@ This section provides details for each class and property defined by EcoControl-
      has range
     </dt>
     <dd>
-     <a href="#Taxon" title="http://ns.inria.fr/ecocontrol/ontology/Taxon">taxon</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#TaxonInStage" title="http://ns.inria.fr/ecocontrol/ontology/TaxonInStage">taxon in stage</a> <sup class="type-c" title="class">c</sup>
+     <a href="#Taxon" title="http://ns.inria.fr/ecocontrol/ontology/Taxon">taxon</a> <sup class="type-c" title="class">c</sup>
     </dd>
    </dl>
   </div>
@@ -1474,7 +1473,7 @@ This section provides details for each class and property defined by EcoControl-
      has range
     </dt>
     <dd>
-     <a href="#PlantPart" title="http://ns.inria.fr/ecocontrol/ontology/PlantPart">plant part</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#Taxon" title="http://ns.inria.fr/ecocontrol/ontology/Taxon">taxon</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#TaxonInStage" title="http://ns.inria.fr/ecocontrol/ontology/TaxonInStage">taxon in stage</a> <sup class="type-c" title="class">c</sup>
+     <a href="#PlantOrPlantPart" title="http://ns.inria.fr/ecocontrol/ontology/PlantOrPlantPart">plant or plant part</a> <sup class="type-c" title="class">c</sup>
     </dd>
    </dl>
   </div>
@@ -1494,7 +1493,7 @@ This section provides details for each class and property defined by EcoControl-
      has range
     </dt>
     <dd>
-     <a href="#Taxon" title="http://ns.inria.fr/ecocontrol/ontology/Taxon">taxon</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#TaxonInStage" title="http://ns.inria.fr/ecocontrol/ontology/TaxonInStage">taxon in stage</a> <sup class="type-c" title="class">c</sup>
+     <a href="#Taxon" title="http://ns.inria.fr/ecocontrol/ontology/Taxon">taxon</a> <sup class="type-c" title="class">c</sup>
     </dd>
    </dl>
   </div>
@@ -1514,7 +1513,7 @@ This section provides details for each class and property defined by EcoControl-
      has range
     </dt>
     <dd>
-     <a href="#Taxon" title="http://ns.inria.fr/ecocontrol/ontology/Taxon">taxon</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#TaxonInStage" title="http://ns.inria.fr/ecocontrol/ontology/TaxonInStage">taxon in stage</a> <sup class="type-c" title="class">c</sup>
+     <a href="#Taxon" title="http://ns.inria.fr/ecocontrol/ontology/Taxon">taxon</a> <sup class="type-c" title="class">c</sup>
     </dd>
    </dl>
   </div>
@@ -1580,7 +1579,7 @@ This section provides details for each class and property defined by EcoControl-
      has range
     </dt>
     <dd>
-     <a href="#Taxon" title="http://ns.inria.fr/ecocontrol/ontology/Taxon">taxon</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#TaxonInStage" title="http://ns.inria.fr/ecocontrol/ontology/TaxonInStage">taxon in stage</a> <sup class="type-c" title="class">c</sup>
+     <a href="#Taxon" title="http://ns.inria.fr/ecocontrol/ontology/Taxon">taxon</a> <sup class="type-c" title="class">c</sup>
     </dd>
    </dl>
   </div>
@@ -1600,7 +1599,7 @@ This section provides details for each class and property defined by EcoControl-
      has range
     </dt>
     <dd>
-     <a href="#Taxon" title="http://ns.inria.fr/ecocontrol/ontology/Taxon">taxon</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#TaxonInStage" title="http://ns.inria.fr/ecocontrol/ontology/TaxonInStage">taxon in stage</a> <sup class="type-c" title="class">c</sup>
+     <a href="#Taxon" title="http://ns.inria.fr/ecocontrol/ontology/Taxon">taxon</a> <sup class="type-c" title="class">c</sup>
     </dd>
    </dl>
   </div>
@@ -1620,7 +1619,7 @@ This section provides details for each class and property defined by EcoControl-
      has range
     </dt>
     <dd>
-     <a href="#Taxon" title="http://ns.inria.fr/ecocontrol/ontology/Taxon">taxon</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#TaxonInStage" title="http://ns.inria.fr/ecocontrol/ontology/TaxonInStage">taxon in stage</a> <sup class="type-c" title="class">c</sup>
+     <a href="#Taxon" title="http://ns.inria.fr/ecocontrol/ontology/Taxon">taxon</a> <sup class="type-c" title="class">c</sup>
     </dd>
    </dl>
   </div>
@@ -1689,7 +1688,7 @@ This section provides details for each class and property defined by EcoControl-
      has range
     </dt>
     <dd>
-     <a href="#Taxon" title="http://ns.inria.fr/ecocontrol/ontology/Taxon">taxon</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#TaxonInStage" title="http://ns.inria.fr/ecocontrol/ontology/TaxonInStage">taxon in stage</a> <sup class="type-c" title="class">c</sup>
+     <a href="#Taxon" title="http://ns.inria.fr/ecocontrol/ontology/Taxon">taxon</a> <sup class="type-c" title="class">c</sup>
     </dd>
    </dl>
   </div>
@@ -1712,7 +1711,7 @@ This section provides details for each class and property defined by EcoControl-
      has range
     </dt>
     <dd>
-     <a href="#Taxon" title="http://ns.inria.fr/ecocontrol/ontology/Taxon">taxon</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#TaxonInStage" title="http://ns.inria.fr/ecocontrol/ontology/TaxonInStage">taxon in stage</a> <sup class="type-c" title="class">c</sup>
+     <a href="#Taxon" title="http://ns.inria.fr/ecocontrol/ontology/Taxon">taxon</a> <sup class="type-c" title="class">c</sup>
     </dd>
    </dl>
   </div>
@@ -1735,7 +1734,7 @@ This section provides details for each class and property defined by EcoControl-
      has range
     </dt>
     <dd>
-     <a href="#Taxon" title="http://ns.inria.fr/ecocontrol/ontology/Taxon">taxon</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#TaxonInStage" title="http://ns.inria.fr/ecocontrol/ontology/TaxonInStage">taxon in stage</a> <sup class="type-c" title="class">c</sup>
+     <a href="#Taxon" title="http://ns.inria.fr/ecocontrol/ontology/Taxon">taxon</a> <sup class="type-c" title="class">c</sup>
     </dd>
    </dl>
   </div>
@@ -1768,15 +1767,6 @@ This section provides details for each class and property defined by EcoControl-
    </dl>
   </div>
  </div>
-</div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="annotationproperties">
- <h3 id="annotationproperties" class="list">Annotation Properties</h3>
- <ul class="hlist">
-  <li><a href="#http://www.w3.org/2004/02/skos/core#example" title="http://www.w3.org/2004/02/skos/core#example"> <span>example</span> </a></li>
- </ul>
- <div class="entity" id="http://www.w3.org/2004/02/skos/core#example">
-  <h3>example<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
-  <p><strong>IRI:</strong> http://www.w3.org/2004/02/skos/core#example</p>
- </div>
 </div><div id="legend">
 <h2>Legend <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
 <div   class="entity">
@@ -1785,6 +1775,15 @@ This section provides details for each class and property defined by EcoControl-
 <sup class="type-dp" title="Data Properties">dp</sup>: Data Properties <br/>
 </div>
 </div>
+</div>
+    
+
+<!--REFERENCES SECTION-->
+  <div id="references">
+<h2 id="ref" class="list">References <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown">
+Add your references here. It is recommended to have them as a list.</span>
+
 </div>
 <div id="acknowledgments">
 <h2 id="ack" class="list">Acknowledgments <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>

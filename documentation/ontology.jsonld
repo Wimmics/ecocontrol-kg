@@ -9,67 +9,7 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid11",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#unionOf" : [ {
-    "@list" : [ {
-      "@id" : "http://ns.inria.fr/ecocontrol/ontology/Taxon"
-    }, {
-      "@id" : "http://ns.inria.fr/ecocontrol/ontology/TaxonInStage"
-    } ]
-  } ]
-}, {
-  "@id" : "_:genid14",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#unionOf" : [ {
-    "@list" : [ {
-      "@id" : "http://ns.inria.fr/ecocontrol/ontology/AbioticDisorder"
-    }, {
-      "@id" : "http://ns.inria.fr/ecocontrol/ontology/Affliction"
-    } ]
-  } ]
-}, {
-  "@id" : "_:genid17",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#unionOf" : [ {
-    "@list" : [ {
-      "@id" : "http://ns.inria.fr/ecocontrol/ontology/Taxon"
-    }, {
-      "@id" : "http://ns.inria.fr/ecocontrol/ontology/TaxonInStage"
-    } ]
-  } ]
-}, {
-  "@id" : "_:genid20",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#unionOf" : [ {
-    "@list" : [ {
-      "@id" : "http://ns.inria.fr/ecocontrol/ontology/Taxon"
-    }, {
-      "@id" : "http://ns.inria.fr/ecocontrol/ontology/TaxonInStage"
-    } ]
-  } ]
-}, {
-  "@id" : "_:genid23",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#unionOf" : [ {
-    "@list" : [ {
-      "@id" : "http://ns.inria.fr/ecocontrol/ontology/IsCommensalOf"
-    }, {
-      "@id" : "http://ns.inria.fr/ecocontrol/ontology/IsNaturalEnemyOf"
-    } ]
-  } ]
-}, {
-  "@id" : "_:genid26",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#unionOf" : [ {
-    "@list" : [ {
-      "@id" : "http://ns.inria.fr/ecocontrol/ontology/Taxon"
-    }, {
-      "@id" : "http://ns.inria.fr/ecocontrol/ontology/TaxonInStage"
-    } ]
-  } ]
-}, {
-  "@id" : "_:genid29",
+  "@id" : "_:genid10",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
@@ -83,83 +23,7 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid34",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#unionOf" : [ {
-    "@list" : [ {
-      "@id" : "http://ns.inria.fr/ecocontrol/ontology/PlantPart"
-    }, {
-      "@id" : "http://ns.inria.fr/ecocontrol/ontology/Taxon"
-    }, {
-      "@id" : "http://ns.inria.fr/ecocontrol/ontology/TaxonInStage"
-    } ]
-  } ]
-}, {
-  "@id" : "_:genid38",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#unionOf" : [ {
-    "@list" : [ {
-      "@id" : "http://ns.inria.fr/ecocontrol/ontology/Taxon"
-    }, {
-      "@id" : "http://ns.inria.fr/ecocontrol/ontology/TaxonInStage"
-    } ]
-  } ]
-}, {
-  "@id" : "_:genid4",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#unionOf" : [ {
-    "@list" : [ {
-      "@id" : "http://ns.inria.fr/ecocontrol/ontology/PlantPart"
-    }, {
-      "@id" : "http://ns.inria.fr/ecocontrol/ontology/Taxon"
-    }, {
-      "@id" : "http://ns.inria.fr/ecocontrol/ontology/TaxonInStage"
-    } ]
-  } ]
-}, {
-  "@id" : "_:genid41",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#unionOf" : [ {
-    "@list" : [ {
-      "@id" : "http://ns.inria.fr/ecocontrol/ontology/Taxon"
-    }, {
-      "@id" : "http://ns.inria.fr/ecocontrol/ontology/TaxonInStage"
-    } ]
-  } ]
-}, {
-  "@id" : "_:genid44",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#unionOf" : [ {
-    "@list" : [ {
-      "@id" : "http://ns.inria.fr/ecocontrol/ontology/PlantPart"
-    }, {
-      "@id" : "http://ns.inria.fr/ecocontrol/ontology/Taxon"
-    }, {
-      "@id" : "http://ns.inria.fr/ecocontrol/ontology/TaxonInStage"
-    } ]
-  } ]
-}, {
-  "@id" : "_:genid48",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#unionOf" : [ {
-    "@list" : [ {
-      "@id" : "http://ns.inria.fr/ecocontrol/ontology/Taxon"
-    }, {
-      "@id" : "http://ns.inria.fr/ecocontrol/ontology/TaxonInStage"
-    } ]
-  } ]
-}, {
-  "@id" : "_:genid51",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#unionOf" : [ {
-    "@list" : [ {
-      "@id" : "http://ns.inria.fr/ecocontrol/ontology/Taxon"
-    }, {
-      "@id" : "http://ns.inria.fr/ecocontrol/ontology/TaxonInStage"
-    } ]
-  } ]
-}, {
-  "@id" : "_:genid54",
+  "@id" : "_:genid15",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
@@ -169,67 +33,7 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid57",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#unionOf" : [ {
-    "@list" : [ {
-      "@id" : "http://ns.inria.fr/ecocontrol/ontology/Taxon"
-    }, {
-      "@id" : "http://ns.inria.fr/ecocontrol/ontology/TaxonInStage"
-    } ]
-  } ]
-}, {
-  "@id" : "_:genid60",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#unionOf" : [ {
-    "@list" : [ {
-      "@id" : "http://ns.inria.fr/ecocontrol/ontology/Taxon"
-    }, {
-      "@id" : "http://ns.inria.fr/ecocontrol/ontology/TaxonInStage"
-    } ]
-  } ]
-}, {
-  "@id" : "_:genid63",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#unionOf" : [ {
-    "@list" : [ {
-      "@id" : "http://ns.inria.fr/ecocontrol/ontology/Taxon"
-    }, {
-      "@id" : "http://ns.inria.fr/ecocontrol/ontology/TaxonInStage"
-    } ]
-  } ]
-}, {
-  "@id" : "_:genid66",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#unionOf" : [ {
-    "@list" : [ {
-      "@id" : "http://ns.inria.fr/ecocontrol/ontology/Taxon"
-    }, {
-      "@id" : "http://ns.inria.fr/ecocontrol/ontology/TaxonInStage"
-    } ]
-  } ]
-}, {
-  "@id" : "_:genid69",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#unionOf" : [ {
-    "@list" : [ {
-      "@id" : "http://ns.inria.fr/ecocontrol/ontology/Taxon"
-    }, {
-      "@id" : "http://ns.inria.fr/ecocontrol/ontology/TaxonInStage"
-    } ]
-  } ]
-}, {
-  "@id" : "_:genid72",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#unionOf" : [ {
-    "@list" : [ {
-      "@id" : "http://ns.inria.fr/ecocontrol/ontology/Taxon"
-    }, {
-      "@id" : "http://ns.inria.fr/ecocontrol/ontology/TaxonInStage"
-    } ]
-  } ]
-}, {
-  "@id" : "_:genid75",
+  "@id" : "_:genid18",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
@@ -239,13 +43,33 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid8",
+  "@id" : "_:genid21",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
-      "@id" : "http://ns.inria.fr/ecocontrol/ontology/Taxon"
+      "@id" : "http://ns.inria.fr/ecocontrol/ontology/PlantPart"
     }, {
-      "@id" : "http://ns.inria.fr/ecocontrol/ontology/TaxonInStage"
+      "@id" : "http://ns.inria.fr/ecocontrol/ontology/Taxon"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid4",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://ns.inria.fr/ecocontrol/ontology/AbioticDisorder"
+    }, {
+      "@id" : "http://ns.inria.fr/ecocontrol/ontology/Affliction"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid7",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://ns.inria.fr/ecocontrol/ontology/IsCommensalOf"
+    }, {
+      "@id" : "http://ns.inria.fr/ecocontrol/ontology/IsNaturalEnemyOf"
     } ]
   } ]
 }, {
@@ -550,6 +374,18 @@
     "@value" : "time periodicity"
   } ]
 }, {
+  "@id" : "http://ns.inria.fr/ecocontrol/ontology/PlantOrPlantPart",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Either a plant or a part of a plant."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "plant or plant part"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "_:genid21"
+  } ]
+}, {
   "@id" : "http://ns.inria.fr/ecocontrol/ontology/PlantPart",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -616,7 +452,7 @@
     "@value" : "affects"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "_:genid4"
+    "@id" : "http://ns.inria.fr/ecocontrol/ontology/PlantOrPlantPart"
   } ]
 }, {
   "@id" : "http://ns.inria.fr/ecocontrol/ontology/agent",
@@ -631,7 +467,7 @@
     "@value" : "agent"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "_:genid8"
+    "@id" : "http://ns.inria.fr/ecocontrol/ontology/Taxon"
   } ]
 }, {
   "@id" : "http://ns.inria.fr/ecocontrol/ontology/beneficiary",
@@ -676,7 +512,7 @@
     "@value" : "commensal"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "_:genid11"
+    "@id" : "http://ns.inria.fr/ecocontrol/ontology/Taxon"
   } ]
 }, {
   "@id" : "http://ns.inria.fr/ecocontrol/ontology/disease",
@@ -700,7 +536,7 @@
     "@value" : "A disorder resulting from an affliction or abiotic factor."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "_:genid14"
+    "@id" : "_:genid4"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "disorder"
@@ -718,7 +554,7 @@
     "@value" : "enemy"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "_:genid17"
+    "@id" : "http://ns.inria.fr/ecocontrol/ontology/Taxon"
   } ]
 }, {
   "@id" : "http://ns.inria.fr/ecocontrol/ontology/harbored",
@@ -733,7 +569,7 @@
     "@value" : "harbored"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "_:genid20"
+    "@id" : "http://ns.inria.fr/ecocontrol/ontology/Taxon"
   } ]
 }, {
   "@id" : "http://ns.inria.fr/ecocontrol/ontology/hasDiagnosis",
@@ -757,7 +593,7 @@
     "@value" : "To be completed"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "_:genid75"
+    "@id" : "_:genid18"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "has lethality"
@@ -799,13 +635,13 @@
     "@value" : "The animal that harbors another organism."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "_:genid23"
+    "@id" : "_:genid7"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "host animal"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "_:genid26"
+    "@id" : "http://ns.inria.fr/ecocontrol/ontology/Taxon"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "http://ns.inria.fr/ecocontrol/ontology/host"
@@ -817,13 +653,13 @@
     "@value" : "The plant that harbors another organism."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "_:genid29"
+    "@id" : "_:genid10"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "host plant"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "_:genid34"
+    "@id" : "http://ns.inria.fr/ecocontrol/ontology/PlantOrPlantPart"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "http://ns.inria.fr/ecocontrol/ontology/host"
@@ -838,7 +674,7 @@
     "@value" : "hyperparasite"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "_:genid38"
+    "@id" : "http://ns.inria.fr/ecocontrol/ontology/Taxon"
   } ]
 }, {
   "@id" : "http://ns.inria.fr/ecocontrol/ontology/hyperparasitoid",
@@ -850,7 +686,7 @@
     "@value" : "hyperparasitoid"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "_:genid41"
+    "@id" : "http://ns.inria.fr/ecocontrol/ontology/Taxon"
   } ]
 }, {
   "@id" : "http://ns.inria.fr/ecocontrol/ontology/object",
@@ -865,7 +701,7 @@
     "@value" : "object"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "_:genid44"
+    "@id" : "http://ns.inria.fr/ecocontrol/ontology/PlantOrPlantPart"
   } ]
 }, {
   "@id" : "http://ns.inria.fr/ecocontrol/ontology/parasite",
@@ -877,7 +713,7 @@
     "@value" : "parasite"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "_:genid48"
+    "@id" : "http://ns.inria.fr/ecocontrol/ontology/Taxon"
   } ]
 }, {
   "@id" : "http://ns.inria.fr/ecocontrol/ontology/parasitoid",
@@ -889,7 +725,7 @@
     "@value" : "parasitoid"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "_:genid51"
+    "@id" : "http://ns.inria.fr/ecocontrol/ontology/Taxon"
   } ]
 }, {
   "@id" : "http://ns.inria.fr/ecocontrol/ontology/partOf",
@@ -910,7 +746,7 @@
     "@value" : "The frequency or regularity of an event or process."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "_:genid54"
+    "@id" : "_:genid15"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "periodicity"
@@ -931,7 +767,7 @@
     "@value" : "pest"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "_:genid57"
+    "@id" : "http://ns.inria.fr/ecocontrol/ontology/Taxon"
   } ]
 }, {
   "@id" : "http://ns.inria.fr/ecocontrol/ontology/predator",
@@ -943,7 +779,7 @@
     "@value" : "predator"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "_:genid60"
+    "@id" : "http://ns.inria.fr/ecocontrol/ontology/Taxon"
   } ]
 }, {
   "@id" : "http://ns.inria.fr/ecocontrol/ontology/prey",
@@ -955,7 +791,7 @@
     "@value" : "prey"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "_:genid63"
+    "@id" : "http://ns.inria.fr/ecocontrol/ontology/Taxon"
   } ]
 }, {
   "@id" : "http://ns.inria.fr/ecocontrol/ontology/sign",
@@ -1000,7 +836,7 @@
     "@value" : "target"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "_:genid66"
+    "@id" : "http://ns.inria.fr/ecocontrol/ontology/Taxon"
   } ]
 }, {
   "@id" : "http://ns.inria.fr/ecocontrol/ontology/transmitted",
@@ -1015,7 +851,7 @@
     "@value" : "transmitted"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "_:genid69"
+    "@id" : "http://ns.inria.fr/ecocontrol/ontology/Taxon"
   } ]
 }, {
   "@id" : "http://ns.inria.fr/ecocontrol/ontology/vector",
@@ -1030,7 +866,7 @@
     "@value" : "vector"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "_:genid72"
+    "@id" : "http://ns.inria.fr/ecocontrol/ontology/Taxon"
   } ]
 }, {
   "@id" : "http://www.w3.org/2004/02/skos/core#example",

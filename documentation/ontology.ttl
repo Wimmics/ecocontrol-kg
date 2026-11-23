@@ -27,12 +27,7 @@
                                      :Manifestation
                                    )
                      ] ;
-         rdfs:range [ rdf:type owl:Class ;
-                      owl:unionOf ( :PlantPart
-                                    :Taxon
-                                    :TaxonInStage
-                                  )
-                    ] ;
+         rdfs:range :PlantOrPlantPart ;
          rdfs:comment "The plant (or a plant part, possibly at a development stage) that is affected by an affliction or manifestation." ;
          rdfs:label "affects" .
 
@@ -40,11 +35,7 @@
 ###  http://ns.inria.fr/ecocontrol/ontology/agent
 :agent rdf:type owl:ObjectProperty ;
        rdfs:domain :BioticDisorder ;
-       rdfs:range [ rdf:type owl:Class ;
-                    owl:unionOf ( :Taxon
-                                  :TaxonInStage
-                                )
-                  ] ;
+       rdfs:range :Taxon ;
        rdfs:comment "The organism causing a disease." ;
        rdfs:label "agent" .
 
@@ -68,11 +59,7 @@
 ###  http://ns.inria.fr/ecocontrol/ontology/commensal
 :commensal rdf:type owl:ObjectProperty ;
            rdfs:domain :IsCommensalOf ;
-           rdfs:range [ rdf:type owl:Class ;
-                        owl:unionOf ( :Taxon
-                                      :TaxonInStage
-                                    )
-                      ] ;
+           rdfs:range :Taxon ;
            rdfs:comment "The organism that benefits from the relationship." ;
            rdfs:label "commensal" .
 
@@ -100,22 +87,14 @@
 ###  http://ns.inria.fr/ecocontrol/ontology/enemy
 :enemy rdf:type owl:ObjectProperty ;
        rdfs:domain :IsNaturalEnemyOf ;
-       rdfs:range [ rdf:type owl:Class ;
-                    owl:unionOf ( :Taxon
-                                  :TaxonInStage
-                                )
-                  ] ;
+       rdfs:range :Taxon ;
        rdfs:label "enemy" .
 
 
 ###  http://ns.inria.fr/ecocontrol/ontology/harbored
 :harbored rdf:type owl:ObjectProperty ;
           rdfs:domain :IsHostPlantOf ;
-          rdfs:range [ rdf:type owl:Class ;
-                       owl:unionOf ( :Taxon
-                                     :TaxonInStage
-                                   )
-                     ] ;
+          rdfs:range :Taxon ;
           rdfs:comment "The organism that is harbored." ;
           rdfs:label "harbored" .
 
@@ -151,11 +130,7 @@
                                         :IsNaturalEnemyOf
                                       )
                         ] ;
-            rdfs:range [ rdf:type owl:Class ;
-                         owl:unionOf ( :Taxon
-                                       :TaxonInStage
-                                     )
-                       ] ;
+            rdfs:range :Taxon ;
             rdfs:comment "The animal that harbors another organism." ;
             rdfs:label "host animal" .
 
@@ -170,12 +145,7 @@
                                        :IsVectorOf
                                      )
                        ] ;
-           rdfs:range [ rdf:type owl:Class ;
-                        owl:unionOf ( :PlantPart
-                                      :Taxon
-                                      :TaxonInStage
-                                    )
-                      ] ;
+           rdfs:range :PlantOrPlantPart ;
            rdfs:comment "The plant that harbors another organism." ;
            rdfs:label "host plant" .
 
@@ -183,34 +153,21 @@
 ###  http://ns.inria.fr/ecocontrol/ontology/hyperparasite
 :hyperparasite rdf:type owl:ObjectProperty ;
                rdfs:domain :IsHyperParasiteOf ;
-               rdfs:range [ rdf:type owl:Class ;
-                            owl:unionOf ( :Taxon
-                                          :TaxonInStage
-                                        )
-                          ] ;
+               rdfs:range :Taxon ;
                rdfs:label "hyperparasite" .
 
 
 ###  http://ns.inria.fr/ecocontrol/ontology/hyperparasitoid
 :hyperparasitoid rdf:type owl:ObjectProperty ;
                  rdfs:domain :IsHyperParasitoidOf ;
-                 rdfs:range [ rdf:type owl:Class ;
-                              owl:unionOf ( :Taxon
-                                            :TaxonInStage
-                                          )
-                            ] ;
+                 rdfs:range :Taxon ;
                  rdfs:label "hyperparasitoid" .
 
 
 ###  http://ns.inria.fr/ecocontrol/ontology/object
 :object rdf:type owl:ObjectProperty ;
         rdfs:domain :AbioticDisorder ;
-        rdfs:range [ rdf:type owl:Class ;
-                     owl:unionOf ( :PlantPart
-                                   :Taxon
-                                   :TaxonInStage
-                                 )
-                   ] ;
+        rdfs:range :PlantOrPlantPart ;
         rdfs:comment "The plant (or a plant part) that is affected by an abiotic factor." ;
         rdfs:label "object" .
 
@@ -218,22 +175,14 @@
 ###  http://ns.inria.fr/ecocontrol/ontology/parasite
 :parasite rdf:type owl:ObjectProperty ;
           rdfs:domain :IsParasiteOf ;
-          rdfs:range [ rdf:type owl:Class ;
-                       owl:unionOf ( :Taxon
-                                     :TaxonInStage
-                                   )
-                     ] ;
+          rdfs:range :Taxon ;
           rdfs:label "parasite" .
 
 
 ###  http://ns.inria.fr/ecocontrol/ontology/parasitoid
 :parasitoid rdf:type owl:ObjectProperty ;
             rdfs:domain :IsParasitoidOf ;
-            rdfs:range [ rdf:type owl:Class ;
-                         owl:unionOf ( :Taxon
-                                       :TaxonInStage
-                                     )
-                       ] ;
+            rdfs:range :Taxon ;
             rdfs:label "parasitoid" .
 
 
@@ -259,11 +208,7 @@
 ###  http://ns.inria.fr/ecocontrol/ontology/pest
 :pest rdf:type owl:ObjectProperty ;
       rdfs:domain :Attacks ;
-      rdfs:range [ rdf:type owl:Class ;
-                   owl:unionOf ( :Taxon
-                                 :TaxonInStage
-                               )
-                 ] ;
+      rdfs:range :Taxon ;
       rdfs:comment "The organism that attacks a plant." ;
       rdfs:label "pest" .
 
@@ -271,22 +216,14 @@
 ###  http://ns.inria.fr/ecocontrol/ontology/predator
 :predator rdf:type owl:ObjectProperty ;
           rdfs:domain :PreysOn ;
-          rdfs:range [ rdf:type owl:Class ;
-                       owl:unionOf ( :Taxon
-                                     :TaxonInStage
-                                   )
-                     ] ;
+          rdfs:range :Taxon ;
           rdfs:label "predator" .
 
 
 ###  http://ns.inria.fr/ecocontrol/ontology/prey
 :prey rdf:type owl:ObjectProperty ;
       rdfs:domain :PreysOn ;
-      rdfs:range [ rdf:type owl:Class ;
-                   owl:unionOf ( :Taxon
-                                 :TaxonInStage
-                               )
-                 ] ;
+      rdfs:range :Taxon ;
       rdfs:label "prey" .
 
 
@@ -309,11 +246,7 @@
 ###  http://ns.inria.fr/ecocontrol/ontology/target
 :target rdf:type owl:ObjectProperty ;
         rdfs:domain :IsNaturalEnemyOf ;
-        rdfs:range [ rdf:type owl:Class ;
-                     owl:unionOf ( :Taxon
-                                   :TaxonInStage
-                                 )
-                   ] ;
+        rdfs:range :Taxon ;
         rdfs:comment "To be completed" ;
         rdfs:label "target" .
 
@@ -321,11 +254,7 @@
 ###  http://ns.inria.fr/ecocontrol/ontology/transmitted
 :transmitted rdf:type owl:ObjectProperty ;
              rdfs:domain :IsVectorOf ;
-             rdfs:range [ rdf:type owl:Class ;
-                          owl:unionOf ( :Taxon
-                                        :TaxonInStage
-                                      )
-                        ] ;
+             rdfs:range :Taxon ;
              rdfs:comment "The organism that is transmitted by a vector." ;
              rdfs:label "transmitted" .
 
@@ -333,11 +262,7 @@
 ###  http://ns.inria.fr/ecocontrol/ontology/vector
 :vector rdf:type owl:ObjectProperty ;
         rdfs:domain :IsVectorOf ;
-        rdfs:range [ rdf:type owl:Class ;
-                     owl:unionOf ( :Taxon
-                                   :TaxonInStage
-                                 )
-                   ] ;
+        rdfs:range :Taxon ;
         rdfs:comment "Transmitting organism." ;
         rdfs:label "vector" .
 
@@ -531,6 +456,17 @@
 :Periodicity rdf:type owl:Class ;
              rdfs:comment "A period of time, e.g. a seasonal, a month of the year, or other type of repetition." ;
              rdfs:label "time periodicity" .
+
+
+###  http://ns.inria.fr/ecocontrol/ontology/PlantOrPlantPart
+:PlantOrPlantPart rdf:type owl:Class ;
+                  owl:equivalentClass [ rdf:type owl:Class ;
+                                        owl:unionOf ( :PlantPart
+                                                      :Taxon
+                                                    )
+                                      ] ;
+                  rdfs:comment "Either a plant or a part of a plant." ;
+                  rdfs:label "plant or plant part" .
 
 
 ###  http://ns.inria.fr/ecocontrol/ontology/PlantPart
