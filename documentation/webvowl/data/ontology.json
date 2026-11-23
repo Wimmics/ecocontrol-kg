@@ -109,10 +109,10 @@
     "id" : "75",
     "type" : "owl:Class"
   }, {
-    "id" : "66",
+    "id" : "19",
     "type" : "owl:Class"
   }, {
-    "id" : "19",
+    "id" : "66",
     "type" : "owl:Class"
   }, {
     "id" : "27",
@@ -236,12 +236,12 @@
       "example" : [ {
         "identifier" : "example",
         "language" : "undefined",
-        "value" : "Trichogramma wasps are released in crops to control the corn borer.",
+        "value" : "Ageniaspis citricola is a wasp parasite of the citrus leafminer larva, Phyllocnistis citrella.",
         "type" : "label"
       }, {
         "identifier" : "example",
         "language" : "undefined",
-        "value" : "Ageniaspis citricola is a wasp parasite of the citrus leafminer larva, Phyllocnistis citrella.",
+        "value" : "Trichogramma wasps are released in crops to control the corn borer.",
         "type" : "label"
       } ]
     },
@@ -394,12 +394,12 @@
       "example" : [ {
         "identifier" : "example",
         "language" : "undefined",
-        "value" : "The plants are affected by leaf chlorosis, it is due to lack of sunlight.",
+        "value" : "The leaves burned/dried because of frost.",
         "type" : "label"
       }, {
         "identifier" : "example",
         "language" : "undefined",
-        "value" : "The leaves burned/dried because of frost.",
+        "value" : "The plants are affected by leaf chlorosis, it is due to lack of sunlight.",
         "type" : "label"
       } ]
     },
@@ -498,17 +498,17 @@
       "example" : [ {
         "identifier" : "example",
         "language" : "undefined",
-        "value" : "Brown spot is a harmful disease caused by Alternaria alternata, a pathogenic fungus. It is moderately infectious but not lethal for potato (Solanum tuberosum).",
-        "type" : "label"
-      }, {
-        "identifier" : "example",
-        "language" : "undefined",
         "value" : "Septoriosis affects soft wheat.",
         "type" : "label"
       }, {
         "identifier" : "example",
         "language" : "undefined",
         "value" : "Rose leaf affected by black spot disease.",
+        "type" : "label"
+      }, {
+        "identifier" : "example",
+        "language" : "undefined",
+        "value" : "Brown spot is a harmful disease caused by Alternaria alternata, a pathogenic fungus. It is moderately infectious but not lethal for potato (Solanum tuberosum).",
         "type" : "label"
       } ]
     },
@@ -597,31 +597,6 @@
     "id" : "75",
     "superClasses" : [ "16" ]
   }, {
-    "iri" : "http://ns.inria.fr/ecocontrol/ontology/Manifestation",
-    "baseIri" : "http://ns.inria.fr/ecocontrol/ontology",
-    "instances" : 0,
-    "annotations" : {
-      "example" : [ {
-        "identifier" : "example",
-        "language" : "undefined",
-        "value" : "Leaf chlorosis affects the leaf of the grapevine.",
-        "type" : "label"
-      }, {
-        "identifier" : "example",
-        "language" : "undefined",
-        "value" : "Symptoms manifest as the appearance of punctiform spots visible on both sides of the orange tree leaf.",
-        "type" : "label"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "Manifestation",
-      "undefined" : "manifestation"
-    },
-    "comment" : {
-      "undefined" : "A symptom is the manifestation of a disorder or disease for a particular plant (or a plant part, possibly at a development stage)."
-    },
-    "id" : "66"
-  }, {
     "iri" : "http://ns.inria.fr/ecocontrol/ontology/PlantPart",
     "baseIri" : "http://ns.inria.fr/ecocontrol/ontology",
     "instances" : 0,
@@ -634,6 +609,31 @@
     },
     "id" : "19"
   }, {
+    "iri" : "http://ns.inria.fr/ecocontrol/ontology/Manifestation",
+    "baseIri" : "http://ns.inria.fr/ecocontrol/ontology",
+    "instances" : 0,
+    "annotations" : {
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "undefined",
+        "value" : "Symptoms manifest as the appearance of punctiform spots visible on both sides of the orange tree leaf.",
+        "type" : "label"
+      }, {
+        "identifier" : "example",
+        "language" : "undefined",
+        "value" : "Leaf chlorosis affects the leaf of the grapevine.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Manifestation",
+      "undefined" : "manifestation"
+    },
+    "comment" : {
+      "undefined" : "A symptom is the manifestation of a disorder or disease for a particular plant (or a plant part, possibly at a development stage)."
+    },
+    "id" : "66"
+  }, {
     "iri" : "http://ns.inria.fr/ecocontrol/ontology/BioticDisorder",
     "baseIri" : "http://ns.inria.fr/ecocontrol/ontology",
     "instances" : 0,
@@ -641,12 +641,12 @@
       "example" : [ {
         "identifier" : "example",
         "language" : "undefined",
-        "value" : "Xylella fastidiosa causes Pierce's disease of the grapevine.",
+        "value" : "The citrus mite causes acoriosis of the lemon tree.",
         "type" : "label"
       }, {
         "identifier" : "example",
         "language" : "undefined",
-        "value" : "The citrus mite causes acoriosis of the lemon tree.",
+        "value" : "Xylella fastidiosa causes Pierce's disease of the grapevine.",
         "type" : "label"
       } ]
     },
@@ -738,12 +738,12 @@
       "example" : [ {
         "identifier" : "example",
         "language" : "undefined",
-        "value" : "The psyllid Cacopsylla pruni, vector of the phytoplasma 'Candidatus Phytoplasma prunorum', leaves Prunus in summer and uses conifers such as Norway spruce (Picea abies) as overwintering hosts; in early spring, adults return to fruit trees of the genus Prunus, such as plum (Prunus domestica), where they reproduce and can transmit the phytoplasma.",
+        "value" : "During winter, the hazel (Corylus avellana) is a refuge for predatory mites (Phytoseiidae) of phytophagous mites such as the red mite (Panonychus ulmi); in spring, the predatory mites can colonize the grapevine (Vitis vinifera) and take part in regulation.",
         "type" : "label"
       }, {
         "identifier" : "example",
         "language" : "undefined",
-        "value" : "During winter, the hazel (Corylus avellana) is a refuge for predatory mites (Phytoseiidae) of phytophagous mites such as the red mite (Panonychus ulmi); in spring, the predatory mites can colonize the grapevine (Vitis vinifera) and take part in regulation.",
+        "value" : "The psyllid Cacopsylla pruni, vector of the phytoplasma 'Candidatus Phytoplasma prunorum', leaves Prunus in summer and uses conifers such as Norway spruce (Picea abies) as overwintering hosts; in early spring, adults return to fruit trees of the genus Prunus, such as plum (Prunus domestica), where they reproduce and can transmit the phytoplasma.",
         "type" : "label"
       } ]
     },
@@ -1191,7 +1191,7 @@
   }, {
     "iri" : "http://ns.inria.fr/ecocontrol/ontology/host",
     "baseIri" : "http://ns.inria.fr/ecocontrol/ontology",
-    "range" : "20",
+    "range" : "2",
     "label" : {
       "IRI-based" : "host",
       "undefined" : "host"

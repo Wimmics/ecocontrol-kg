@@ -138,6 +138,7 @@
 
 ###  http://ns.inria.fr/ecocontrol/ontology/host
 :host rdf:type owl:ObjectProperty ;
+      rdfs:range :Taxon ;
       rdfs:comment "The organism that harbors another organism." ;
       rdfs:label "host" .
 

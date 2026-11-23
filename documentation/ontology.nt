@@ -157,6 +157,7 @@ _:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 # 
 # http://ns.inria.fr/ecocontrol/ontology/host
 <http://ns.inria.fr/ecocontrol/ontology/host> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://ns.inria.fr/ecocontrol/ontology/host> <http://www.w3.org/2000/01/rdf-schema#range> <http://ns.inria.fr/ecocontrol/ontology/Taxon> .
 <http://ns.inria.fr/ecocontrol/ontology/host> <http://www.w3.org/2000/01/rdf-schema#comment> "The organism that harbors another organism." .
 <http://ns.inria.fr/ecocontrol/ontology/host> <http://www.w3.org/2000/01/rdf-schema#label> "host" .
 # 

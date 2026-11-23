@@ -204,7 +204,8 @@ eco:disease a owl:ObjectProperty ;
 
 eco:host a owl:ObjectProperty ;
     rdfs:label "host" ;
-    rdfs:comment "The organism that harbors another organism." .
+    rdfs:comment "The organism that harbors another organism." ;
+    rdfs:range eco:Taxon .
 
 eco:hostPlant a owl:ObjectProperty ;
     rdfs:label "host plant" ;

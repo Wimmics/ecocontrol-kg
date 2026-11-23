@@ -227,6 +227,7 @@
 
 
     <owl:ObjectProperty rdf:about="http://ns.inria.fr/ecocontrol/ontology/host">
+        <rdfs:range rdf:resource="http://ns.inria.fr/ecocontrol/ontology/Taxon"/>
         <rdfs:comment>The organism that harbors another organism.</rdfs:comment>
         <rdfs:label>host</rdfs:label>
     </owl:ObjectProperty>
