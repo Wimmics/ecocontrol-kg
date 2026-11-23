@@ -1,0 +1,626 @@
+<http://ns.inria.fr/ecocontrol/ontology/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://www.w3.org/2004/02/skos/core#example
+<http://www.w3.org/2004/02/skos/core#example> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# http://ns.inria.fr/ecocontrol/ontology/affects
+<http://ns.inria.fr/ecocontrol/ontology/affects> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://ns.inria.fr/ecocontrol/ontology/affects> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid1 .
+_:genid1 <http://www.w3.org/2002/07/owl#unionOf> _:genid3 .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid2 .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://ns.inria.fr/ecocontrol/ontology/Manifestation> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://ns.inria.fr/ecocontrol/ontology/Affliction> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://ns.inria.fr/ecocontrol/ontology/affects> <http://www.w3.org/2000/01/rdf-schema#range> _:genid4 .
+_:genid4 <http://www.w3.org/2002/07/owl#unionOf> _:genid7 .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid6 .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid5 .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://ns.inria.fr/ecocontrol/ontology/TaxonInStage> .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://ns.inria.fr/ecocontrol/ontology/Taxon> .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://ns.inria.fr/ecocontrol/ontology/PlantPart> .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://ns.inria.fr/ecocontrol/ontology/affects> <http://www.w3.org/2000/01/rdf-schema#comment> "The plant (or a plant part, possibly at a development stage) that is affected by an affliction or manifestation." .
+<http://ns.inria.fr/ecocontrol/ontology/affects> <http://www.w3.org/2000/01/rdf-schema#label> "affects" .
+# 
+# http://ns.inria.fr/ecocontrol/ontology/agent
+<http://ns.inria.fr/ecocontrol/ontology/agent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://ns.inria.fr/ecocontrol/ontology/agent> <http://www.w3.org/2000/01/rdf-schema#domain> <http://ns.inria.fr/ecocontrol/ontology/BioticDisorder> .
+<http://ns.inria.fr/ecocontrol/ontology/agent> <http://www.w3.org/2000/01/rdf-schema#range> _:genid8 .
+_:genid8 <http://www.w3.org/2002/07/owl#unionOf> _:genid10 .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid9 .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://ns.inria.fr/ecocontrol/ontology/TaxonInStage> .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://ns.inria.fr/ecocontrol/ontology/Taxon> .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://ns.inria.fr/ecocontrol/ontology/agent> <http://www.w3.org/2000/01/rdf-schema#comment> "The organism causing a disease." .
+<http://ns.inria.fr/ecocontrol/ontology/agent> <http://www.w3.org/2000/01/rdf-schema#label> "agent" .
+# 
+# http://ns.inria.fr/ecocontrol/ontology/beneficiary
+<http://ns.inria.fr/ecocontrol/ontology/beneficiary> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://ns.inria.fr/ecocontrol/ontology/beneficiary> <http://www.w3.org/2000/01/rdf-schema#domain> <http://ns.inria.fr/ecocontrol/ontology/IsBeneficialPlantOf> .
+<http://ns.inria.fr/ecocontrol/ontology/beneficiary> <http://www.w3.org/2000/01/rdf-schema#range> <http://ns.inria.fr/ecocontrol/ontology/Taxon> .
+<http://ns.inria.fr/ecocontrol/ontology/beneficiary> <http://www.w3.org/2000/01/rdf-schema#comment> "The (other) crop that receives the agronomic or ecological benefit." .
+<http://ns.inria.fr/ecocontrol/ontology/beneficiary> <http://www.w3.org/2000/01/rdf-schema#label> "beneficiary" .
+# 
+# http://ns.inria.fr/ecocontrol/ontology/cause
+<http://ns.inria.fr/ecocontrol/ontology/cause> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://ns.inria.fr/ecocontrol/ontology/cause> <http://www.w3.org/2000/01/rdf-schema#domain> <http://ns.inria.fr/ecocontrol/ontology/AbioticDisorder> .
+<http://ns.inria.fr/ecocontrol/ontology/cause> <http://www.w3.org/2000/01/rdf-schema#range> <http://ns.inria.fr/ecocontrol/ontology/AbioticFactor> .
+<http://ns.inria.fr/ecocontrol/ontology/cause> <http://www.w3.org/2000/01/rdf-schema#comment> "The abiotic factor that causes a disorder." .
+<http://ns.inria.fr/ecocontrol/ontology/cause> <http://www.w3.org/2000/01/rdf-schema#label> "cause" .
+# 
+# http://ns.inria.fr/ecocontrol/ontology/commensal
+<http://ns.inria.fr/ecocontrol/ontology/commensal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://ns.inria.fr/ecocontrol/ontology/commensal> <http://www.w3.org/2000/01/rdf-schema#domain> <http://ns.inria.fr/ecocontrol/ontology/IsCommensalOf> .
+<http://ns.inria.fr/ecocontrol/ontology/commensal> <http://www.w3.org/2000/01/rdf-schema#range> _:genid11 .
+_:genid11 <http://www.w3.org/2002/07/owl#unionOf> _:genid13 .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid12 .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://ns.inria.fr/ecocontrol/ontology/TaxonInStage> .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://ns.inria.fr/ecocontrol/ontology/Taxon> .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://ns.inria.fr/ecocontrol/ontology/commensal> <http://www.w3.org/2000/01/rdf-schema#comment> "The organism that benefits from the relationship." .
+<http://ns.inria.fr/ecocontrol/ontology/commensal> <http://www.w3.org/2000/01/rdf-schema#label> "commensal" .
+# 
+# http://ns.inria.fr/ecocontrol/ontology/disease
+<http://ns.inria.fr/ecocontrol/ontology/disease> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://ns.inria.fr/ecocontrol/ontology/disease> <http://www.w3.org/2000/01/rdf-schema#domain> <http://ns.inria.fr/ecocontrol/ontology/BioticDisorder> .
+<http://ns.inria.fr/ecocontrol/ontology/disease> <http://www.w3.org/2000/01/rdf-schema#range> <http://ns.inria.fr/ecocontrol/ontology/Disease> .
+<http://ns.inria.fr/ecocontrol/ontology/disease> <http://www.w3.org/2000/01/rdf-schema#comment> "The disease caused by an organism to a plant." .
+<http://ns.inria.fr/ecocontrol/ontology/disease> <http://www.w3.org/2000/01/rdf-schema#label> "disease" .
+# 
+# http://ns.inria.fr/ecocontrol/ontology/disorder
+<http://ns.inria.fr/ecocontrol/ontology/disorder> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://ns.inria.fr/ecocontrol/ontology/disorder> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid14 .
+_:genid14 <http://www.w3.org/2002/07/owl#unionOf> _:genid16 .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid15 .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://ns.inria.fr/ecocontrol/ontology/Affliction> .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://ns.inria.fr/ecocontrol/ontology/AbioticDisorder> .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://ns.inria.fr/ecocontrol/ontology/disorder> <http://www.w3.org/2000/01/rdf-schema#range> <http://ns.inria.fr/ecocontrol/ontology/Disorder> .
+<http://ns.inria.fr/ecocontrol/ontology/disorder> <http://www.w3.org/2000/01/rdf-schema#comment> "A disorder resulting from an affliction or abiotic factor." .
+<http://ns.inria.fr/ecocontrol/ontology/disorder> <http://www.w3.org/2000/01/rdf-schema#label> "disorder" .
+# 
+# http://ns.inria.fr/ecocontrol/ontology/enemy
+<http://ns.inria.fr/ecocontrol/ontology/enemy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://ns.inria.fr/ecocontrol/ontology/enemy> <http://www.w3.org/2000/01/rdf-schema#domain> <http://ns.inria.fr/ecocontrol/ontology/IsNaturalEnemyOf> .
+<http://ns.inria.fr/ecocontrol/ontology/enemy> <http://www.w3.org/2000/01/rdf-schema#range> _:genid17 .
+_:genid17 <http://www.w3.org/2002/07/owl#unionOf> _:genid19 .
+_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid18 .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://ns.inria.fr/ecocontrol/ontology/TaxonInStage> .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://ns.inria.fr/ecocontrol/ontology/Taxon> .
+_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://ns.inria.fr/ecocontrol/ontology/enemy> <http://www.w3.org/2000/01/rdf-schema#label> "enemy" .
+# 
+# http://ns.inria.fr/ecocontrol/ontology/harbored
+<http://ns.inria.fr/ecocontrol/ontology/harbored> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://ns.inria.fr/ecocontrol/ontology/harbored> <http://www.w3.org/2000/01/rdf-schema#domain> <http://ns.inria.fr/ecocontrol/ontology/IsHostPlantOf> .
+<http://ns.inria.fr/ecocontrol/ontology/harbored> <http://www.w3.org/2000/01/rdf-schema#range> _:genid20 .
+_:genid20 <http://www.w3.org/2002/07/owl#unionOf> _:genid22 .
+_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid21 .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://ns.inria.fr/ecocontrol/ontology/TaxonInStage> .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://ns.inria.fr/ecocontrol/ontology/Taxon> .
+_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://ns.inria.fr/ecocontrol/ontology/harbored> <http://www.w3.org/2000/01/rdf-schema#comment> "The organism that is harbored." .
+<http://ns.inria.fr/ecocontrol/ontology/harbored> <http://www.w3.org/2000/01/rdf-schema#label> "harbored" .
+# 
+# http://ns.inria.fr/ecocontrol/ontology/hasDiagnosis
+<http://ns.inria.fr/ecocontrol/ontology/hasDiagnosis> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://ns.inria.fr/ecocontrol/ontology/hasDiagnosis> <http://www.w3.org/2000/01/rdf-schema#domain> <http://ns.inria.fr/ecocontrol/ontology/Manifestation> .
+<http://ns.inria.fr/ecocontrol/ontology/hasDiagnosis> <http://www.w3.org/2000/01/rdf-schema#range> <http://ns.inria.fr/ecocontrol/ontology/Disorder> .
+<http://ns.inria.fr/ecocontrol/ontology/hasDiagnosis> <http://www.w3.org/2000/01/rdf-schema#comment> "A disorder or disease diagnosed for the manifestation of a symptom." .
+<http://ns.inria.fr/ecocontrol/ontology/hasDiagnosis> <http://www.w3.org/2000/01/rdf-schema#label> "has diagnosis" .
+# 
+# http://ns.inria.fr/ecocontrol/ontology/hasStage
+<http://ns.inria.fr/ecocontrol/ontology/hasStage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://ns.inria.fr/ecocontrol/ontology/hasStage> <http://www.w3.org/2000/01/rdf-schema#domain> <http://ns.inria.fr/ecocontrol/ontology/TaxonInStage> .
+<http://ns.inria.fr/ecocontrol/ontology/hasStage> <http://www.w3.org/2000/01/rdf-schema#range> <http://ns.inria.fr/ecocontrol/ontology/DevelopmentStage> .
+<http://ns.inria.fr/ecocontrol/ontology/hasStage> <http://www.w3.org/2000/01/rdf-schema#comment> "The development stage that applies to the taxon." .
+<http://ns.inria.fr/ecocontrol/ontology/hasStage> <http://www.w3.org/2000/01/rdf-schema#label> "has stage" .
+# 
+# http://ns.inria.fr/ecocontrol/ontology/host
+<http://ns.inria.fr/ecocontrol/ontology/host> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://ns.inria.fr/ecocontrol/ontology/host> <http://www.w3.org/2000/01/rdf-schema#comment> "The organism that harbors another organism." .
+<http://ns.inria.fr/ecocontrol/ontology/host> <http://www.w3.org/2000/01/rdf-schema#label> "host" .
+# 
+# http://ns.inria.fr/ecocontrol/ontology/hostAnimal
+<http://ns.inria.fr/ecocontrol/ontology/hostAnimal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://ns.inria.fr/ecocontrol/ontology/hostAnimal> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://ns.inria.fr/ecocontrol/ontology/host> .
+<http://ns.inria.fr/ecocontrol/ontology/hostAnimal> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid23 .
+_:genid23 <http://www.w3.org/2002/07/owl#unionOf> _:genid25 .
+_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid24 .
+_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://ns.inria.fr/ecocontrol/ontology/IsNaturalEnemyOf> .
+_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://ns.inria.fr/ecocontrol/ontology/IsCommensalOf> .
+_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://ns.inria.fr/ecocontrol/ontology/hostAnimal> <http://www.w3.org/2000/01/rdf-schema#range> _:genid26 .
+_:genid26 <http://www.w3.org/2002/07/owl#unionOf> _:genid28 .
+_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid27 .
+_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://ns.inria.fr/ecocontrol/ontology/TaxonInStage> .
+_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://ns.inria.fr/ecocontrol/ontology/Taxon> .
+_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://ns.inria.fr/ecocontrol/ontology/hostAnimal> <http://www.w3.org/2000/01/rdf-schema#comment> "The animal that harbors another organism." .
+<http://ns.inria.fr/ecocontrol/ontology/hostAnimal> <http://www.w3.org/2000/01/rdf-schema#label> "host animal" .
+# 
+# http://ns.inria.fr/ecocontrol/ontology/hostPlant
+<http://ns.inria.fr/ecocontrol/ontology/hostPlant> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://ns.inria.fr/ecocontrol/ontology/hostPlant> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://ns.inria.fr/ecocontrol/ontology/host> .
+<http://ns.inria.fr/ecocontrol/ontology/hostPlant> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid29 .
+_:genid29 <http://www.w3.org/2002/07/owl#unionOf> _:genid33 .
+_:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid32 .
+_:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid31 .
+_:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid30 .
+_:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://ns.inria.fr/ecocontrol/ontology/IsVectorOf> .
+_:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://ns.inria.fr/ecocontrol/ontology/IsHostPlantOf> .
+_:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://ns.inria.fr/ecocontrol/ontology/BioticDisorder> .
+_:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://ns.inria.fr/ecocontrol/ontology/Attacks> .
+_:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://ns.inria.fr/ecocontrol/ontology/hostPlant> <http://www.w3.org/2000/01/rdf-schema#range> _:genid34 .
+_:genid34 <http://www.w3.org/2002/07/owl#unionOf> _:genid37 .
+_:genid37 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid36 .
+_:genid36 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid35 .
+_:genid35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://ns.inria.fr/ecocontrol/ontology/TaxonInStage> .
+_:genid35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid36 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://ns.inria.fr/ecocontrol/ontology/Taxon> .
+_:genid36 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid37 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://ns.inria.fr/ecocontrol/ontology/PlantPart> .
+_:genid37 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://ns.inria.fr/ecocontrol/ontology/hostPlant> <http://www.w3.org/2000/01/rdf-schema#comment> "The plant that harbors another organism." .
+<http://ns.inria.fr/ecocontrol/ontology/hostPlant> <http://www.w3.org/2000/01/rdf-schema#label> "host plant" .
+# 
+# http://ns.inria.fr/ecocontrol/ontology/hyperparasite
+<http://ns.inria.fr/ecocontrol/ontology/hyperparasite> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://ns.inria.fr/ecocontrol/ontology/hyperparasite> <http://www.w3.org/2000/01/rdf-schema#domain> <http://ns.inria.fr/ecocontrol/ontology/IsHyperParasiteOf> .
+<http://ns.inria.fr/ecocontrol/ontology/hyperparasite> <http://www.w3.org/2000/01/rdf-schema#range> _:genid38 .
+_:genid38 <http://www.w3.org/2002/07/owl#unionOf> _:genid40 .
+_:genid40 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid39 .
+_:genid39 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid39 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://ns.inria.fr/ecocontrol/ontology/TaxonInStage> .
+_:genid39 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid40 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://ns.inria.fr/ecocontrol/ontology/Taxon> .
+_:genid40 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid38 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://ns.inria.fr/ecocontrol/ontology/hyperparasite> <http://www.w3.org/2000/01/rdf-schema#label> "hyperparasite" .
+# 
+# http://ns.inria.fr/ecocontrol/ontology/hyperparasitoid
+<http://ns.inria.fr/ecocontrol/ontology/hyperparasitoid> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://ns.inria.fr/ecocontrol/ontology/hyperparasitoid> <http://www.w3.org/2000/01/rdf-schema#domain> <http://ns.inria.fr/ecocontrol/ontology/IsHyperParasitoidOf> .
+<http://ns.inria.fr/ecocontrol/ontology/hyperparasitoid> <http://www.w3.org/2000/01/rdf-schema#range> _:genid41 .
+_:genid41 <http://www.w3.org/2002/07/owl#unionOf> _:genid43 .
+_:genid43 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid42 .
+_:genid42 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid42 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://ns.inria.fr/ecocontrol/ontology/TaxonInStage> .
+_:genid42 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid43 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://ns.inria.fr/ecocontrol/ontology/Taxon> .
+_:genid43 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid41 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://ns.inria.fr/ecocontrol/ontology/hyperparasitoid> <http://www.w3.org/2000/01/rdf-schema#label> "hyperparasitoid" .
+# 
+# http://ns.inria.fr/ecocontrol/ontology/object
+<http://ns.inria.fr/ecocontrol/ontology/object> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://ns.inria.fr/ecocontrol/ontology/object> <http://www.w3.org/2000/01/rdf-schema#domain> <http://ns.inria.fr/ecocontrol/ontology/AbioticDisorder> .
+<http://ns.inria.fr/ecocontrol/ontology/object> <http://www.w3.org/2000/01/rdf-schema#range> _:genid44 .
+_:genid44 <http://www.w3.org/2002/07/owl#unionOf> _:genid47 .
+_:genid47 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid46 .
+_:genid46 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid45 .
+_:genid45 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid45 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://ns.inria.fr/ecocontrol/ontology/TaxonInStage> .
+_:genid45 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid46 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://ns.inria.fr/ecocontrol/ontology/Taxon> .
+_:genid46 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid47 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://ns.inria.fr/ecocontrol/ontology/PlantPart> .
+_:genid47 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid44 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://ns.inria.fr/ecocontrol/ontology/object> <http://www.w3.org/2000/01/rdf-schema#comment> "The plant (or a plant part) that is affected by an abiotic factor." .
+<http://ns.inria.fr/ecocontrol/ontology/object> <http://www.w3.org/2000/01/rdf-schema#label> "object" .
+# 
+# http://ns.inria.fr/ecocontrol/ontology/parasite
+<http://ns.inria.fr/ecocontrol/ontology/parasite> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://ns.inria.fr/ecocontrol/ontology/parasite> <http://www.w3.org/2000/01/rdf-schema#domain> <http://ns.inria.fr/ecocontrol/ontology/IsParasiteOf> .
+<http://ns.inria.fr/ecocontrol/ontology/parasite> <http://www.w3.org/2000/01/rdf-schema#range> _:genid48 .
+_:genid48 <http://www.w3.org/2002/07/owl#unionOf> _:genid50 .
+_:genid50 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid49 .
+_:genid49 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid49 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://ns.inria.fr/ecocontrol/ontology/TaxonInStage> .
+_:genid49 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid50 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://ns.inria.fr/ecocontrol/ontology/Taxon> .
+_:genid50 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid48 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://ns.inria.fr/ecocontrol/ontology/parasite> <http://www.w3.org/2000/01/rdf-schema#label> "parasite" .
+# 
+# http://ns.inria.fr/ecocontrol/ontology/parasitoid
+<http://ns.inria.fr/ecocontrol/ontology/parasitoid> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://ns.inria.fr/ecocontrol/ontology/parasitoid> <http://www.w3.org/2000/01/rdf-schema#domain> <http://ns.inria.fr/ecocontrol/ontology/IsParasitoidOf> .
+<http://ns.inria.fr/ecocontrol/ontology/parasitoid> <http://www.w3.org/2000/01/rdf-schema#range> _:genid51 .
+_:genid51 <http://www.w3.org/2002/07/owl#unionOf> _:genid53 .
+_:genid53 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid52 .
+_:genid52 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid52 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://ns.inria.fr/ecocontrol/ontology/TaxonInStage> .
+_:genid52 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid53 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://ns.inria.fr/ecocontrol/ontology/Taxon> .
+_:genid53 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid51 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://ns.inria.fr/ecocontrol/ontology/parasitoid> <http://www.w3.org/2000/01/rdf-schema#label> "parasitoid" .
+# 
+# http://ns.inria.fr/ecocontrol/ontology/partOf
+<http://ns.inria.fr/ecocontrol/ontology/partOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://ns.inria.fr/ecocontrol/ontology/partOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://ns.inria.fr/ecocontrol/ontology/PlantPart> .
+<http://ns.inria.fr/ecocontrol/ontology/partOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://ns.inria.fr/ecocontrol/ontology/Taxon> .
+<http://ns.inria.fr/ecocontrol/ontology/partOf> <http://www.w3.org/2000/01/rdf-schema#label> "part of" .
+# 
+# http://ns.inria.fr/ecocontrol/ontology/periodicity
+<http://ns.inria.fr/ecocontrol/ontology/periodicity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://ns.inria.fr/ecocontrol/ontology/periodicity> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid54 .
+_:genid54 <http://www.w3.org/2002/07/owl#unionOf> _:genid56 .
+_:genid56 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid55 .
+_:genid55 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid55 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://ns.inria.fr/ecocontrol/ontology/IsRefugeOf> .
+_:genid55 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid56 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://ns.inria.fr/ecocontrol/ontology/Attacks> .
+_:genid56 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid54 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://ns.inria.fr/ecocontrol/ontology/periodicity> <http://www.w3.org/2000/01/rdf-schema#range> <http://ns.inria.fr/ecocontrol/ontology/Periodicity> .
+<http://ns.inria.fr/ecocontrol/ontology/periodicity> <http://www.w3.org/2000/01/rdf-schema#comment> "The frequency or regularity of an event or process." .
+<http://ns.inria.fr/ecocontrol/ontology/periodicity> <http://www.w3.org/2000/01/rdf-schema#label> "periodicity" .
+# 
+# http://ns.inria.fr/ecocontrol/ontology/pest
+<http://ns.inria.fr/ecocontrol/ontology/pest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://ns.inria.fr/ecocontrol/ontology/pest> <http://www.w3.org/2000/01/rdf-schema#domain> <http://ns.inria.fr/ecocontrol/ontology/Attacks> .
+<http://ns.inria.fr/ecocontrol/ontology/pest> <http://www.w3.org/2000/01/rdf-schema#range> _:genid57 .
+_:genid57 <http://www.w3.org/2002/07/owl#unionOf> _:genid59 .
+_:genid59 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid58 .
+_:genid58 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid58 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://ns.inria.fr/ecocontrol/ontology/TaxonInStage> .
+_:genid58 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid59 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://ns.inria.fr/ecocontrol/ontology/Taxon> .
+_:genid59 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid57 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://ns.inria.fr/ecocontrol/ontology/pest> <http://www.w3.org/2000/01/rdf-schema#comment> "The organism that attacks a plant." .
+<http://ns.inria.fr/ecocontrol/ontology/pest> <http://www.w3.org/2000/01/rdf-schema#label> "pest" .
+# 
+# http://ns.inria.fr/ecocontrol/ontology/predator
+<http://ns.inria.fr/ecocontrol/ontology/predator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://ns.inria.fr/ecocontrol/ontology/predator> <http://www.w3.org/2000/01/rdf-schema#domain> <http://ns.inria.fr/ecocontrol/ontology/PreysOn> .
+<http://ns.inria.fr/ecocontrol/ontology/predator> <http://www.w3.org/2000/01/rdf-schema#range> _:genid60 .
+_:genid60 <http://www.w3.org/2002/07/owl#unionOf> _:genid62 .
+_:genid62 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid61 .
+_:genid61 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid61 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://ns.inria.fr/ecocontrol/ontology/TaxonInStage> .
+_:genid61 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid62 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://ns.inria.fr/ecocontrol/ontology/Taxon> .
+_:genid62 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid60 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://ns.inria.fr/ecocontrol/ontology/predator> <http://www.w3.org/2000/01/rdf-schema#label> "predator" .
+# 
+# http://ns.inria.fr/ecocontrol/ontology/prey
+<http://ns.inria.fr/ecocontrol/ontology/prey> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://ns.inria.fr/ecocontrol/ontology/prey> <http://www.w3.org/2000/01/rdf-schema#domain> <http://ns.inria.fr/ecocontrol/ontology/PreysOn> .
+<http://ns.inria.fr/ecocontrol/ontology/prey> <http://www.w3.org/2000/01/rdf-schema#range> _:genid63 .
+_:genid63 <http://www.w3.org/2002/07/owl#unionOf> _:genid65 .
+_:genid65 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid64 .
+_:genid64 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid64 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://ns.inria.fr/ecocontrol/ontology/TaxonInStage> .
+_:genid64 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid65 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://ns.inria.fr/ecocontrol/ontology/Taxon> .
+_:genid65 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid63 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://ns.inria.fr/ecocontrol/ontology/prey> <http://www.w3.org/2000/01/rdf-schema#label> "prey" .
+# 
+# http://ns.inria.fr/ecocontrol/ontology/sign
+<http://ns.inria.fr/ecocontrol/ontology/sign> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://ns.inria.fr/ecocontrol/ontology/sign> <http://www.w3.org/2000/01/rdf-schema#domain> <http://ns.inria.fr/ecocontrol/ontology/Manifestation> .
+<http://ns.inria.fr/ecocontrol/ontology/sign> <http://www.w3.org/2000/01/rdf-schema#range> <http://ns.inria.fr/ecocontrol/ontology/Symptom> .
+<http://ns.inria.fr/ecocontrol/ontology/sign> <http://www.w3.org/2000/01/rdf-schema#comment> "A symptom associated with a disorder or disease." .
+<http://ns.inria.fr/ecocontrol/ontology/sign> <http://www.w3.org/2000/01/rdf-schema#label> "sign" .
+# 
+# http://ns.inria.fr/ecocontrol/ontology/stageOf
+<http://ns.inria.fr/ecocontrol/ontology/stageOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://ns.inria.fr/ecocontrol/ontology/stageOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://ns.inria.fr/ecocontrol/ontology/TaxonInStage> .
+<http://ns.inria.fr/ecocontrol/ontology/stageOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://ns.inria.fr/ecocontrol/ontology/Taxon> .
+<http://ns.inria.fr/ecocontrol/ontology/stageOf> <http://www.w3.org/2000/01/rdf-schema#comment> "The taxon to which the development stage applies." .
+<http://ns.inria.fr/ecocontrol/ontology/stageOf> <http://www.w3.org/2000/01/rdf-schema#label> "stage of" .
+# 
+# http://ns.inria.fr/ecocontrol/ontology/target
+<http://ns.inria.fr/ecocontrol/ontology/target> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://ns.inria.fr/ecocontrol/ontology/target> <http://www.w3.org/2000/01/rdf-schema#domain> <http://ns.inria.fr/ecocontrol/ontology/IsNaturalEnemyOf> .
+<http://ns.inria.fr/ecocontrol/ontology/target> <http://www.w3.org/2000/01/rdf-schema#range> _:genid66 .
+_:genid66 <http://www.w3.org/2002/07/owl#unionOf> _:genid68 .
+_:genid68 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid67 .
+_:genid67 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid67 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://ns.inria.fr/ecocontrol/ontology/TaxonInStage> .
+_:genid67 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid68 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://ns.inria.fr/ecocontrol/ontology/Taxon> .
+_:genid68 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid66 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://ns.inria.fr/ecocontrol/ontology/target> <http://www.w3.org/2000/01/rdf-schema#comment> "To be completed" .
+<http://ns.inria.fr/ecocontrol/ontology/target> <http://www.w3.org/2000/01/rdf-schema#label> "target" .
+# 
+# http://ns.inria.fr/ecocontrol/ontology/transmitted
+<http://ns.inria.fr/ecocontrol/ontology/transmitted> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://ns.inria.fr/ecocontrol/ontology/transmitted> <http://www.w3.org/2000/01/rdf-schema#domain> <http://ns.inria.fr/ecocontrol/ontology/IsVectorOf> .
+<http://ns.inria.fr/ecocontrol/ontology/transmitted> <http://www.w3.org/2000/01/rdf-schema#range> _:genid69 .
+_:genid69 <http://www.w3.org/2002/07/owl#unionOf> _:genid71 .
+_:genid71 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid70 .
+_:genid70 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid70 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://ns.inria.fr/ecocontrol/ontology/TaxonInStage> .
+_:genid70 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid71 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://ns.inria.fr/ecocontrol/ontology/Taxon> .
+_:genid71 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid69 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://ns.inria.fr/ecocontrol/ontology/transmitted> <http://www.w3.org/2000/01/rdf-schema#comment> "The organism that is transmitted by a vector." .
+<http://ns.inria.fr/ecocontrol/ontology/transmitted> <http://www.w3.org/2000/01/rdf-schema#label> "transmitted" .
+# 
+# http://ns.inria.fr/ecocontrol/ontology/vector
+<http://ns.inria.fr/ecocontrol/ontology/vector> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://ns.inria.fr/ecocontrol/ontology/vector> <http://www.w3.org/2000/01/rdf-schema#domain> <http://ns.inria.fr/ecocontrol/ontology/IsVectorOf> .
+<http://ns.inria.fr/ecocontrol/ontology/vector> <http://www.w3.org/2000/01/rdf-schema#range> _:genid72 .
+_:genid72 <http://www.w3.org/2002/07/owl#unionOf> _:genid74 .
+_:genid74 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid73 .
+_:genid73 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid73 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://ns.inria.fr/ecocontrol/ontology/TaxonInStage> .
+_:genid73 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid74 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://ns.inria.fr/ecocontrol/ontology/Taxon> .
+_:genid74 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid72 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://ns.inria.fr/ecocontrol/ontology/vector> <http://www.w3.org/2000/01/rdf-schema#comment> "Transmitting organism." .
+<http://ns.inria.fr/ecocontrol/ontology/vector> <http://www.w3.org/2000/01/rdf-schema#label> "vector" .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# http://ns.inria.fr/ecocontrol/ontology/hasLethality
+<http://ns.inria.fr/ecocontrol/ontology/hasLethality> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://ns.inria.fr/ecocontrol/ontology/hasLethality> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid75 .
+_:genid75 <http://www.w3.org/2002/07/owl#unionOf> _:genid77 .
+_:genid77 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid76 .
+_:genid76 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid76 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://ns.inria.fr/ecocontrol/ontology/IsNaturalEnemyOf> .
+_:genid76 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid77 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://ns.inria.fr/ecocontrol/ontology/Affliction> .
+_:genid77 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid75 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://ns.inria.fr/ecocontrol/ontology/hasLethality> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<http://ns.inria.fr/ecocontrol/ontology/hasLethality> <http://www.w3.org/2000/01/rdf-schema#comment> "To be completed" .
+<http://ns.inria.fr/ecocontrol/ontology/hasLethality> <http://www.w3.org/2000/01/rdf-schema#label> "has lethality" .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://ns.inria.fr/ecocontrol/ontology/AbioticDisorder
+<http://ns.inria.fr/ecocontrol/ontology/AbioticDisorder> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://ns.inria.fr/ecocontrol/ontology/AbioticDisorder> <http://www.w3.org/2000/01/rdf-schema#comment> "An abiotic factor causes a disorder for a plant (or a plant part, possibly at a development stage)." .
+<http://ns.inria.fr/ecocontrol/ontology/AbioticDisorder> <http://www.w3.org/2000/01/rdf-schema#label> "abiotic disorder" .
+<http://ns.inria.fr/ecocontrol/ontology/AbioticDisorder> <http://www.w3.org/2004/02/skos/core#example> "The leaves burned/dried because of frost." .
+<http://ns.inria.fr/ecocontrol/ontology/AbioticDisorder> <http://www.w3.org/2004/02/skos/core#example> "The plants are affected by leaf chlorosis, it is due to lack of sunlight." .
+# 
+# http://ns.inria.fr/ecocontrol/ontology/AbioticFactor
+<http://ns.inria.fr/ecocontrol/ontology/AbioticFactor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://ns.inria.fr/ecocontrol/ontology/AbioticFactor> <http://www.w3.org/2000/01/rdf-schema#comment> "A non-biological factor affecting an organism or ecosystem." .
+<http://ns.inria.fr/ecocontrol/ontology/AbioticFactor> <http://www.w3.org/2000/01/rdf-schema#label> "abiotic factor" .
+# 
+# http://ns.inria.fr/ecocontrol/ontology/Affliction
+<http://ns.inria.fr/ecocontrol/ontology/Affliction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://ns.inria.fr/ecocontrol/ontology/Affliction> <http://www.w3.org/2000/01/rdf-schema#comment> "An affliction is the result of a disorder or disease that affects a plant (or a plant part, possibly at a development stage) and eventually kills it or not." .
+<http://ns.inria.fr/ecocontrol/ontology/Affliction> <http://www.w3.org/2000/01/rdf-schema#label> "affliction" .
+<http://ns.inria.fr/ecocontrol/ontology/Affliction> <http://www.w3.org/2004/02/skos/core#example> "Brown spot is a harmful disease caused by Alternaria alternata, a pathogenic fungus. It is moderately infectious but not lethal for potato (Solanum tuberosum)." .
+<http://ns.inria.fr/ecocontrol/ontology/Affliction> <http://www.w3.org/2004/02/skos/core#example> "Rose leaf affected by black spot disease." .
+<http://ns.inria.fr/ecocontrol/ontology/Affliction> <http://www.w3.org/2004/02/skos/core#example> "Septoriosis affects soft wheat." .
+# 
+# http://ns.inria.fr/ecocontrol/ontology/Attacks
+<http://ns.inria.fr/ecocontrol/ontology/Attacks> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://ns.inria.fr/ecocontrol/ontology/Attacks> <http://www.w3.org/2000/01/rdf-schema#comment> "A pest (possibly at a development stage) attacks a target plant (or a plant part, possibly at a development stage) at a period of time." .
+<http://ns.inria.fr/ecocontrol/ontology/Attacks> <http://www.w3.org/2000/01/rdf-schema#label> "attacks" .
+<http://ns.inria.fr/ecocontrol/ontology/Attacks> <http://www.w3.org/2004/02/skos/core#example> "The larvae of the Eastern pine shoot borer feed on Pinus species, mainly Pinus strobus and Pinus sylvestris." .
+# 
+# http://ns.inria.fr/ecocontrol/ontology/BioticDisorder
+<http://ns.inria.fr/ecocontrol/ontology/BioticDisorder> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://ns.inria.fr/ecocontrol/ontology/BioticDisorder> <http://www.w3.org/2000/01/rdf-schema#comment> "An animal or a microbe (possibly at a development stage) causes a disease for a host plant (or a plant part, possibly at a development stage). Constraint: either the disease or the plant must be explicitly known (both cannot be anonymous at the same time)." .
+<http://ns.inria.fr/ecocontrol/ontology/BioticDisorder> <http://www.w3.org/2000/01/rdf-schema#label> "biotic disorder" .
+<http://ns.inria.fr/ecocontrol/ontology/BioticDisorder> <http://www.w3.org/2004/02/skos/core#example> "The citrus mite causes acoriosis of the lemon tree." .
+<http://ns.inria.fr/ecocontrol/ontology/BioticDisorder> <http://www.w3.org/2004/02/skos/core#example> "Xylella fastidiosa causes Pierce's disease of the grapevine." .
+# 
+# http://ns.inria.fr/ecocontrol/ontology/DevelopmentStage
+<http://ns.inria.fr/ecocontrol/ontology/DevelopmentStage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://ns.inria.fr/ecocontrol/ontology/DevelopmentStage> <http://www.w3.org/2000/01/rdf-schema#comment> "A phase in the life cycle of an organism." .
+<http://ns.inria.fr/ecocontrol/ontology/DevelopmentStage> <http://www.w3.org/2000/01/rdf-schema#label> "development stage" .
+# 
+# http://ns.inria.fr/ecocontrol/ontology/Disease
+<http://ns.inria.fr/ecocontrol/ontology/Disease> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://ns.inria.fr/ecocontrol/ontology/Disease> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://ns.inria.fr/ecocontrol/ontology/Disorder> .
+<http://ns.inria.fr/ecocontrol/ontology/Disease> <http://www.w3.org/2000/01/rdf-schema#comment> "Pathological state resulting from a biotic cause." .
+<http://ns.inria.fr/ecocontrol/ontology/Disease> <http://www.w3.org/2000/01/rdf-schema#label> "disease" .
+# 
+# http://ns.inria.fr/ecocontrol/ontology/Disorder
+<http://ns.inria.fr/ecocontrol/ontology/Disorder> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://ns.inria.fr/ecocontrol/ontology/Disorder> <http://www.w3.org/2000/01/rdf-schema#comment> "Pathological state resulting from a biotic cause (disease) or an abiotic or physiological cause (nutritional disorder, drought)." .
+<http://ns.inria.fr/ecocontrol/ontology/Disorder> <http://www.w3.org/2000/01/rdf-schema#label> "disorder" .
+# 
+# http://ns.inria.fr/ecocontrol/ontology/IsAlternativeHostPlantOf
+<http://ns.inria.fr/ecocontrol/ontology/IsAlternativeHostPlantOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://ns.inria.fr/ecocontrol/ontology/IsAlternativeHostPlantOf> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://ns.inria.fr/ecocontrol/ontology/IsHostPlantOf> .
+<http://ns.inria.fr/ecocontrol/ontology/IsAlternativeHostPlantOf> <http://www.w3.org/2000/01/rdf-schema#comment> "Secondary plant that supports a pest, a pathogen or an organism during at least one stage of its life cycle, in the absence of the primary host plant. Often used during an unfavorable period (e.g. winter) or for a specific phase of the cycle (e.g. sexual reproduction for some pathogens)." .
+<http://ns.inria.fr/ecocontrol/ontology/IsAlternativeHostPlantOf> <http://www.w3.org/2000/01/rdf-schema#label> "is alternative host plant of" .
+# 
+# http://ns.inria.fr/ecocontrol/ontology/IsBeneficialPlantOf
+<http://ns.inria.fr/ecocontrol/ontology/IsBeneficialPlantOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://ns.inria.fr/ecocontrol/ontology/IsBeneficialPlantOf> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://ns.inria.fr/ecocontrol/ontology/IsHostPlantOf> .
+<http://ns.inria.fr/ecocontrol/ontology/IsBeneficialPlantOf> <http://www.w3.org/2000/01/rdf-schema#comment> "Cultivated or non-cultivated plant, intentionally introduced or encouraged or maintained, providing an agronomic or ecological benefit for a crop (called beneficiary). Examples: protecting crops from a bioaggressor, either by directly attracting the bioaggressor (trap plant) to draw it away from the crops, or by attracting auxiliary insects (predators, parasitoids, food insects of vectors, etc.)." .
+<http://ns.inria.fr/ecocontrol/ontology/IsBeneficialPlantOf> <http://www.w3.org/2000/01/rdf-schema#label> "is beneficial plant of" .
+<http://ns.inria.fr/ecocontrol/ontology/IsBeneficialPlantOf> <http://www.w3.org/2004/02/skos/core#example> "The flowers of yarrow (Achillea millefolium) provide nectar and pollen to various auxiliary insects, such as bees or hoverflies and some parasitoids. Hoverfly larvae can then consume aphids present on the crops. Bees allow the pollination of the beneficiary crop." .
+# 
+# http://ns.inria.fr/ecocontrol/ontology/IsCommensalOf
+<http://ns.inria.fr/ecocontrol/ontology/IsCommensalOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://ns.inria.fr/ecocontrol/ontology/IsCommensalOf> <http://www.w3.org/2000/01/rdf-schema#comment> "An animal or microbe is a commensal of an animal. The commensal (the species that benefits from the association) may obtain from the host nutrients, shelter, support or a means of locomotion. The host is not significantly affected." .
+<http://ns.inria.fr/ecocontrol/ontology/IsCommensalOf> <http://www.w3.org/2000/01/rdf-schema#label> "is commensal of" .
+<http://ns.inria.fr/ecocontrol/ontology/IsCommensalOf> <http://www.w3.org/2004/02/skos/core#example> "Some epiphytic bacteria, such as Pseudomonas spp., use the exudates present on the surface of the leaves of a cultivated plant as a source of nutrients and as a habitat, without significantly affecting the plant." .
+<http://ns.inria.fr/ecocontrol/ontology/IsCommensalOf> <http://www.w3.org/2004/02/skos/core#example> "Vector insects are possibly hosts of commensal microbes (rare), actually more often mutualists or parasites, rather than strict commensals." .
+# 
+# http://ns.inria.fr/ecocontrol/ontology/IsHostPlantOf
+<http://ns.inria.fr/ecocontrol/ontology/IsHostPlantOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://ns.inria.fr/ecocontrol/ontology/IsHostPlantOf> <http://www.w3.org/2000/01/rdf-schema#comment> "Generic relation between a plant and the organism that it harbors." .
+<http://ns.inria.fr/ecocontrol/ontology/IsHostPlantOf> <http://www.w3.org/2000/01/rdf-schema#label> "is host plant of" .
+# 
+# http://ns.inria.fr/ecocontrol/ontology/IsHyperParasiteOf
+<http://ns.inria.fr/ecocontrol/ontology/IsHyperParasiteOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://ns.inria.fr/ecocontrol/ontology/IsHyperParasiteOf> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://ns.inria.fr/ecocontrol/ontology/IsParasiteOf> .
+<http://ns.inria.fr/ecocontrol/ontology/IsHyperParasiteOf> <http://www.w3.org/2000/01/rdf-schema#comment> "An animal (possibly at a development stage) is a parasite of an animal (possibly at a development stage), itself a parasite of another animal." .
+<http://ns.inria.fr/ecocontrol/ontology/IsHyperParasiteOf> <http://www.w3.org/2000/01/rdf-schema#label> "is hyper-parasite of" .
+# 
+# http://ns.inria.fr/ecocontrol/ontology/IsHyperParasitoidOf
+<http://ns.inria.fr/ecocontrol/ontology/IsHyperParasitoidOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://ns.inria.fr/ecocontrol/ontology/IsHyperParasitoidOf> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://ns.inria.fr/ecocontrol/ontology/IsParasitoidOf> .
+<http://ns.inria.fr/ecocontrol/ontology/IsHyperParasitoidOf> <http://www.w3.org/2000/01/rdf-schema#comment> "An animal (possibly at a development stage) is a parasitoid of an animal (possibly at a development stage) that is itself a parasitoid." .
+<http://ns.inria.fr/ecocontrol/ontology/IsHyperParasitoidOf> <http://www.w3.org/2000/01/rdf-schema#label> "is hyper-parasitoid of" .
+<http://ns.inria.fr/ecocontrol/ontology/IsHyperParasitoidOf> <http://www.w3.org/2004/02/skos/core#example> "Dendrocerus carpenteri, a small wasp that parasitizes other parasitoid wasps, particularly Aphidius species, which are primary parasitoids of aphids." .
+# 
+# http://ns.inria.fr/ecocontrol/ontology/IsNaturalEnemyOf
+<http://ns.inria.fr/ecocontrol/ontology/IsNaturalEnemyOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://ns.inria.fr/ecocontrol/ontology/IsNaturalEnemyOf> <http://www.w3.org/2000/01/rdf-schema#comment> "An animal (possibly at a development stage) is a natural enemy of another animal (possibly at a development stage)." .
+<http://ns.inria.fr/ecocontrol/ontology/IsNaturalEnemyOf> <http://www.w3.org/2000/01/rdf-schema#label> "is natural enemy of" .
+# 
+# http://ns.inria.fr/ecocontrol/ontology/IsParasiteOf
+<http://ns.inria.fr/ecocontrol/ontology/IsParasiteOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://ns.inria.fr/ecocontrol/ontology/IsParasiteOf> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://ns.inria.fr/ecocontrol/ontology/IsNaturalEnemyOf> .
+<http://ns.inria.fr/ecocontrol/ontology/IsParasiteOf> <http://www.w3.org/2000/01/rdf-schema#comment> "An animal (possibly at a development stage) is a parasite of an animal (possibly at a development stage). Lethality is not necessary for the parasite (unlike parasitoidism), even though the host may die in some cases." .
+<http://ns.inria.fr/ecocontrol/ontology/IsParasiteOf> <http://www.w3.org/2000/01/rdf-schema#label> "is parasite of" .
+<http://ns.inria.fr/ecocontrol/ontology/IsParasiteOf> <http://www.w3.org/2004/02/skos/core#example> "Trichogramma brassicae, a small parasitoid wasp, which parasitizes the eggs of certain pest insects, notably the corn borer (Ostrinia nubilalis)." .
+# 
+# http://ns.inria.fr/ecocontrol/ontology/IsParasitoidOf
+<http://ns.inria.fr/ecocontrol/ontology/IsParasitoidOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://ns.inria.fr/ecocontrol/ontology/IsParasitoidOf> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://ns.inria.fr/ecocontrol/ontology/IsNaturalEnemyOf> .
+<http://ns.inria.fr/ecocontrol/ontology/IsParasitoidOf> <http://www.w3.org/2000/01/rdf-schema#comment> "An animal (possibly at a development stage) is a parasitoid of an animal (possibly at a development stage) that it inevitably kills during or at the end of its development. An insect is said to be host of its parasitoid. Likewise, a parasitoid is host of its hyperparasitoid. Parasitoidism is a special case of parasitism in conjunction with predation (but different from PreysOn, which implies a brief relation). Lethality is the norm (majority of cases). If the host does not die, this usually means the death of the parasitoid." .
+<http://ns.inria.fr/ecocontrol/ontology/IsParasitoidOf> <http://www.w3.org/2000/01/rdf-schema#label> "is parasitoid of" .
+<http://ns.inria.fr/ecocontrol/ontology/IsParasitoidOf> <http://www.w3.org/2004/02/skos/core#example> "Ageniaspis citricola is a wasp parasite of the citrus leafminer larva, Phyllocnistis citrella." .
+<http://ns.inria.fr/ecocontrol/ontology/IsParasitoidOf> <http://www.w3.org/2004/02/skos/core#example> "Trichogramma wasps are released in crops to control the corn borer." .
+# 
+# http://ns.inria.fr/ecocontrol/ontology/IsPrimaryHostPlantOf
+<http://ns.inria.fr/ecocontrol/ontology/IsPrimaryHostPlantOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://ns.inria.fr/ecocontrol/ontology/IsPrimaryHostPlantOf> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://ns.inria.fr/ecocontrol/ontology/IsHostPlantOf> .
+<http://ns.inria.fr/ecocontrol/ontology/IsPrimaryHostPlantOf> <http://www.w3.org/2000/01/rdf-schema#comment> "Main cultivated plant on which a pest, a pathogen or an organism develops, reproduces or causes damage in an optimal way. Often the target crop or the most susceptible plant." .
+<http://ns.inria.fr/ecocontrol/ontology/IsPrimaryHostPlantOf> <http://www.w3.org/2000/01/rdf-schema#label> "is primary host plant of" .
+<http://ns.inria.fr/ecocontrol/ontology/IsPrimaryHostPlantOf> <http://www.w3.org/2004/02/skos/core#example> "For Candidatus Phytoplasma vitis, the flavescence dorée phytoplasma, the primary host is the cultivated grapevine (Vitis vinifera)." .
+# 
+# http://ns.inria.fr/ecocontrol/ontology/IsRefugeOf
+<http://ns.inria.fr/ecocontrol/ontology/IsRefugeOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://ns.inria.fr/ecocontrol/ontology/IsRefugeOf> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://ns.inria.fr/ecocontrol/ontology/IsHostPlantOf> .
+<http://ns.inria.fr/ecocontrol/ontology/IsRefugeOf> <http://www.w3.org/2000/01/rdf-schema#comment> "A refuge plant is a non-cultivated plant, offering habitat, food (sap, alternative prey) or protection (egg-laying site) to a harmful or beneficial insect, during unfavorable conditions (cold, drought, temporary absence of the crop). The insect can be a pest, a vector (itself host of the pest or pathogen of something else), or a parasitoid of a pest." .
+<http://ns.inria.fr/ecocontrol/ontology/IsRefugeOf> <http://www.w3.org/2000/01/rdf-schema#label> "is refuge of" .
+<http://ns.inria.fr/ecocontrol/ontology/IsRefugeOf> <http://www.w3.org/2004/02/skos/core#example> "During winter, the hazel (Corylus avellana) is a refuge for predatory mites (Phytoseiidae) of phytophagous mites such as the red mite (Panonychus ulmi); in spring, the predatory mites can colonize the grapevine (Vitis vinifera) and take part in regulation." .
+<http://ns.inria.fr/ecocontrol/ontology/IsRefugeOf> <http://www.w3.org/2004/02/skos/core#example> "The psyllid Cacopsylla pruni, vector of the phytoplasma 'Candidatus Phytoplasma prunorum', leaves Prunus in summer and uses conifers such as Norway spruce (Picea abies) as overwintering hosts; in early spring, adults return to fruit trees of the genus Prunus, such as plum (Prunus domestica), where they reproduce and can transmit the phytoplasma." .
+# 
+# http://ns.inria.fr/ecocontrol/ontology/IsReservoirOf
+<http://ns.inria.fr/ecocontrol/ontology/IsReservoirOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://ns.inria.fr/ecocontrol/ontology/IsReservoirOf> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://ns.inria.fr/ecocontrol/ontology/IsHostPlantOf> .
+<http://ns.inria.fr/ecocontrol/ontology/IsReservoirOf> <http://www.w3.org/2000/01/rdf-schema#comment> "A reservoir plant is a non-cultivated plant: wild, become wild (e.g. abandoned vine crop), or adventice, which harbors and maintains (often permanently or cyclically) a potential source of contamination for cultivated plants. This excludes auxiliary plants, which have a positive role and are used for it. In ecology, the term alternative host plant is rather used (more general than refuge or reservoir)." .
+<http://ns.inria.fr/ecocontrol/ontology/IsReservoirOf> <http://www.w3.org/2000/01/rdf-schema#label> "is reservoir of" .
+<http://ns.inria.fr/ecocontrol/ontology/IsReservoirOf> <http://www.w3.org/2004/02/skos/core#example> "Wild, abandoned vines or infected vine regrowth (Vitis vinifera subsp. sylvestris): they can constitute reservoirs of the flavescence dorée phytoplasma Candidatus Phytoplasma vitis and harbor its vector insect, Scaphoideus titanus." .
+# 
+# http://ns.inria.fr/ecocontrol/ontology/IsVectorOf
+<http://ns.inria.fr/ecocontrol/ontology/IsVectorOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://ns.inria.fr/ecocontrol/ontology/IsVectorOf> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://ns.inria.fr/ecocontrol/ontology/IsCommensalOf> .
+<http://ns.inria.fr/ecocontrol/ontology/IsVectorOf> <http://www.w3.org/2000/01/rdf-schema#comment> "An animal is a vector of an animal/microbe (transmitted) for a host plant. The transmitted organism may be pathogenic (but not necessarily) for the host plant. Vector is understood here in the biotic sense, not to be confused with an abiotic vector, which is a means of dissemination (of a pest or pathogen). Vector is a type of commensalism: the transmitted animal is commensal of the vector animal." .
+<http://ns.inria.fr/ecocontrol/ontology/IsVectorOf> <http://www.w3.org/2000/01/rdf-schema#label> "is vector of" .
+<http://ns.inria.fr/ecocontrol/ontology/IsVectorOf> <http://www.w3.org/2004/02/skos/core#example> "Xylella fastidiosa is a bacterium that spreads from one plant to another through sap-sucking insects, such as leafhoppers, which feed on plant sap and transmit the bacterium as they move between plants." .
+# 
+# http://ns.inria.fr/ecocontrol/ontology/Manifestation
+<http://ns.inria.fr/ecocontrol/ontology/Manifestation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://ns.inria.fr/ecocontrol/ontology/Manifestation> <http://www.w3.org/2000/01/rdf-schema#comment> "A symptom is the manifestation of a disorder or disease for a particular plant (or a plant part, possibly at a development stage)." .
+<http://ns.inria.fr/ecocontrol/ontology/Manifestation> <http://www.w3.org/2000/01/rdf-schema#label> "manifestation" .
+<http://ns.inria.fr/ecocontrol/ontology/Manifestation> <http://www.w3.org/2004/02/skos/core#example> "Leaf chlorosis affects the leaf of the grapevine." .
+<http://ns.inria.fr/ecocontrol/ontology/Manifestation> <http://www.w3.org/2004/02/skos/core#example> "Symptoms manifest as the appearance of punctiform spots visible on both sides of the orange tree leaf." .
+# 
+# http://ns.inria.fr/ecocontrol/ontology/Periodicity
+<http://ns.inria.fr/ecocontrol/ontology/Periodicity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://ns.inria.fr/ecocontrol/ontology/Periodicity> <http://www.w3.org/2000/01/rdf-schema#comment> "A period of time, e.g. a seasonal, a month of the year, or other type of repetition." .
+<http://ns.inria.fr/ecocontrol/ontology/Periodicity> <http://www.w3.org/2000/01/rdf-schema#label> "time periodicity" .
+# 
+# http://ns.inria.fr/ecocontrol/ontology/PlantPart
+<http://ns.inria.fr/ecocontrol/ontology/PlantPart> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://ns.inria.fr/ecocontrol/ontology/PlantPart> <http://www.w3.org/2000/01/rdf-schema#comment> "A part of a plant." .
+<http://ns.inria.fr/ecocontrol/ontology/PlantPart> <http://www.w3.org/2000/01/rdf-schema#label> "plant part" .
+# 
+# http://ns.inria.fr/ecocontrol/ontology/PreysOn
+<http://ns.inria.fr/ecocontrol/ontology/PreysOn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://ns.inria.fr/ecocontrol/ontology/PreysOn> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://ns.inria.fr/ecocontrol/ontology/IsNaturalEnemyOf> .
+<http://ns.inria.fr/ecocontrol/ontology/PreysOn> <http://www.w3.org/2000/01/rdf-schema#comment> "An animal (possibly at a development stage) is a predator of an animal (possibly at a development stage). The relation is brief, unlike parasitoidism, which lasts for the duration of the parasitoid's stage." .
+<http://ns.inria.fr/ecocontrol/ontology/PreysOn> <http://www.w3.org/2000/01/rdf-schema#label> "preys on" .
+<http://ns.inria.fr/ecocontrol/ontology/PreysOn> <http://www.w3.org/2004/02/skos/core#example> "Aeolothrips intermedius Bagnall, a cosmopolitan insect whose larvae and adults consume phytophagous thrips." .
+# 
+# http://ns.inria.fr/ecocontrol/ontology/Symptom
+<http://ns.inria.fr/ecocontrol/ontology/Symptom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://ns.inria.fr/ecocontrol/ontology/Symptom> <http://www.w3.org/2000/01/rdf-schema#comment> "A sign of a disease or disorder." .
+<http://ns.inria.fr/ecocontrol/ontology/Symptom> <http://www.w3.org/2000/01/rdf-schema#label> "symptom" .
+# 
+# http://ns.inria.fr/ecocontrol/ontology/Taxon
+<http://ns.inria.fr/ecocontrol/ontology/Taxon> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://ns.inria.fr/ecocontrol/ontology/Taxon> <http://www.w3.org/2000/01/rdf-schema#comment> "Set of organisms grouped based on their shared characteristics." .
+<http://ns.inria.fr/ecocontrol/ontology/Taxon> <http://www.w3.org/2000/01/rdf-schema#label> "taxon" .
+# 
+# http://ns.inria.fr/ecocontrol/ontology/TaxonInStage
+<http://ns.inria.fr/ecocontrol/ontology/TaxonInStage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://ns.inria.fr/ecocontrol/ontology/TaxonInStage> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://ns.inria.fr/ecocontrol/ontology/Taxon> .
+<http://ns.inria.fr/ecocontrol/ontology/TaxonInStage> <http://www.w3.org/2000/01/rdf-schema#comment> "A subset of a taxon with only individuals at a certain development stage." .
+<http://ns.inria.fr/ecocontrol/ontology/TaxonInStage> <http://www.w3.org/2000/01/rdf-schema#label> "taxon in stage" .
+# 
+# Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

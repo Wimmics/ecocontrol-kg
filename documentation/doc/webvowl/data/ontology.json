@@ -1,0 +1,1418 @@
+{
+  "_comment" : "Created with OWL2VOWL (version 0.3.5), http://vowl.visualdataweb.org",
+  "header" : {
+    "languages" : [ "undefined" ],
+    "baseIris" : [ "http://ns.inria.fr/ecocontrol/ontology", "http://www.w3.org/2000/01/rdf-schema", "http://www.w3.org/2001/XMLSchema" ],
+    "iri" : "http://ns.inria.fr/ecocontrol/ontology/"
+  },
+  "namespace" : [ ],
+  "class" : [ {
+    "id" : "11",
+    "type" : "owl:Class"
+  }, {
+    "id" : "20",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "21",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "25",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "29",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "17",
+    "type" : "owl:Class"
+  }, {
+    "id" : "30",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "32",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "14",
+    "type" : "owl:Class"
+  }, {
+    "id" : "33",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "34",
+    "type" : "owl:Class"
+  }, {
+    "id" : "35",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "36",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "37",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "38",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "39",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "42",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "43",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "44",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "45",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "5",
+    "type" : "owl:Class"
+  }, {
+    "id" : "50",
+    "type" : "owl:Class"
+  }, {
+    "id" : "23",
+    "type" : "owl:Class"
+  }, {
+    "id" : "1",
+    "type" : "owl:Class"
+  }, {
+    "id" : "53",
+    "type" : "owl:Class"
+  }, {
+    "id" : "56",
+    "type" : "owl:Class"
+  }, {
+    "id" : "69",
+    "type" : "owl:Class"
+  }, {
+    "id" : "40",
+    "type" : "owl:Class"
+  }, {
+    "id" : "13",
+    "type" : "owl:Class"
+  }, {
+    "id" : "31",
+    "type" : "owl:Class"
+  }, {
+    "id" : "68",
+    "type" : "owl:Class"
+  }, {
+    "id" : "10",
+    "type" : "owl:Class"
+  }, {
+    "id" : "51",
+    "type" : "owl:Class"
+  }, {
+    "id" : "75",
+    "type" : "owl:Class"
+  }, {
+    "id" : "66",
+    "type" : "owl:Class"
+  }, {
+    "id" : "19",
+    "type" : "owl:Class"
+  }, {
+    "id" : "27",
+    "type" : "owl:Class"
+  }, {
+    "id" : "28",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "82",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "7",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "90",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "49",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "71",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "72",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "61",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "58",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "59",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "16",
+    "type" : "owl:Class"
+  }, {
+    "id" : "41",
+    "type" : "owl:Class"
+  }, {
+    "id" : "78",
+    "type" : "owl:Class"
+  }, {
+    "id" : "64",
+    "type" : "owl:Class"
+  }, {
+    "id" : "4",
+    "type" : "owl:Class"
+  }, {
+    "id" : "2",
+    "type" : "owl:Class"
+  }, {
+    "id" : "8",
+    "type" : "owl:Class"
+  } ],
+  "classAttribute" : [ {
+    "iri" : "http://ns.inria.fr/ecocontrol/ontology/DevelopmentStage",
+    "baseIri" : "http://ns.inria.fr/ecocontrol/ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "DevelopmentStage",
+      "undefined" : "development stage"
+    },
+    "comment" : {
+      "undefined" : "A phase in the life cycle of an organism."
+    },
+    "id" : "11"
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "20",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "21",
+    "label" : {
+      "IRI-based" : "decimal"
+    }
+  }, {
+    "instances" : 0,
+    "union" : [ "2", "1" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "25"
+  }, {
+    "instances" : 0,
+    "union" : [ "2", "1" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "29"
+  }, {
+    "iri" : "http://ns.inria.fr/ecocontrol/ontology/IsNaturalEnemyOf",
+    "baseIri" : "http://ns.inria.fr/ecocontrol/ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "IsNaturalEnemyOf",
+      "undefined" : "is natural enemy of"
+    },
+    "subClasses" : [ "14", "23", "16" ],
+    "comment" : {
+      "undefined" : "An animal (possibly at a development stage) is a natural enemy of another animal (possibly at a development stage)."
+    },
+    "id" : "17"
+  }, {
+    "instances" : 0,
+    "union" : [ "31", "17" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "30"
+  }, {
+    "instances" : 0,
+    "union" : [ "2", "1" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "32"
+  }, {
+    "iri" : "http://ns.inria.fr/ecocontrol/ontology/IsParasitoidOf",
+    "baseIri" : "http://ns.inria.fr/ecocontrol/ontology",
+    "instances" : 0,
+    "annotations" : {
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "undefined",
+        "value" : "Trichogramma wasps are released in crops to control the corn borer.",
+        "type" : "label"
+      }, {
+        "identifier" : "example",
+        "language" : "undefined",
+        "value" : "Ageniaspis citricola is a wasp parasite of the citrus leafminer larva, Phyllocnistis citrella.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "IsParasitoidOf",
+      "undefined" : "is parasitoid of"
+    },
+    "subClasses" : [ "13" ],
+    "comment" : {
+      "undefined" : "An animal (possibly at a development stage) is a parasitoid of an animal (possibly at a development stage) that it inevitably kills during or at the end of its development. An insect is said to be host of its parasitoid. Likewise, a parasitoid is host of its hyperparasitoid. Parasitoidism is a special case of parasitism in conjunction with predation (but different from PreysOn, which implies a brief relation). Lethality is the norm (majority of cases). If the host does not die, this usually means the death of the parasitoid."
+    },
+    "id" : "14",
+    "superClasses" : [ "17" ]
+  }, {
+    "instances" : 0,
+    "union" : [ "2", "1" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "33"
+  }, {
+    "iri" : "http://ns.inria.fr/ecocontrol/ontology/Disease",
+    "baseIri" : "http://ns.inria.fr/ecocontrol/ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Disease",
+      "undefined" : "disease"
+    },
+    "comment" : {
+      "undefined" : "Pathological state resulting from a biotic cause."
+    },
+    "id" : "34",
+    "superClasses" : [ "8" ]
+  }, {
+    "instances" : 0,
+    "union" : [ "2", "1" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "35"
+  }, {
+    "instances" : 0,
+    "union" : [ "2", "1" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "36"
+  }, {
+    "instances" : 0,
+    "union" : [ "2", "1" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "37"
+  }, {
+    "instances" : 0,
+    "union" : [ "19", "2", "1" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "38"
+  }, {
+    "instances" : 0,
+    "union" : [ "40", "41" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "39"
+  }, {
+    "instances" : 0,
+    "union" : [ "2", "1" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "42"
+  }, {
+    "instances" : 0,
+    "union" : [ "19", "2", "1" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "43"
+  }, {
+    "instances" : 0,
+    "union" : [ "2", "1" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "44"
+  }, {
+    "instances" : 0,
+    "union" : [ "2", "1" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "45"
+  }, {
+    "iri" : "http://ns.inria.fr/ecocontrol/ontology/IsHostPlantOf",
+    "baseIri" : "http://ns.inria.fr/ecocontrol/ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "IsHostPlantOf",
+      "undefined" : "is host plant of"
+    },
+    "subClasses" : [ "4", "41", "50", "10", "51" ],
+    "comment" : {
+      "undefined" : "Generic relation between a plant and the organism that it harbors."
+    },
+    "id" : "5"
+  }, {
+    "iri" : "http://ns.inria.fr/ecocontrol/ontology/IsReservoirOf",
+    "baseIri" : "http://ns.inria.fr/ecocontrol/ontology",
+    "instances" : 0,
+    "annotations" : {
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "undefined",
+        "value" : "Wild, abandoned vines or infected vine regrowth (Vitis vinifera subsp. sylvestris): they can constitute reservoirs of the flavescence dorée phytoplasma Candidatus Phytoplasma vitis and harbor its vector insect, Scaphoideus titanus.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "IsReservoirOf",
+      "undefined" : "is reservoir of"
+    },
+    "comment" : {
+      "undefined" : "A reservoir plant is a non-cultivated plant: wild, become wild (e.g. abandoned vine crop), or adventice, which harbors and maintains (often permanently or cyclically) a potential source of contamination for cultivated plants. This excludes auxiliary plants, which have a positive role and are used for it. In ecology, the term alternative host plant is rather used (more general than refuge or reservoir)."
+    },
+    "id" : "50",
+    "superClasses" : [ "5" ]
+  }, {
+    "iri" : "http://ns.inria.fr/ecocontrol/ontology/PreysOn",
+    "baseIri" : "http://ns.inria.fr/ecocontrol/ontology",
+    "instances" : 0,
+    "annotations" : {
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "undefined",
+        "value" : "Aeolothrips intermedius Bagnall, a cosmopolitan insect whose larvae and adults consume phytophagous thrips.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "PreysOn",
+      "undefined" : "preys on"
+    },
+    "comment" : {
+      "undefined" : "An animal (possibly at a development stage) is a predator of an animal (possibly at a development stage). The relation is brief, unlike parasitoidism, which lasts for the duration of the parasitoid's stage."
+    },
+    "id" : "23",
+    "superClasses" : [ "17" ]
+  }, {
+    "iri" : "http://ns.inria.fr/ecocontrol/ontology/TaxonInStage",
+    "baseIri" : "http://ns.inria.fr/ecocontrol/ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "TaxonInStage",
+      "undefined" : "taxon in stage"
+    },
+    "comment" : {
+      "undefined" : "A subset of a taxon with only individuals at a certain development stage."
+    },
+    "id" : "1",
+    "superClasses" : [ "2" ]
+  }, {
+    "iri" : "http://ns.inria.fr/ecocontrol/ontology/AbioticDisorder",
+    "baseIri" : "http://ns.inria.fr/ecocontrol/ontology",
+    "instances" : 0,
+    "annotations" : {
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "undefined",
+        "value" : "The plants are affected by leaf chlorosis, it is due to lack of sunlight.",
+        "type" : "label"
+      }, {
+        "identifier" : "example",
+        "language" : "undefined",
+        "value" : "The leaves burned/dried because of frost.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "AbioticDisorder",
+      "undefined" : "abiotic disorder"
+    },
+    "comment" : {
+      "undefined" : "An abiotic factor causes a disorder for a plant (or a plant part, possibly at a development stage)."
+    },
+    "id" : "53"
+  }, {
+    "iri" : "http://ns.inria.fr/ecocontrol/ontology/Periodicity",
+    "baseIri" : "http://ns.inria.fr/ecocontrol/ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Periodicity",
+      "undefined" : "time periodicity"
+    },
+    "comment" : {
+      "undefined" : "A period of time, e.g. a seasonal, a month of the year, or other type of repetition."
+    },
+    "id" : "56"
+  }, {
+    "iri" : "http://ns.inria.fr/ecocontrol/ontology/IsCommensalOf",
+    "baseIri" : "http://ns.inria.fr/ecocontrol/ontology",
+    "instances" : 0,
+    "annotations" : {
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "undefined",
+        "value" : "Some epiphytic bacteria, such as Pseudomonas spp., use the exudates present on the surface of the leaves of a cultivated plant as a source of nutrients and as a habitat, without significantly affecting the plant.",
+        "type" : "label"
+      }, {
+        "identifier" : "example",
+        "language" : "undefined",
+        "value" : "Vector insects are possibly hosts of commensal microbes (rare), actually more often mutualists or parasites, rather than strict commensals.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "IsCommensalOf",
+      "undefined" : "is commensal of"
+    },
+    "subClasses" : [ "68" ],
+    "comment" : {
+      "undefined" : "An animal or microbe is a commensal of an animal. The commensal (the species that benefits from the association) may obtain from the host nutrients, shelter, support or a means of locomotion. The host is not significantly affected."
+    },
+    "id" : "69"
+  }, {
+    "iri" : "http://ns.inria.fr/ecocontrol/ontology/Attacks",
+    "baseIri" : "http://ns.inria.fr/ecocontrol/ontology",
+    "instances" : 0,
+    "annotations" : {
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "undefined",
+        "value" : "The larvae of the Eastern pine shoot borer feed on Pinus species, mainly Pinus strobus and Pinus sylvestris.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Attacks",
+      "undefined" : "attacks"
+    },
+    "comment" : {
+      "undefined" : "A pest (possibly at a development stage) attacks a target plant (or a plant part, possibly at a development stage) at a period of time."
+    },
+    "id" : "40"
+  }, {
+    "iri" : "http://ns.inria.fr/ecocontrol/ontology/IsHyperParasitoidOf",
+    "baseIri" : "http://ns.inria.fr/ecocontrol/ontology",
+    "instances" : 0,
+    "annotations" : {
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "undefined",
+        "value" : "Dendrocerus carpenteri, a small wasp that parasitizes other parasitoid wasps, particularly Aphidius species, which are primary parasitoids of aphids.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "IsHyperParasitoidOf",
+      "undefined" : "is hyper-parasitoid of"
+    },
+    "comment" : {
+      "undefined" : "An animal (possibly at a development stage) is a parasitoid of an animal (possibly at a development stage) that is itself a parasitoid."
+    },
+    "id" : "13",
+    "superClasses" : [ "14" ]
+  }, {
+    "iri" : "http://ns.inria.fr/ecocontrol/ontology/Affliction",
+    "baseIri" : "http://ns.inria.fr/ecocontrol/ontology",
+    "instances" : 0,
+    "annotations" : {
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "undefined",
+        "value" : "Brown spot is a harmful disease caused by Alternaria alternata, a pathogenic fungus. It is moderately infectious but not lethal for potato (Solanum tuberosum).",
+        "type" : "label"
+      }, {
+        "identifier" : "example",
+        "language" : "undefined",
+        "value" : "Septoriosis affects soft wheat.",
+        "type" : "label"
+      }, {
+        "identifier" : "example",
+        "language" : "undefined",
+        "value" : "Rose leaf affected by black spot disease.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Affliction",
+      "undefined" : "affliction"
+    },
+    "comment" : {
+      "undefined" : "An affliction is the result of a disorder or disease that affects a plant (or a plant part, possibly at a development stage) and eventually kills it or not."
+    },
+    "id" : "31"
+  }, {
+    "iri" : "http://ns.inria.fr/ecocontrol/ontology/IsVectorOf",
+    "baseIri" : "http://ns.inria.fr/ecocontrol/ontology",
+    "instances" : 0,
+    "annotations" : {
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "undefined",
+        "value" : "Xylella fastidiosa is a bacterium that spreads from one plant to another through sap-sucking insects, such as leafhoppers, which feed on plant sap and transmit the bacterium as they move between plants.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "IsVectorOf",
+      "undefined" : "is vector of"
+    },
+    "comment" : {
+      "undefined" : "An animal is a vector of an animal/microbe (transmitted) for a host plant. The transmitted organism may be pathogenic (but not necessarily) for the host plant. Vector is understood here in the biotic sense, not to be confused with an abiotic vector, which is a means of dissemination (of a pest or pathogen). Vector is a type of commensalism: the transmitted animal is commensal of the vector animal."
+    },
+    "id" : "68",
+    "superClasses" : [ "69" ]
+  }, {
+    "iri" : "http://ns.inria.fr/ecocontrol/ontology/IsBeneficialPlantOf",
+    "baseIri" : "http://ns.inria.fr/ecocontrol/ontology",
+    "instances" : 0,
+    "annotations" : {
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "undefined",
+        "value" : "The flowers of yarrow (Achillea millefolium) provide nectar and pollen to various auxiliary insects, such as bees or hoverflies and some parasitoids. Hoverfly larvae can then consume aphids present on the crops. Bees allow the pollination of the beneficiary crop.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "IsBeneficialPlantOf",
+      "undefined" : "is beneficial plant of"
+    },
+    "comment" : {
+      "undefined" : "Cultivated or non-cultivated plant, intentionally introduced or encouraged or maintained, providing an agronomic or ecological benefit for a crop (called beneficiary). Examples: protecting crops from a bioaggressor, either by directly attracting the bioaggressor (trap plant) to draw it away from the crops, or by attracting auxiliary insects (predators, parasitoids, food insects of vectors, etc.)."
+    },
+    "id" : "10",
+    "superClasses" : [ "5" ]
+  }, {
+    "iri" : "http://ns.inria.fr/ecocontrol/ontology/IsPrimaryHostPlantOf",
+    "baseIri" : "http://ns.inria.fr/ecocontrol/ontology",
+    "instances" : 0,
+    "annotations" : {
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "undefined",
+        "value" : "For Candidatus Phytoplasma vitis, the flavescence dorée phytoplasma, the primary host is the cultivated grapevine (Vitis vinifera).",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "IsPrimaryHostPlantOf",
+      "undefined" : "is primary host plant of"
+    },
+    "comment" : {
+      "undefined" : "Main cultivated plant on which a pest, a pathogen or an organism develops, reproduces or causes damage in an optimal way. Often the target crop or the most susceptible plant."
+    },
+    "id" : "51",
+    "superClasses" : [ "5" ]
+  }, {
+    "iri" : "http://ns.inria.fr/ecocontrol/ontology/IsHyperParasiteOf",
+    "baseIri" : "http://ns.inria.fr/ecocontrol/ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "IsHyperParasiteOf",
+      "undefined" : "is hyper-parasite of"
+    },
+    "comment" : {
+      "undefined" : "An animal (possibly at a development stage) is a parasite of an animal (possibly at a development stage), itself a parasite of another animal."
+    },
+    "id" : "75",
+    "superClasses" : [ "16" ]
+  }, {
+    "iri" : "http://ns.inria.fr/ecocontrol/ontology/Manifestation",
+    "baseIri" : "http://ns.inria.fr/ecocontrol/ontology",
+    "instances" : 0,
+    "annotations" : {
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "undefined",
+        "value" : "Leaf chlorosis affects the leaf of the grapevine.",
+        "type" : "label"
+      }, {
+        "identifier" : "example",
+        "language" : "undefined",
+        "value" : "Symptoms manifest as the appearance of punctiform spots visible on both sides of the orange tree leaf.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Manifestation",
+      "undefined" : "manifestation"
+    },
+    "comment" : {
+      "undefined" : "A symptom is the manifestation of a disorder or disease for a particular plant (or a plant part, possibly at a development stage)."
+    },
+    "id" : "66"
+  }, {
+    "iri" : "http://ns.inria.fr/ecocontrol/ontology/PlantPart",
+    "baseIri" : "http://ns.inria.fr/ecocontrol/ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "PlantPart",
+      "undefined" : "plant part"
+    },
+    "comment" : {
+      "undefined" : "A part of a plant."
+    },
+    "id" : "19"
+  }, {
+    "iri" : "http://ns.inria.fr/ecocontrol/ontology/BioticDisorder",
+    "baseIri" : "http://ns.inria.fr/ecocontrol/ontology",
+    "instances" : 0,
+    "annotations" : {
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "undefined",
+        "value" : "Xylella fastidiosa causes Pierce's disease of the grapevine.",
+        "type" : "label"
+      }, {
+        "identifier" : "example",
+        "language" : "undefined",
+        "value" : "The citrus mite causes acoriosis of the lemon tree.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "BioticDisorder",
+      "undefined" : "biotic disorder"
+    },
+    "comment" : {
+      "undefined" : "An animal or a microbe (possibly at a development stage) causes a disease for a host plant (or a plant part, possibly at a development stage). Constraint: either the disease or the plant must be explicitly known (both cannot be anonymous at the same time)."
+    },
+    "id" : "27"
+  }, {
+    "instances" : 0,
+    "union" : [ "2", "1" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "28"
+  }, {
+    "instances" : 0,
+    "union" : [ "2", "1" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "82"
+  }, {
+    "instances" : 0,
+    "union" : [ "53", "31" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "7"
+  }, {
+    "instances" : 0,
+    "union" : [ "2", "1" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "90"
+  }, {
+    "instances" : 0,
+    "union" : [ "2", "1" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "49"
+  }, {
+    "instances" : 0,
+    "union" : [ "69", "17" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "71"
+  }, {
+    "instances" : 0,
+    "union" : [ "2", "1" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "72"
+  }, {
+    "instances" : 0,
+    "union" : [ "27", "40", "5", "68" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "61"
+  }, {
+    "instances" : 0,
+    "union" : [ "66", "31" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "58"
+  }, {
+    "instances" : 0,
+    "union" : [ "19", "2", "1" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "59"
+  }, {
+    "iri" : "http://ns.inria.fr/ecocontrol/ontology/IsParasiteOf",
+    "baseIri" : "http://ns.inria.fr/ecocontrol/ontology",
+    "instances" : 0,
+    "annotations" : {
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "undefined",
+        "value" : "Trichogramma brassicae, a small parasitoid wasp, which parasitizes the eggs of certain pest insects, notably the corn borer (Ostrinia nubilalis).",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "IsParasiteOf",
+      "undefined" : "is parasite of"
+    },
+    "subClasses" : [ "75" ],
+    "comment" : {
+      "undefined" : "An animal (possibly at a development stage) is a parasite of an animal (possibly at a development stage). Lethality is not necessary for the parasite (unlike parasitoidism), even though the host may die in some cases."
+    },
+    "id" : "16",
+    "superClasses" : [ "17" ]
+  }, {
+    "iri" : "http://ns.inria.fr/ecocontrol/ontology/IsRefugeOf",
+    "baseIri" : "http://ns.inria.fr/ecocontrol/ontology",
+    "instances" : 0,
+    "annotations" : {
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "undefined",
+        "value" : "The psyllid Cacopsylla pruni, vector of the phytoplasma 'Candidatus Phytoplasma prunorum', leaves Prunus in summer and uses conifers such as Norway spruce (Picea abies) as overwintering hosts; in early spring, adults return to fruit trees of the genus Prunus, such as plum (Prunus domestica), where they reproduce and can transmit the phytoplasma.",
+        "type" : "label"
+      }, {
+        "identifier" : "example",
+        "language" : "undefined",
+        "value" : "During winter, the hazel (Corylus avellana) is a refuge for predatory mites (Phytoseiidae) of phytophagous mites such as the red mite (Panonychus ulmi); in spring, the predatory mites can colonize the grapevine (Vitis vinifera) and take part in regulation.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "IsRefugeOf",
+      "undefined" : "is refuge of"
+    },
+    "comment" : {
+      "undefined" : "A refuge plant is a non-cultivated plant, offering habitat, food (sap, alternative prey) or protection (egg-laying site) to a harmful or beneficial insect, during unfavorable conditions (cold, drought, temporary absence of the crop). The insect can be a pest, a vector (itself host of the pest or pathogen of something else), or a parasitoid of a pest."
+    },
+    "id" : "41",
+    "superClasses" : [ "5" ]
+  }, {
+    "iri" : "http://ns.inria.fr/ecocontrol/ontology/Symptom",
+    "baseIri" : "http://ns.inria.fr/ecocontrol/ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Symptom",
+      "undefined" : "symptom"
+    },
+    "comment" : {
+      "undefined" : "A sign of a disease or disorder."
+    },
+    "id" : "78"
+  }, {
+    "iri" : "http://ns.inria.fr/ecocontrol/ontology/AbioticFactor",
+    "baseIri" : "http://ns.inria.fr/ecocontrol/ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "AbioticFactor",
+      "undefined" : "abiotic factor"
+    },
+    "comment" : {
+      "undefined" : "A non-biological factor affecting an organism or ecosystem."
+    },
+    "id" : "64"
+  }, {
+    "iri" : "http://ns.inria.fr/ecocontrol/ontology/IsAlternativeHostPlantOf",
+    "baseIri" : "http://ns.inria.fr/ecocontrol/ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "IsAlternativeHostPlantOf",
+      "undefined" : "is alternative host plant of"
+    },
+    "comment" : {
+      "undefined" : "Secondary plant that supports a pest, a pathogen or an organism during at least one stage of its life cycle, in the absence of the primary host plant. Often used during an unfavorable period (e.g. winter) or for a specific phase of the cycle (e.g. sexual reproduction for some pathogens)."
+    },
+    "id" : "4",
+    "superClasses" : [ "5" ]
+  }, {
+    "iri" : "http://ns.inria.fr/ecocontrol/ontology/Taxon",
+    "baseIri" : "http://ns.inria.fr/ecocontrol/ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Taxon",
+      "undefined" : "taxon"
+    },
+    "subClasses" : [ "1" ],
+    "comment" : {
+      "undefined" : "Set of organisms grouped based on their shared characteristics."
+    },
+    "id" : "2"
+  }, {
+    "iri" : "http://ns.inria.fr/ecocontrol/ontology/Disorder",
+    "baseIri" : "http://ns.inria.fr/ecocontrol/ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Disorder",
+      "undefined" : "disorder"
+    },
+    "subClasses" : [ "34" ],
+    "comment" : {
+      "undefined" : "Pathological state resulting from a biotic cause (disease) or an abiotic or physiological cause (nutritional disorder, drought)."
+    },
+    "id" : "8"
+  } ],
+  "property" : [ {
+    "id" : "0",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "3",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "6",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "9",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "12",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "15",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "18",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "22",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "24",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "26",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "46",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "47",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "48",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "52",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "54",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "55",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "57",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "60",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "63",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "65",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "67",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "62",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "70",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "73",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "74",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "76",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "77",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "79",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "80",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "81",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "83",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "84",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "85",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "86",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "87",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "88",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "89",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "91",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "92",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "93",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "94",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "95",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "96",
+    "type" : "owl:objectProperty"
+  } ],
+  "propertyAttribute" : [ {
+    "iri" : "http://ns.inria.fr/ecocontrol/ontology/stageOf",
+    "baseIri" : "http://ns.inria.fr/ecocontrol/ontology",
+    "range" : "2",
+    "label" : {
+      "IRI-based" : "stageOf",
+      "undefined" : "stage of"
+    },
+    "domain" : "1",
+    "comment" : {
+      "undefined" : "The taxon to which the development stage applies."
+    },
+    "attributes" : [ "object" ],
+    "id" : "0"
+  }, {
+    "range" : "5",
+    "domain" : "4",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "3"
+  }, {
+    "iri" : "http://ns.inria.fr/ecocontrol/ontology/disorder",
+    "baseIri" : "http://ns.inria.fr/ecocontrol/ontology",
+    "range" : "8",
+    "label" : {
+      "IRI-based" : "disorder",
+      "undefined" : "disorder"
+    },
+    "domain" : "7",
+    "comment" : {
+      "undefined" : "A disorder resulting from an affliction or abiotic factor."
+    },
+    "attributes" : [ "object" ],
+    "id" : "6"
+  }, {
+    "iri" : "http://ns.inria.fr/ecocontrol/ontology/beneficiary",
+    "baseIri" : "http://ns.inria.fr/ecocontrol/ontology",
+    "range" : "2",
+    "label" : {
+      "IRI-based" : "beneficiary",
+      "undefined" : "beneficiary"
+    },
+    "domain" : "10",
+    "comment" : {
+      "undefined" : "The (other) crop that receives the agronomic or ecological benefit."
+    },
+    "attributes" : [ "object" ],
+    "id" : "9"
+  }, {
+    "range" : "14",
+    "domain" : "13",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "12"
+  }, {
+    "range" : "17",
+    "domain" : "16",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "15"
+  }, {
+    "iri" : "http://ns.inria.fr/ecocontrol/ontology/partOf",
+    "baseIri" : "http://ns.inria.fr/ecocontrol/ontology",
+    "range" : "2",
+    "label" : {
+      "IRI-based" : "partOf",
+      "undefined" : "part of"
+    },
+    "domain" : "19",
+    "attributes" : [ "object" ],
+    "id" : "18"
+  }, {
+    "range" : "17",
+    "domain" : "23",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "22"
+  }, {
+    "range" : "17",
+    "domain" : "14",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "24"
+  }, {
+    "iri" : "http://ns.inria.fr/ecocontrol/ontology/agent",
+    "baseIri" : "http://ns.inria.fr/ecocontrol/ontology",
+    "range" : "28",
+    "label" : {
+      "IRI-based" : "agent",
+      "undefined" : "agent"
+    },
+    "domain" : "27",
+    "comment" : {
+      "undefined" : "The organism causing a disease."
+    },
+    "attributes" : [ "object" ],
+    "id" : "26"
+  }, {
+    "iri" : "http://ns.inria.fr/ecocontrol/ontology/hasLethality",
+    "baseIri" : "http://ns.inria.fr/ecocontrol/ontology",
+    "range" : "21",
+    "label" : {
+      "IRI-based" : "hasLethality",
+      "undefined" : "has lethality"
+    },
+    "domain" : "30",
+    "comment" : {
+      "undefined" : "To be completed"
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "46"
+  }, {
+    "iri" : "http://ns.inria.fr/ecocontrol/ontology/parasite",
+    "baseIri" : "http://ns.inria.fr/ecocontrol/ontology",
+    "range" : "37",
+    "label" : {
+      "IRI-based" : "parasite",
+      "undefined" : "parasite"
+    },
+    "domain" : "16",
+    "attributes" : [ "object" ],
+    "id" : "47"
+  }, {
+    "iri" : "http://ns.inria.fr/ecocontrol/ontology/harbored",
+    "baseIri" : "http://ns.inria.fr/ecocontrol/ontology",
+    "range" : "49",
+    "label" : {
+      "IRI-based" : "harbored",
+      "undefined" : "harbored"
+    },
+    "domain" : "5",
+    "comment" : {
+      "undefined" : "The organism that is harbored."
+    },
+    "attributes" : [ "object" ],
+    "id" : "48"
+  }, {
+    "iri" : "http://ns.inria.fr/ecocontrol/ontology/disease",
+    "baseIri" : "http://ns.inria.fr/ecocontrol/ontology",
+    "range" : "34",
+    "label" : {
+      "IRI-based" : "disease",
+      "undefined" : "disease"
+    },
+    "domain" : "27",
+    "comment" : {
+      "undefined" : "The disease caused by an organism to a plant."
+    },
+    "attributes" : [ "object" ],
+    "id" : "52"
+  }, {
+    "iri" : "http://ns.inria.fr/ecocontrol/ontology/parasitoid",
+    "baseIri" : "http://ns.inria.fr/ecocontrol/ontology",
+    "range" : "42",
+    "label" : {
+      "IRI-based" : "parasitoid",
+      "undefined" : "parasitoid"
+    },
+    "domain" : "14",
+    "attributes" : [ "object" ],
+    "id" : "54"
+  }, {
+    "iri" : "http://ns.inria.fr/ecocontrol/ontology/predator",
+    "baseIri" : "http://ns.inria.fr/ecocontrol/ontology",
+    "range" : "33",
+    "label" : {
+      "IRI-based" : "predator",
+      "undefined" : "predator"
+    },
+    "domain" : "23",
+    "attributes" : [ "object" ],
+    "id" : "55"
+  }, {
+    "iri" : "http://ns.inria.fr/ecocontrol/ontology/affects",
+    "baseIri" : "http://ns.inria.fr/ecocontrol/ontology",
+    "range" : "59",
+    "label" : {
+      "IRI-based" : "affects",
+      "undefined" : "affects"
+    },
+    "domain" : "58",
+    "comment" : {
+      "undefined" : "The plant (or a plant part, possibly at a development stage) that is affected by an affliction or manifestation."
+    },
+    "attributes" : [ "object" ],
+    "id" : "57"
+  }, {
+    "iri" : "http://ns.inria.fr/ecocontrol/ontology/hostPlant",
+    "baseIri" : "http://ns.inria.fr/ecocontrol/ontology",
+    "range" : "43",
+    "label" : {
+      "IRI-based" : "hostPlant",
+      "undefined" : "host plant"
+    },
+    "superproperty" : [ "62" ],
+    "domain" : "61",
+    "comment" : {
+      "undefined" : "The plant that harbors another organism."
+    },
+    "attributes" : [ "object" ],
+    "id" : "60"
+  }, {
+    "iri" : "http://ns.inria.fr/ecocontrol/ontology/cause",
+    "baseIri" : "http://ns.inria.fr/ecocontrol/ontology",
+    "range" : "64",
+    "label" : {
+      "IRI-based" : "cause",
+      "undefined" : "cause"
+    },
+    "domain" : "53",
+    "comment" : {
+      "undefined" : "The abiotic factor that causes a disorder."
+    },
+    "attributes" : [ "object" ],
+    "id" : "63"
+  }, {
+    "iri" : "http://ns.inria.fr/ecocontrol/ontology/hasDiagnosis",
+    "baseIri" : "http://ns.inria.fr/ecocontrol/ontology",
+    "range" : "8",
+    "label" : {
+      "IRI-based" : "hasDiagnosis",
+      "undefined" : "has diagnosis"
+    },
+    "domain" : "66",
+    "comment" : {
+      "undefined" : "A disorder or disease diagnosed for the manifestation of a symptom."
+    },
+    "attributes" : [ "object" ],
+    "id" : "65"
+  }, {
+    "iri" : "http://ns.inria.fr/ecocontrol/ontology/transmitted",
+    "baseIri" : "http://ns.inria.fr/ecocontrol/ontology",
+    "range" : "25",
+    "label" : {
+      "IRI-based" : "transmitted",
+      "undefined" : "transmitted"
+    },
+    "domain" : "68",
+    "comment" : {
+      "undefined" : "The organism that is transmitted by a vector."
+    },
+    "attributes" : [ "object" ],
+    "id" : "67"
+  }, {
+    "iri" : "http://ns.inria.fr/ecocontrol/ontology/host",
+    "baseIri" : "http://ns.inria.fr/ecocontrol/ontology",
+    "range" : "20",
+    "label" : {
+      "IRI-based" : "host",
+      "undefined" : "host"
+    },
+    "domain" : "20",
+    "subproperty" : [ "70", "60" ],
+    "comment" : {
+      "undefined" : "The organism that harbors another organism."
+    },
+    "attributes" : [ "object" ],
+    "id" : "62"
+  }, {
+    "iri" : "http://ns.inria.fr/ecocontrol/ontology/hostAnimal",
+    "baseIri" : "http://ns.inria.fr/ecocontrol/ontology",
+    "range" : "72",
+    "label" : {
+      "IRI-based" : "hostAnimal",
+      "undefined" : "host animal"
+    },
+    "superproperty" : [ "62" ],
+    "domain" : "71",
+    "comment" : {
+      "undefined" : "The animal that harbors another organism."
+    },
+    "attributes" : [ "object" ],
+    "id" : "70"
+  }, {
+    "range" : "69",
+    "domain" : "68",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "73"
+  }, {
+    "range" : "16",
+    "domain" : "75",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "74"
+  }, {
+    "range" : "8",
+    "domain" : "34",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "76"
+  }, {
+    "iri" : "http://ns.inria.fr/ecocontrol/ontology/sign",
+    "baseIri" : "http://ns.inria.fr/ecocontrol/ontology",
+    "range" : "78",
+    "label" : {
+      "IRI-based" : "sign",
+      "undefined" : "sign"
+    },
+    "domain" : "66",
+    "comment" : {
+      "undefined" : "A symptom associated with a disorder or disease."
+    },
+    "attributes" : [ "object" ],
+    "id" : "77"
+  }, {
+    "range" : "2",
+    "domain" : "1",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "79"
+  }, {
+    "range" : "5",
+    "domain" : "50",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "80"
+  }, {
+    "iri" : "http://ns.inria.fr/ecocontrol/ontology/commensal",
+    "baseIri" : "http://ns.inria.fr/ecocontrol/ontology",
+    "range" : "82",
+    "label" : {
+      "IRI-based" : "commensal",
+      "undefined" : "commensal"
+    },
+    "domain" : "69",
+    "comment" : {
+      "undefined" : "The organism that benefits from the relationship."
+    },
+    "attributes" : [ "object" ],
+    "id" : "81"
+  }, {
+    "range" : "5",
+    "domain" : "41",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "83"
+  }, {
+    "range" : "5",
+    "domain" : "51",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "84"
+  }, {
+    "range" : "5",
+    "domain" : "10",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "85"
+  }, {
+    "iri" : "http://ns.inria.fr/ecocontrol/ontology/hyperparasite",
+    "baseIri" : "http://ns.inria.fr/ecocontrol/ontology",
+    "range" : "45",
+    "label" : {
+      "IRI-based" : "hyperparasite",
+      "undefined" : "hyperparasite"
+    },
+    "domain" : "75",
+    "attributes" : [ "object" ],
+    "id" : "86"
+  }, {
+    "iri" : "http://ns.inria.fr/ecocontrol/ontology/target",
+    "baseIri" : "http://ns.inria.fr/ecocontrol/ontology",
+    "range" : "29",
+    "label" : {
+      "IRI-based" : "target",
+      "undefined" : "target"
+    },
+    "domain" : "17",
+    "comment" : {
+      "undefined" : "To be completed"
+    },
+    "attributes" : [ "object" ],
+    "id" : "87"
+  }, {
+    "iri" : "http://ns.inria.fr/ecocontrol/ontology/object",
+    "baseIri" : "http://ns.inria.fr/ecocontrol/ontology",
+    "range" : "38",
+    "label" : {
+      "IRI-based" : "object",
+      "undefined" : "object"
+    },
+    "domain" : "53",
+    "comment" : {
+      "undefined" : "The plant (or a plant part) that is affected by an abiotic factor."
+    },
+    "attributes" : [ "object" ],
+    "id" : "88"
+  }, {
+    "iri" : "http://ns.inria.fr/ecocontrol/ontology/hasStage",
+    "baseIri" : "http://ns.inria.fr/ecocontrol/ontology",
+    "range" : "11",
+    "label" : {
+      "IRI-based" : "hasStage",
+      "undefined" : "has stage"
+    },
+    "domain" : "1",
+    "comment" : {
+      "undefined" : "The development stage that applies to the taxon."
+    },
+    "attributes" : [ "object" ],
+    "id" : "89"
+  }, {
+    "iri" : "http://ns.inria.fr/ecocontrol/ontology/pest",
+    "baseIri" : "http://ns.inria.fr/ecocontrol/ontology",
+    "range" : "35",
+    "label" : {
+      "IRI-based" : "pest",
+      "undefined" : "pest"
+    },
+    "domain" : "40",
+    "comment" : {
+      "undefined" : "The organism that attacks a plant."
+    },
+    "attributes" : [ "object" ],
+    "id" : "91"
+  }, {
+    "iri" : "http://ns.inria.fr/ecocontrol/ontology/enemy",
+    "baseIri" : "http://ns.inria.fr/ecocontrol/ontology",
+    "range" : "90",
+    "label" : {
+      "IRI-based" : "enemy",
+      "undefined" : "enemy"
+    },
+    "domain" : "17",
+    "attributes" : [ "object" ],
+    "id" : "92"
+  }, {
+    "iri" : "http://ns.inria.fr/ecocontrol/ontology/vector",
+    "baseIri" : "http://ns.inria.fr/ecocontrol/ontology",
+    "range" : "32",
+    "label" : {
+      "IRI-based" : "vector",
+      "undefined" : "vector"
+    },
+    "domain" : "68",
+    "comment" : {
+      "undefined" : "Transmitting organism."
+    },
+    "attributes" : [ "object" ],
+    "id" : "93"
+  }, {
+    "iri" : "http://ns.inria.fr/ecocontrol/ontology/hyperparasitoid",
+    "baseIri" : "http://ns.inria.fr/ecocontrol/ontology",
+    "range" : "44",
+    "label" : {
+      "IRI-based" : "hyperparasitoid",
+      "undefined" : "hyperparasitoid"
+    },
+    "domain" : "13",
+    "attributes" : [ "object" ],
+    "id" : "94"
+  }, {
+    "iri" : "http://ns.inria.fr/ecocontrol/ontology/periodicity",
+    "baseIri" : "http://ns.inria.fr/ecocontrol/ontology",
+    "range" : "56",
+    "label" : {
+      "IRI-based" : "periodicity",
+      "undefined" : "periodicity"
+    },
+    "domain" : "39",
+    "comment" : {
+      "undefined" : "The frequency or regularity of an event or process."
+    },
+    "attributes" : [ "object" ],
+    "id" : "95"
+  }, {
+    "iri" : "http://ns.inria.fr/ecocontrol/ontology/prey",
+    "baseIri" : "http://ns.inria.fr/ecocontrol/ontology",
+    "range" : "36",
+    "label" : {
+      "IRI-based" : "prey",
+      "undefined" : "prey"
+    },
+    "domain" : "23",
+    "attributes" : [ "object" ],
+    "id" : "96"
+  } ]
+}

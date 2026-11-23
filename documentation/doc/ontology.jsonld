@@ -1,0 +1,1035 @@
+[ {
+  "@id" : "_:genid1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://ns.inria.fr/ecocontrol/ontology/Affliction"
+    }, {
+      "@id" : "http://ns.inria.fr/ecocontrol/ontology/Manifestation"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid11",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://ns.inria.fr/ecocontrol/ontology/Taxon"
+    }, {
+      "@id" : "http://ns.inria.fr/ecocontrol/ontology/TaxonInStage"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid14",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://ns.inria.fr/ecocontrol/ontology/AbioticDisorder"
+    }, {
+      "@id" : "http://ns.inria.fr/ecocontrol/ontology/Affliction"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid17",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://ns.inria.fr/ecocontrol/ontology/Taxon"
+    }, {
+      "@id" : "http://ns.inria.fr/ecocontrol/ontology/TaxonInStage"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid20",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://ns.inria.fr/ecocontrol/ontology/Taxon"
+    }, {
+      "@id" : "http://ns.inria.fr/ecocontrol/ontology/TaxonInStage"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid23",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://ns.inria.fr/ecocontrol/ontology/IsCommensalOf"
+    }, {
+      "@id" : "http://ns.inria.fr/ecocontrol/ontology/IsNaturalEnemyOf"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid26",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://ns.inria.fr/ecocontrol/ontology/Taxon"
+    }, {
+      "@id" : "http://ns.inria.fr/ecocontrol/ontology/TaxonInStage"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid29",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://ns.inria.fr/ecocontrol/ontology/Attacks"
+    }, {
+      "@id" : "http://ns.inria.fr/ecocontrol/ontology/BioticDisorder"
+    }, {
+      "@id" : "http://ns.inria.fr/ecocontrol/ontology/IsHostPlantOf"
+    }, {
+      "@id" : "http://ns.inria.fr/ecocontrol/ontology/IsVectorOf"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid34",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://ns.inria.fr/ecocontrol/ontology/PlantPart"
+    }, {
+      "@id" : "http://ns.inria.fr/ecocontrol/ontology/Taxon"
+    }, {
+      "@id" : "http://ns.inria.fr/ecocontrol/ontology/TaxonInStage"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid38",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://ns.inria.fr/ecocontrol/ontology/Taxon"
+    }, {
+      "@id" : "http://ns.inria.fr/ecocontrol/ontology/TaxonInStage"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid4",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://ns.inria.fr/ecocontrol/ontology/PlantPart"
+    }, {
+      "@id" : "http://ns.inria.fr/ecocontrol/ontology/Taxon"
+    }, {
+      "@id" : "http://ns.inria.fr/ecocontrol/ontology/TaxonInStage"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid41",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://ns.inria.fr/ecocontrol/ontology/Taxon"
+    }, {
+      "@id" : "http://ns.inria.fr/ecocontrol/ontology/TaxonInStage"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid44",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://ns.inria.fr/ecocontrol/ontology/PlantPart"
+    }, {
+      "@id" : "http://ns.inria.fr/ecocontrol/ontology/Taxon"
+    }, {
+      "@id" : "http://ns.inria.fr/ecocontrol/ontology/TaxonInStage"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid48",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://ns.inria.fr/ecocontrol/ontology/Taxon"
+    }, {
+      "@id" : "http://ns.inria.fr/ecocontrol/ontology/TaxonInStage"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid51",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://ns.inria.fr/ecocontrol/ontology/Taxon"
+    }, {
+      "@id" : "http://ns.inria.fr/ecocontrol/ontology/TaxonInStage"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid54",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://ns.inria.fr/ecocontrol/ontology/Attacks"
+    }, {
+      "@id" : "http://ns.inria.fr/ecocontrol/ontology/IsRefugeOf"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid57",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://ns.inria.fr/ecocontrol/ontology/Taxon"
+    }, {
+      "@id" : "http://ns.inria.fr/ecocontrol/ontology/TaxonInStage"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid60",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://ns.inria.fr/ecocontrol/ontology/Taxon"
+    }, {
+      "@id" : "http://ns.inria.fr/ecocontrol/ontology/TaxonInStage"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid63",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://ns.inria.fr/ecocontrol/ontology/Taxon"
+    }, {
+      "@id" : "http://ns.inria.fr/ecocontrol/ontology/TaxonInStage"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid66",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://ns.inria.fr/ecocontrol/ontology/Taxon"
+    }, {
+      "@id" : "http://ns.inria.fr/ecocontrol/ontology/TaxonInStage"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid69",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://ns.inria.fr/ecocontrol/ontology/Taxon"
+    }, {
+      "@id" : "http://ns.inria.fr/ecocontrol/ontology/TaxonInStage"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid72",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://ns.inria.fr/ecocontrol/ontology/Taxon"
+    }, {
+      "@id" : "http://ns.inria.fr/ecocontrol/ontology/TaxonInStage"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid75",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://ns.inria.fr/ecocontrol/ontology/Affliction"
+    }, {
+      "@id" : "http://ns.inria.fr/ecocontrol/ontology/IsNaturalEnemyOf"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid8",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://ns.inria.fr/ecocontrol/ontology/Taxon"
+    }, {
+      "@id" : "http://ns.inria.fr/ecocontrol/ontology/TaxonInStage"
+    } ]
+  } ]
+}, {
+  "@id" : "http://ns.inria.fr/ecocontrol/ontology/",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ]
+}, {
+  "@id" : "http://ns.inria.fr/ecocontrol/ontology/AbioticDisorder",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "An abiotic factor causes a disorder for a plant (or a plant part, possibly at a development stage)."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "abiotic disorder"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@value" : "The leaves burned/dried because of frost."
+  }, {
+    "@value" : "The plants are affected by leaf chlorosis, it is due to lack of sunlight."
+  } ]
+}, {
+  "@id" : "http://ns.inria.fr/ecocontrol/ontology/AbioticFactor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A non-biological factor affecting an organism or ecosystem."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "abiotic factor"
+  } ]
+}, {
+  "@id" : "http://ns.inria.fr/ecocontrol/ontology/Affliction",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "An affliction is the result of a disorder or disease that affects a plant (or a plant part, possibly at a development stage) and eventually kills it or not."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "affliction"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@value" : "Brown spot is a harmful disease caused by Alternaria alternata, a pathogenic fungus. It is moderately infectious but not lethal for potato (Solanum tuberosum)."
+  }, {
+    "@value" : "Rose leaf affected by black spot disease."
+  }, {
+    "@value" : "Septoriosis affects soft wheat."
+  } ]
+}, {
+  "@id" : "http://ns.inria.fr/ecocontrol/ontology/Attacks",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A pest (possibly at a development stage) attacks a target plant (or a plant part, possibly at a development stage) at a period of time."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "attacks"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@value" : "The larvae of the Eastern pine shoot borer feed on Pinus species, mainly Pinus strobus and Pinus sylvestris."
+  } ]
+}, {
+  "@id" : "http://ns.inria.fr/ecocontrol/ontology/BioticDisorder",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "An animal or a microbe (possibly at a development stage) causes a disease for a host plant (or a plant part, possibly at a development stage). Constraint: either the disease or the plant must be explicitly known (both cannot be anonymous at the same time)."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "biotic disorder"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@value" : "The citrus mite causes acoriosis of the lemon tree."
+  }, {
+    "@value" : "Xylella fastidiosa causes Pierce's disease of the grapevine."
+  } ]
+}, {
+  "@id" : "http://ns.inria.fr/ecocontrol/ontology/DevelopmentStage",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A phase in the life cycle of an organism."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "development stage"
+  } ]
+}, {
+  "@id" : "http://ns.inria.fr/ecocontrol/ontology/Disease",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Pathological state resulting from a biotic cause."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "disease"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://ns.inria.fr/ecocontrol/ontology/Disorder"
+  } ]
+}, {
+  "@id" : "http://ns.inria.fr/ecocontrol/ontology/Disorder",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Pathological state resulting from a biotic cause (disease) or an abiotic or physiological cause (nutritional disorder, drought)."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "disorder"
+  } ]
+}, {
+  "@id" : "http://ns.inria.fr/ecocontrol/ontology/IsAlternativeHostPlantOf",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Secondary plant that supports a pest, a pathogen or an organism during at least one stage of its life cycle, in the absence of the primary host plant. Often used during an unfavorable period (e.g. winter) or for a specific phase of the cycle (e.g. sexual reproduction for some pathogens)."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "is alternative host plant of"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://ns.inria.fr/ecocontrol/ontology/IsHostPlantOf"
+  } ]
+}, {
+  "@id" : "http://ns.inria.fr/ecocontrol/ontology/IsBeneficialPlantOf",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Cultivated or non-cultivated plant, intentionally introduced or encouraged or maintained, providing an agronomic or ecological benefit for a crop (called beneficiary). Examples: protecting crops from a bioaggressor, either by directly attracting the bioaggressor (trap plant) to draw it away from the crops, or by attracting auxiliary insects (predators, parasitoids, food insects of vectors, etc.)."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "is beneficial plant of"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://ns.inria.fr/ecocontrol/ontology/IsHostPlantOf"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@value" : "The flowers of yarrow (Achillea millefolium) provide nectar and pollen to various auxiliary insects, such as bees or hoverflies and some parasitoids. Hoverfly larvae can then consume aphids present on the crops. Bees allow the pollination of the beneficiary crop."
+  } ]
+}, {
+  "@id" : "http://ns.inria.fr/ecocontrol/ontology/IsCommensalOf",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "An animal or microbe is a commensal of an animal. The commensal (the species that benefits from the association) may obtain from the host nutrients, shelter, support or a means of locomotion. The host is not significantly affected."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "is commensal of"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@value" : "Some epiphytic bacteria, such as Pseudomonas spp., use the exudates present on the surface of the leaves of a cultivated plant as a source of nutrients and as a habitat, without significantly affecting the plant."
+  }, {
+    "@value" : "Vector insects are possibly hosts of commensal microbes (rare), actually more often mutualists or parasites, rather than strict commensals."
+  } ]
+}, {
+  "@id" : "http://ns.inria.fr/ecocontrol/ontology/IsHostPlantOf",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Generic relation between a plant and the organism that it harbors."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "is host plant of"
+  } ]
+}, {
+  "@id" : "http://ns.inria.fr/ecocontrol/ontology/IsHyperParasiteOf",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "An animal (possibly at a development stage) is a parasite of an animal (possibly at a development stage), itself a parasite of another animal."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "is hyper-parasite of"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://ns.inria.fr/ecocontrol/ontology/IsParasiteOf"
+  } ]
+}, {
+  "@id" : "http://ns.inria.fr/ecocontrol/ontology/IsHyperParasitoidOf",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "An animal (possibly at a development stage) is a parasitoid of an animal (possibly at a development stage) that is itself a parasitoid."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "is hyper-parasitoid of"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://ns.inria.fr/ecocontrol/ontology/IsParasitoidOf"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@value" : "Dendrocerus carpenteri, a small wasp that parasitizes other parasitoid wasps, particularly Aphidius species, which are primary parasitoids of aphids."
+  } ]
+}, {
+  "@id" : "http://ns.inria.fr/ecocontrol/ontology/IsNaturalEnemyOf",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "An animal (possibly at a development stage) is a natural enemy of another animal (possibly at a development stage)."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "is natural enemy of"
+  } ]
+}, {
+  "@id" : "http://ns.inria.fr/ecocontrol/ontology/IsParasiteOf",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "An animal (possibly at a development stage) is a parasite of an animal (possibly at a development stage). Lethality is not necessary for the parasite (unlike parasitoidism), even though the host may die in some cases."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "is parasite of"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://ns.inria.fr/ecocontrol/ontology/IsNaturalEnemyOf"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@value" : "Trichogramma brassicae, a small parasitoid wasp, which parasitizes the eggs of certain pest insects, notably the corn borer (Ostrinia nubilalis)."
+  } ]
+}, {
+  "@id" : "http://ns.inria.fr/ecocontrol/ontology/IsParasitoidOf",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "An animal (possibly at a development stage) is a parasitoid of an animal (possibly at a development stage) that it inevitably kills during or at the end of its development. An insect is said to be host of its parasitoid. Likewise, a parasitoid is host of its hyperparasitoid. Parasitoidism is a special case of parasitism in conjunction with predation (but different from PreysOn, which implies a brief relation). Lethality is the norm (majority of cases). If the host does not die, this usually means the death of the parasitoid."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "is parasitoid of"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://ns.inria.fr/ecocontrol/ontology/IsNaturalEnemyOf"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@value" : "Ageniaspis citricola is a wasp parasite of the citrus leafminer larva, Phyllocnistis citrella."
+  }, {
+    "@value" : "Trichogramma wasps are released in crops to control the corn borer."
+  } ]
+}, {
+  "@id" : "http://ns.inria.fr/ecocontrol/ontology/IsPrimaryHostPlantOf",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Main cultivated plant on which a pest, a pathogen or an organism develops, reproduces or causes damage in an optimal way. Often the target crop or the most susceptible plant."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "is primary host plant of"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://ns.inria.fr/ecocontrol/ontology/IsHostPlantOf"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@value" : "For Candidatus Phytoplasma vitis, the flavescence dorée phytoplasma, the primary host is the cultivated grapevine (Vitis vinifera)."
+  } ]
+}, {
+  "@id" : "http://ns.inria.fr/ecocontrol/ontology/IsRefugeOf",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A refuge plant is a non-cultivated plant, offering habitat, food (sap, alternative prey) or protection (egg-laying site) to a harmful or beneficial insect, during unfavorable conditions (cold, drought, temporary absence of the crop). The insect can be a pest, a vector (itself host of the pest or pathogen of something else), or a parasitoid of a pest."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "is refuge of"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://ns.inria.fr/ecocontrol/ontology/IsHostPlantOf"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@value" : "During winter, the hazel (Corylus avellana) is a refuge for predatory mites (Phytoseiidae) of phytophagous mites such as the red mite (Panonychus ulmi); in spring, the predatory mites can colonize the grapevine (Vitis vinifera) and take part in regulation."
+  }, {
+    "@value" : "The psyllid Cacopsylla pruni, vector of the phytoplasma 'Candidatus Phytoplasma prunorum', leaves Prunus in summer and uses conifers such as Norway spruce (Picea abies) as overwintering hosts; in early spring, adults return to fruit trees of the genus Prunus, such as plum (Prunus domestica), where they reproduce and can transmit the phytoplasma."
+  } ]
+}, {
+  "@id" : "http://ns.inria.fr/ecocontrol/ontology/IsReservoirOf",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A reservoir plant is a non-cultivated plant: wild, become wild (e.g. abandoned vine crop), or adventice, which harbors and maintains (often permanently or cyclically) a potential source of contamination for cultivated plants. This excludes auxiliary plants, which have a positive role and are used for it. In ecology, the term alternative host plant is rather used (more general than refuge or reservoir)."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "is reservoir of"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://ns.inria.fr/ecocontrol/ontology/IsHostPlantOf"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@value" : "Wild, abandoned vines or infected vine regrowth (Vitis vinifera subsp. sylvestris): they can constitute reservoirs of the flavescence dorée phytoplasma Candidatus Phytoplasma vitis and harbor its vector insect, Scaphoideus titanus."
+  } ]
+}, {
+  "@id" : "http://ns.inria.fr/ecocontrol/ontology/IsVectorOf",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "An animal is a vector of an animal/microbe (transmitted) for a host plant. The transmitted organism may be pathogenic (but not necessarily) for the host plant. Vector is understood here in the biotic sense, not to be confused with an abiotic vector, which is a means of dissemination (of a pest or pathogen). Vector is a type of commensalism: the transmitted animal is commensal of the vector animal."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "is vector of"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://ns.inria.fr/ecocontrol/ontology/IsCommensalOf"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@value" : "Xylella fastidiosa is a bacterium that spreads from one plant to another through sap-sucking insects, such as leafhoppers, which feed on plant sap and transmit the bacterium as they move between plants."
+  } ]
+}, {
+  "@id" : "http://ns.inria.fr/ecocontrol/ontology/Manifestation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A symptom is the manifestation of a disorder or disease for a particular plant (or a plant part, possibly at a development stage)."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "manifestation"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@value" : "Leaf chlorosis affects the leaf of the grapevine."
+  }, {
+    "@value" : "Symptoms manifest as the appearance of punctiform spots visible on both sides of the orange tree leaf."
+  } ]
+}, {
+  "@id" : "http://ns.inria.fr/ecocontrol/ontology/Periodicity",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A period of time, e.g. a seasonal, a month of the year, or other type of repetition."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "time periodicity"
+  } ]
+}, {
+  "@id" : "http://ns.inria.fr/ecocontrol/ontology/PlantPart",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A part of a plant."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "plant part"
+  } ]
+}, {
+  "@id" : "http://ns.inria.fr/ecocontrol/ontology/PreysOn",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "An animal (possibly at a development stage) is a predator of an animal (possibly at a development stage). The relation is brief, unlike parasitoidism, which lasts for the duration of the parasitoid's stage."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "preys on"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://ns.inria.fr/ecocontrol/ontology/IsNaturalEnemyOf"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@value" : "Aeolothrips intermedius Bagnall, a cosmopolitan insect whose larvae and adults consume phytophagous thrips."
+  } ]
+}, {
+  "@id" : "http://ns.inria.fr/ecocontrol/ontology/Symptom",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A sign of a disease or disorder."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "symptom"
+  } ]
+}, {
+  "@id" : "http://ns.inria.fr/ecocontrol/ontology/Taxon",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Set of organisms grouped based on their shared characteristics."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "taxon"
+  } ]
+}, {
+  "@id" : "http://ns.inria.fr/ecocontrol/ontology/TaxonInStage",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A subset of a taxon with only individuals at a certain development stage."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "taxon in stage"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://ns.inria.fr/ecocontrol/ontology/Taxon"
+  } ]
+}, {
+  "@id" : "http://ns.inria.fr/ecocontrol/ontology/affects",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The plant (or a plant part, possibly at a development stage) that is affected by an affliction or manifestation."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "_:genid1"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "affects"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "_:genid4"
+  } ]
+}, {
+  "@id" : "http://ns.inria.fr/ecocontrol/ontology/agent",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The organism causing a disease."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://ns.inria.fr/ecocontrol/ontology/BioticDisorder"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "agent"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "_:genid8"
+  } ]
+}, {
+  "@id" : "http://ns.inria.fr/ecocontrol/ontology/beneficiary",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The (other) crop that receives the agronomic or ecological benefit."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://ns.inria.fr/ecocontrol/ontology/IsBeneficialPlantOf"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "beneficiary"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://ns.inria.fr/ecocontrol/ontology/Taxon"
+  } ]
+}, {
+  "@id" : "http://ns.inria.fr/ecocontrol/ontology/cause",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The abiotic factor that causes a disorder."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://ns.inria.fr/ecocontrol/ontology/AbioticDisorder"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "cause"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://ns.inria.fr/ecocontrol/ontology/AbioticFactor"
+  } ]
+}, {
+  "@id" : "http://ns.inria.fr/ecocontrol/ontology/commensal",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The organism that benefits from the relationship."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://ns.inria.fr/ecocontrol/ontology/IsCommensalOf"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "commensal"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "_:genid11"
+  } ]
+}, {
+  "@id" : "http://ns.inria.fr/ecocontrol/ontology/disease",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The disease caused by an organism to a plant."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://ns.inria.fr/ecocontrol/ontology/BioticDisorder"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "disease"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://ns.inria.fr/ecocontrol/ontology/Disease"
+  } ]
+}, {
+  "@id" : "http://ns.inria.fr/ecocontrol/ontology/disorder",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A disorder resulting from an affliction or abiotic factor."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "_:genid14"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "disorder"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://ns.inria.fr/ecocontrol/ontology/Disorder"
+  } ]
+}, {
+  "@id" : "http://ns.inria.fr/ecocontrol/ontology/enemy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://ns.inria.fr/ecocontrol/ontology/IsNaturalEnemyOf"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "enemy"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "_:genid17"
+  } ]
+}, {
+  "@id" : "http://ns.inria.fr/ecocontrol/ontology/harbored",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The organism that is harbored."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://ns.inria.fr/ecocontrol/ontology/IsHostPlantOf"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "harbored"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "_:genid20"
+  } ]
+}, {
+  "@id" : "http://ns.inria.fr/ecocontrol/ontology/hasDiagnosis",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A disorder or disease diagnosed for the manifestation of a symptom."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://ns.inria.fr/ecocontrol/ontology/Manifestation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has diagnosis"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://ns.inria.fr/ecocontrol/ontology/Disorder"
+  } ]
+}, {
+  "@id" : "http://ns.inria.fr/ecocontrol/ontology/hasLethality",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "To be completed"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "_:genid75"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has lethality"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#decimal"
+  } ]
+}, {
+  "@id" : "http://ns.inria.fr/ecocontrol/ontology/hasStage",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The development stage that applies to the taxon."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://ns.inria.fr/ecocontrol/ontology/TaxonInStage"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has stage"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://ns.inria.fr/ecocontrol/ontology/DevelopmentStage"
+  } ]
+}, {
+  "@id" : "http://ns.inria.fr/ecocontrol/ontology/host",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The organism that harbors another organism."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "host"
+  } ]
+}, {
+  "@id" : "http://ns.inria.fr/ecocontrol/ontology/hostAnimal",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The animal that harbors another organism."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "_:genid23"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "host animal"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "_:genid26"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://ns.inria.fr/ecocontrol/ontology/host"
+  } ]
+}, {
+  "@id" : "http://ns.inria.fr/ecocontrol/ontology/hostPlant",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The plant that harbors another organism."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "_:genid29"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "host plant"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "_:genid34"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://ns.inria.fr/ecocontrol/ontology/host"
+  } ]
+}, {
+  "@id" : "http://ns.inria.fr/ecocontrol/ontology/hyperparasite",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://ns.inria.fr/ecocontrol/ontology/IsHyperParasiteOf"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "hyperparasite"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "_:genid38"
+  } ]
+}, {
+  "@id" : "http://ns.inria.fr/ecocontrol/ontology/hyperparasitoid",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://ns.inria.fr/ecocontrol/ontology/IsHyperParasitoidOf"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "hyperparasitoid"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "_:genid41"
+  } ]
+}, {
+  "@id" : "http://ns.inria.fr/ecocontrol/ontology/object",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The plant (or a plant part) that is affected by an abiotic factor."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://ns.inria.fr/ecocontrol/ontology/AbioticDisorder"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "object"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "_:genid44"
+  } ]
+}, {
+  "@id" : "http://ns.inria.fr/ecocontrol/ontology/parasite",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://ns.inria.fr/ecocontrol/ontology/IsParasiteOf"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "parasite"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "_:genid48"
+  } ]
+}, {
+  "@id" : "http://ns.inria.fr/ecocontrol/ontology/parasitoid",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://ns.inria.fr/ecocontrol/ontology/IsParasitoidOf"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "parasitoid"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "_:genid51"
+  } ]
+}, {
+  "@id" : "http://ns.inria.fr/ecocontrol/ontology/partOf",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://ns.inria.fr/ecocontrol/ontology/PlantPart"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "part of"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://ns.inria.fr/ecocontrol/ontology/Taxon"
+  } ]
+}, {
+  "@id" : "http://ns.inria.fr/ecocontrol/ontology/periodicity",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The frequency or regularity of an event or process."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "_:genid54"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "periodicity"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://ns.inria.fr/ecocontrol/ontology/Periodicity"
+  } ]
+}, {
+  "@id" : "http://ns.inria.fr/ecocontrol/ontology/pest",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The organism that attacks a plant."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://ns.inria.fr/ecocontrol/ontology/Attacks"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "pest"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "_:genid57"
+  } ]
+}, {
+  "@id" : "http://ns.inria.fr/ecocontrol/ontology/predator",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://ns.inria.fr/ecocontrol/ontology/PreysOn"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "predator"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "_:genid60"
+  } ]
+}, {
+  "@id" : "http://ns.inria.fr/ecocontrol/ontology/prey",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://ns.inria.fr/ecocontrol/ontology/PreysOn"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "prey"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "_:genid63"
+  } ]
+}, {
+  "@id" : "http://ns.inria.fr/ecocontrol/ontology/sign",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A symptom associated with a disorder or disease."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://ns.inria.fr/ecocontrol/ontology/Manifestation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "sign"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://ns.inria.fr/ecocontrol/ontology/Symptom"
+  } ]
+}, {
+  "@id" : "http://ns.inria.fr/ecocontrol/ontology/stageOf",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The taxon to which the development stage applies."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://ns.inria.fr/ecocontrol/ontology/TaxonInStage"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "stage of"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://ns.inria.fr/ecocontrol/ontology/Taxon"
+  } ]
+}, {
+  "@id" : "http://ns.inria.fr/ecocontrol/ontology/target",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "To be completed"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://ns.inria.fr/ecocontrol/ontology/IsNaturalEnemyOf"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "target"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "_:genid66"
+  } ]
+}, {
+  "@id" : "http://ns.inria.fr/ecocontrol/ontology/transmitted",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The organism that is transmitted by a vector."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://ns.inria.fr/ecocontrol/ontology/IsVectorOf"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "transmitted"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "_:genid69"
+  } ]
+}, {
+  "@id" : "http://ns.inria.fr/ecocontrol/ontology/vector",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Transmitting organism."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://ns.inria.fr/ecocontrol/ontology/IsVectorOf"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "vector"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "_:genid72"
+  } ]
+}, {
+  "@id" : "http://www.w3.org/2004/02/skos/core#example",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+} ]

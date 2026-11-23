@@ -1,0 +1,1784 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<link rel="stylesheet" href="resources/primer.css" media="screen"/>
+<link rel="stylesheet" href="resources/rec.css" media="screen"/>
+<link rel="stylesheet" href="resources/extra.css" media="screen"/>
+<link rel="stylesheet" href="resources/owl.css" media="screen"/>
+<link rel="stylesheet" href="resources/dark.css" media="(prefers-color-scheme: dark)"/>
+<link rel="stylesheet" href="resources/light.css" media="(prefers-color-scheme: light)"/>
+<link rel="stylesheet" href="resources/slider.css" media="screen"/>
+<meta name="color-scheme" content="dark light">
+<script type="module" src="resources/dark-mode-toggle.mjs"></script><div class="darkmode">
+	<dark-mode-toggle class="slider"></dark-mode-toggle>
+</div>
+ <title>EcoControl-KG Ontology</title>
+
+
+<!-- SCHEMA.ORG METADATA -->
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"http://ns.inria.fr/ecocontrol/ontology/","image":"http://vowl.visualdataweb.org/webvowl/#iri=http://ns.inria.fr/ecocontrol/ontology/","name":"EcoControl-KG Ontology", "headline":"Document describing the ontology http://ns.inria.fr/ecocontrol/ontology/", "dateReleased":"2026-11-23", "version":"0.1", "license":"https://www.apache.org/licenses/LICENSE-2.0", "author":[{"@type":"Person","name":"Franck Michel"},{"@type":"Person","name":"Catherine Faron"},{"@type":"Person","name":"Claire Nedellec"},{"@type":"Person","name":"Robet Bossy"},{"@type":"Person","name":"Marine Courtin"}]}</script>
+
+<script src="resources/jquery.js"></script> 
+<script src="resources/marked.min.js"></script> 
+    <script> 
+function loadHash() {
+  jQuery(".markdown").each(function(el){jQuery(this).after(marked.parse(jQuery(this).text())).remove()});
+	var hash = location.hash;
+	if($(hash).offset()!=null){
+	  $('html, body').animate({scrollTop: $(hash).offset().top}, 0);
+}
+	loadTOC();
+}
+function loadTOC(){
+	//process toc dynamically
+	  var t='<h2>Table of contents</h2><ul>';i = 1;j=0;
+	  jQuery(".list").each(function(){
+		if(jQuery(this).is('h2')){
+			if(j>0){
+				t+='</ul>';
+				j=0;
+			}
+			t+= '<li>'+i+'. <a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
+			i++;
+		}
+		if(jQuery(this).is('h3')){
+			if(j==0){
+				t+='<ul>';
+			}
+			j++;
+			t+= '<li>'+(i-1)+'.'+j+'. '+'<a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
+		}
+	  });
+	  t+='</ul>';
+	  $("#toc").html(t); 
+}
+$(function(){
+    loadHash();
+}); $.fn.ignore = function(sel){
+        return this.clone().find(sel||">*").remove().end();
+ }; 
+   </script> 
+  </head> 
+
+<body>
+<div class="container">
+<div class="head">
+<div style="float:right">language <a href="index-en.html"><b>en</b></a> </div>
+<h1>EcoControl-KG Ontology</h1>
+<h2>Release: 2026-11-23</h2>
+
+
+<dl>
+<dt>This version:</dt>
+<dd><a href="http://ns.inria.fr/ecocontrol/ontology/v0.1">http://ns.inria.fr/ecocontrol/ontology/v0.1</a></dd>
+<dt>Latest version:</dt>
+<dd><a href="http://ns.inria.fr/ecocontrol/ontology/">http://ns.inria.fr/ecocontrol/ontology/</a></dd>
+<dt>Revision:</dt>
+<dd>0.1</dd>
+<dt>Authors:</dt>
+<dd>Franck Michel</dd><dd>Catherine Faron</dd><dd>Claire Nedellec</dd><dd>Robet Bossy</dd><dd>Marine Courtin</dd>
+
+<dt>Publisher:</dt>
+<dd><a href="https://team.inria.fr/wimmics/">Wimmics research team</a>, <a href="https://www.inria.fr">Inria</a></dd>
+<dt>Source:</dt>
+<dd><a href="https://github.com/Wimmics/ecocontrol-kg/">https://github.com/Wimmics/ecocontrol-kg/</a></dd>
+
+<dt>Download serialization:</dt><dd><span><a href="ontology.jsonld" target="_blank"><img src="https://img.shields.io/badge/Format-JSON_LD-blue.svg" alt="JSON-LD" /></a> </span><span><a href="ontology.owl" target="_blank"><img src="https://img.shields.io/badge/Format-RDF/XML-blue.svg" alt="RDF/XML" /></a> </span><span><a href="ontology.nt" target="_blank"><img src="https://img.shields.io/badge/Format-N_Triples-blue.svg" alt="N-Triples" /></a> </span><span><a href="ontology.ttl" target="_blank"><img src="https://img.shields.io/badge/Format-TTL-blue.svg" alt="TTL" /></a> </span></dd><dt>License:</dt><dd><a href="https://www.apache.org/licenses/LICENSE-2.0" target="_blank"><img src="https://img.shields.io/badge/License-Apache_2.0-blue.svg" alt="https://www.apache.org/licenses/LICENSE-2.0" /></a>
+</dd><dt>Visualization:</dt><dd><a href="webvowl/index.html#" target="_blank"><img src="https://img.shields.io/badge/Visualize_with-WebVowl-blue.svg" alt="Visualize with WebVowl" /></a></dd>
+<!-- <dt>Evaluation:</dt><dd><a href="OOPSevaluation/oopsEval.html#" target="_blank"><img src="https://img.shields.io/badge/Evaluate_with-OOPS! (OntOlogy Pitfall Scanner!)-blue.svg" alt="Evaluate with OOPS!" /></a></dd> --></dl>
+
+<hr/>
+</div>
+<div class="status">
+<div>
+<span>Draft</span>
+</div>
+</div><div id="toc"></div> 
+
+<!--INTRODUCTION SECTION-->
+    <div id="introduction"><h2 id="intro" class="list">Introduction <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown"><p></p></span>
+</div>
+  
+
+<!--OVERVIEW SECTION-->
+    <div id="overview"><h2 id="overv" class="list">EcoControl-KG Ontology: Overview <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown">
+This ontology has the following classes and properties.</span>
+<h4>Classes</h4>
+<ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#AbioticDisorder"
+         title="http://ns.inria.fr/ecocontrol/ontology/AbioticDisorder">abiotic disorder</a>
+   </li>
+   <li>
+      <a href="#AbioticFactor"
+         title="http://ns.inria.fr/ecocontrol/ontology/AbioticFactor">abiotic factor</a>
+   </li>
+   <li>
+      <a href="#Affliction"
+         title="http://ns.inria.fr/ecocontrol/ontology/Affliction">affliction</a>
+   </li>
+   <li>
+      <a href="#Attacks" title="http://ns.inria.fr/ecocontrol/ontology/Attacks">attacks</a>
+   </li>
+   <li>
+      <a href="#BioticDisorder"
+         title="http://ns.inria.fr/ecocontrol/ontology/BioticDisorder">biotic disorder</a>
+   </li>
+   <li>
+      <a href="#DevelopmentStage"
+         title="http://ns.inria.fr/ecocontrol/ontology/DevelopmentStage">development stage</a>
+   </li>
+   <li>
+      <a href="#Disease" title="http://ns.inria.fr/ecocontrol/ontology/Disease">disease</a>
+   </li>
+   <li>
+      <a href="#Disorder" title="http://ns.inria.fr/ecocontrol/ontology/Disorder">disorder</a>
+   </li>
+   <li>
+      <a href="#IsAlternativeHostPlantOf"
+         title="http://ns.inria.fr/ecocontrol/ontology/IsAlternativeHostPlantOf">is alternative host plant of</a>
+   </li>
+   <li>
+      <a href="#IsBeneficialPlantOf"
+         title="http://ns.inria.fr/ecocontrol/ontology/IsBeneficialPlantOf">is beneficial plant of</a>
+   </li>
+   <li>
+      <a href="#IsCommensalOf"
+         title="http://ns.inria.fr/ecocontrol/ontology/IsCommensalOf">is commensal of</a>
+   </li>
+   <li>
+      <a href="#IsHostPlantOf"
+         title="http://ns.inria.fr/ecocontrol/ontology/IsHostPlantOf">is host plant of</a>
+   </li>
+   <li>
+      <a href="#IsHyperParasiteOf"
+         title="http://ns.inria.fr/ecocontrol/ontology/IsHyperParasiteOf">is hyper-parasite of</a>
+   </li>
+   <li>
+      <a href="#IsHyperParasitoidOf"
+         title="http://ns.inria.fr/ecocontrol/ontology/IsHyperParasitoidOf">is hyper-parasitoid of</a>
+   </li>
+   <li>
+      <a href="#IsNaturalEnemyOf"
+         title="http://ns.inria.fr/ecocontrol/ontology/IsNaturalEnemyOf">is natural enemy of</a>
+   </li>
+   <li>
+      <a href="#IsParasiteOf"
+         title="http://ns.inria.fr/ecocontrol/ontology/IsParasiteOf">is parasite of</a>
+   </li>
+   <li>
+      <a href="#IsParasitoidOf"
+         title="http://ns.inria.fr/ecocontrol/ontology/IsParasitoidOf">is parasitoid of</a>
+   </li>
+   <li>
+      <a href="#IsPrimaryHostPlantOf"
+         title="http://ns.inria.fr/ecocontrol/ontology/IsPrimaryHostPlantOf">is primary host plant of</a>
+   </li>
+   <li>
+      <a href="#IsRefugeOf"
+         title="http://ns.inria.fr/ecocontrol/ontology/IsRefugeOf">is refuge of</a>
+   </li>
+   <li>
+      <a href="#IsReservoirOf"
+         title="http://ns.inria.fr/ecocontrol/ontology/IsReservoirOf">is reservoir of</a>
+   </li>
+   <li>
+      <a href="#IsVectorOf"
+         title="http://ns.inria.fr/ecocontrol/ontology/IsVectorOf">is vector of</a>
+   </li>
+   <li>
+      <a href="#Manifestation"
+         title="http://ns.inria.fr/ecocontrol/ontology/Manifestation">manifestation</a>
+   </li>
+   <li>
+      <a href="#PlantPart"
+         title="http://ns.inria.fr/ecocontrol/ontology/PlantPart">plant part</a>
+   </li>
+   <li>
+      <a href="#PreysOn" title="http://ns.inria.fr/ecocontrol/ontology/PreysOn">preys on</a>
+   </li>
+   <li>
+      <a href="#Symptom" title="http://ns.inria.fr/ecocontrol/ontology/Symptom">symptom</a>
+   </li>
+   <li>
+      <a href="#Taxon" title="http://ns.inria.fr/ecocontrol/ontology/Taxon">taxon</a>
+   </li>
+   <li>
+      <a href="#TaxonInStage"
+         title="http://ns.inria.fr/ecocontrol/ontology/TaxonInStage">taxon in stage</a>
+   </li>
+   <li>
+      <a href="#Periodicity"
+         title="http://ns.inria.fr/ecocontrol/ontology/Periodicity">time periodicity</a>
+   </li>
+</ul><h4>Object Properties</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#affects" title="http://ns.inria.fr/ecocontrol/ontology/affects">affects</a>
+   </li>
+   <li>
+      <a href="#agent" title="http://ns.inria.fr/ecocontrol/ontology/agent">agent</a>
+   </li>
+   <li>
+      <a href="#beneficiary"
+         title="http://ns.inria.fr/ecocontrol/ontology/beneficiary">beneficiary</a>
+   </li>
+   <li>
+      <a href="#cause" title="http://ns.inria.fr/ecocontrol/ontology/cause">cause</a>
+   </li>
+   <li>
+      <a href="#commensal" title="http://ns.inria.fr/ecocontrol/ontology/commensal">commensal</a>
+   </li>
+   <li>
+      <a href="#disease" title="http://ns.inria.fr/ecocontrol/ontology/disease">disease</a>
+   </li>
+   <li>
+      <a href="#disorder" title="http://ns.inria.fr/ecocontrol/ontology/disorder">disorder</a>
+   </li>
+   <li>
+      <a href="#enemy" title="http://ns.inria.fr/ecocontrol/ontology/enemy">enemy</a>
+   </li>
+   <li>
+      <a href="#harbored" title="http://ns.inria.fr/ecocontrol/ontology/harbored">harbored</a>
+   </li>
+   <li>
+      <a href="#hasDiagnosis"
+         title="http://ns.inria.fr/ecocontrol/ontology/hasDiagnosis">has diagnosis</a>
+   </li>
+   <li>
+      <a href="#hasStage" title="http://ns.inria.fr/ecocontrol/ontology/hasStage">has stage</a>
+   </li>
+   <li>
+      <a href="#host" title="http://ns.inria.fr/ecocontrol/ontology/host">host</a>
+   </li>
+   <li>
+      <a href="#hostAnimal"
+         title="http://ns.inria.fr/ecocontrol/ontology/hostAnimal">host animal</a>
+   </li>
+   <li>
+      <a href="#hostPlant" title="http://ns.inria.fr/ecocontrol/ontology/hostPlant">host plant</a>
+   </li>
+   <li>
+      <a href="#hyperparasite"
+         title="http://ns.inria.fr/ecocontrol/ontology/hyperparasite">hyperparasite</a>
+   </li>
+   <li>
+      <a href="#hyperparasitoid"
+         title="http://ns.inria.fr/ecocontrol/ontology/hyperparasitoid">hyperparasitoid</a>
+   </li>
+   <li>
+      <a href="#object" title="http://ns.inria.fr/ecocontrol/ontology/object">object</a>
+   </li>
+   <li>
+      <a href="#parasite" title="http://ns.inria.fr/ecocontrol/ontology/parasite">parasite</a>
+   </li>
+   <li>
+      <a href="#parasitoid"
+         title="http://ns.inria.fr/ecocontrol/ontology/parasitoid">parasitoid</a>
+   </li>
+   <li>
+      <a href="#partOf" title="http://ns.inria.fr/ecocontrol/ontology/partOf">part of</a>
+   </li>
+   <li>
+      <a href="#periodicity"
+         title="http://ns.inria.fr/ecocontrol/ontology/periodicity">periodicity</a>
+   </li>
+   <li>
+      <a href="#pest" title="http://ns.inria.fr/ecocontrol/ontology/pest">pest</a>
+   </li>
+   <li>
+      <a href="#predator" title="http://ns.inria.fr/ecocontrol/ontology/predator">predator</a>
+   </li>
+   <li>
+      <a href="#prey" title="http://ns.inria.fr/ecocontrol/ontology/prey">prey</a>
+   </li>
+   <li>
+      <a href="#sign" title="http://ns.inria.fr/ecocontrol/ontology/sign">sign</a>
+   </li>
+   <li>
+      <a href="#stageOf" title="http://ns.inria.fr/ecocontrol/ontology/stageOf">stage of</a>
+   </li>
+   <li>
+      <a href="#target" title="http://ns.inria.fr/ecocontrol/ontology/target">target</a>
+   </li>
+   <li>
+      <a href="#transmitted"
+         title="http://ns.inria.fr/ecocontrol/ontology/transmitted">transmitted</a>
+   </li>
+   <li>
+      <a href="#vector" title="http://ns.inria.fr/ecocontrol/ontology/vector">vector</a>
+   </li>
+</ul><h4>Data Properties</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#hasLethality"
+         title="http://ns.inria.fr/ecocontrol/ontology/hasLethality">has lethality</a>
+   </li>
+</ul><iframe src="webvowl/index.html"></iframe> 
+</div>
+  
+
+<!--DESCRIPTION SECTION-->
+    <div id="description"><h2 id="desc" class="list">EcoControl-KG Ontology: Description <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+
+<span class="markdown">EcoControl-KG Ontology: biological interactions of plants, pests and auxiliaries</span></div>
+   
+
+<!--CROSSREF SECTION-->
+   <div id="crossref"><h2 id="crossreference" class="list">Cross-reference for EcoControl-KG Ontology classes, object properties and data properties <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+This section provides details for each class and property defined by EcoControl-KG Ontology.
+<div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="classes">
+ <h3 id="classes-headline" class="list">Classes</h3>
+ <ul class="hlist">
+  <li><a href="#AbioticDisorder" title="http://ns.inria.fr/ecocontrol/ontology/AbioticDisorder">abiotic disorder</a></li>
+  <li><a href="#AbioticFactor" title="http://ns.inria.fr/ecocontrol/ontology/AbioticFactor">abiotic factor</a></li>
+  <li><a href="#Affliction" title="http://ns.inria.fr/ecocontrol/ontology/Affliction">affliction</a></li>
+  <li><a href="#Attacks" title="http://ns.inria.fr/ecocontrol/ontology/Attacks">attacks</a></li>
+  <li><a href="#BioticDisorder" title="http://ns.inria.fr/ecocontrol/ontology/BioticDisorder">biotic disorder</a></li>
+  <li><a href="#DevelopmentStage" title="http://ns.inria.fr/ecocontrol/ontology/DevelopmentStage">development stage</a></li>
+  <li><a href="#Disease" title="http://ns.inria.fr/ecocontrol/ontology/Disease">disease</a></li>
+  <li><a href="#Disorder" title="http://ns.inria.fr/ecocontrol/ontology/Disorder">disorder</a></li>
+  <li><a href="#IsAlternativeHostPlantOf" title="http://ns.inria.fr/ecocontrol/ontology/IsAlternativeHostPlantOf">is alternative host plant of</a></li>
+  <li><a href="#IsBeneficialPlantOf" title="http://ns.inria.fr/ecocontrol/ontology/IsBeneficialPlantOf">is beneficial plant of</a></li>
+  <li><a href="#IsCommensalOf" title="http://ns.inria.fr/ecocontrol/ontology/IsCommensalOf">is commensal of</a></li>
+  <li><a href="#IsHostPlantOf" title="http://ns.inria.fr/ecocontrol/ontology/IsHostPlantOf">is host plant of</a></li>
+  <li><a href="#IsHyperParasiteOf" title="http://ns.inria.fr/ecocontrol/ontology/IsHyperParasiteOf">is hyper-parasite of</a></li>
+  <li><a href="#IsHyperParasitoidOf" title="http://ns.inria.fr/ecocontrol/ontology/IsHyperParasitoidOf">is hyper-parasitoid of</a></li>
+  <li><a href="#IsNaturalEnemyOf" title="http://ns.inria.fr/ecocontrol/ontology/IsNaturalEnemyOf">is natural enemy of</a></li>
+  <li><a href="#IsParasiteOf" title="http://ns.inria.fr/ecocontrol/ontology/IsParasiteOf">is parasite of</a></li>
+  <li><a href="#IsParasitoidOf" title="http://ns.inria.fr/ecocontrol/ontology/IsParasitoidOf">is parasitoid of</a></li>
+  <li><a href="#IsPrimaryHostPlantOf" title="http://ns.inria.fr/ecocontrol/ontology/IsPrimaryHostPlantOf">is primary host plant of</a></li>
+  <li><a href="#IsRefugeOf" title="http://ns.inria.fr/ecocontrol/ontology/IsRefugeOf">is refuge of</a></li>
+  <li><a href="#IsReservoirOf" title="http://ns.inria.fr/ecocontrol/ontology/IsReservoirOf">is reservoir of</a></li>
+  <li><a href="#IsVectorOf" title="http://ns.inria.fr/ecocontrol/ontology/IsVectorOf">is vector of</a></li>
+  <li><a href="#Manifestation" title="http://ns.inria.fr/ecocontrol/ontology/Manifestation">manifestation</a></li>
+  <li><a href="#PlantPart" title="http://ns.inria.fr/ecocontrol/ontology/PlantPart">plant part</a></li>
+  <li><a href="#PreysOn" title="http://ns.inria.fr/ecocontrol/ontology/PreysOn">preys on</a></li>
+  <li><a href="#Symptom" title="http://ns.inria.fr/ecocontrol/ontology/Symptom">symptom</a></li>
+  <li><a href="#Taxon" title="http://ns.inria.fr/ecocontrol/ontology/Taxon">taxon</a></li>
+  <li><a href="#TaxonInStage" title="http://ns.inria.fr/ecocontrol/ontology/TaxonInStage">taxon in stage</a></li>
+  <li><a href="#Periodicity" title="http://ns.inria.fr/ecocontrol/ontology/Periodicity">time periodicity</a></li>
+ </ul>
+ <div class="entity" id="AbioticDisorder">
+  <h3>abiotic disorder<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://ns.inria.fr/ecocontrol/ontology/AbioticDisorder</p>
+  <div class="comment">
+   <span class="markdown">An abiotic factor causes a disorder for a plant (or a plant part, possibly at a development stage).</span>
+  </div>
+  <dl>
+   <dt>
+    Example
+   </dt>
+   <dd>
+    <pre>The leaves burned/dried because of frost.</pre>
+   </dd>
+   <dd>
+    <pre>The plants are affected by leaf chlorosis, it is due to lack of sunlight.</pre>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#cause" title="http://ns.inria.fr/ecocontrol/ontology/cause">cause</a> <sup class="type-op" title="object property">op</sup>, <a href="#disorder" title="http://ns.inria.fr/ecocontrol/ontology/disorder">disorder</a> <sup class="type-op" title="object property">op</sup>, <a href="#object" title="http://ns.inria.fr/ecocontrol/ontology/object">object</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="AbioticFactor">
+  <h3>abiotic factor<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://ns.inria.fr/ecocontrol/ontology/AbioticFactor</p>
+  <div class="comment">
+   <span class="markdown">A non-biological factor affecting an organism or ecosystem.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#cause" title="http://ns.inria.fr/ecocontrol/ontology/cause">cause</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Affliction">
+  <h3>affliction<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://ns.inria.fr/ecocontrol/ontology/Affliction</p>
+  <div class="comment">
+   <span class="markdown">An affliction is the result of a disorder or disease that affects a plant (or a plant part, possibly at a development stage) and eventually kills it or not.</span>
+  </div>
+  <dl>
+   <dt>
+    Example
+   </dt>
+   <dd>
+    <pre>Brown spot is a harmful disease caused by Alternaria alternata, a pathogenic fungus. It is moderately infectious but not lethal for potato (Solanum tuberosum).</pre>
+   </dd>
+   <dd>
+    <pre>Rose leaf affected by black spot disease.</pre>
+   </dd>
+   <dd>
+    <pre>Septoriosis affects soft wheat.</pre>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#affects" title="http://ns.inria.fr/ecocontrol/ontology/affects">affects</a> <sup class="type-op" title="object property">op</sup>, <a href="#disorder" title="http://ns.inria.fr/ecocontrol/ontology/disorder">disorder</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasLethality" title="http://ns.inria.fr/ecocontrol/ontology/hasLethality">has lethality</a> <sup class="type-dp" title="data property">dp</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Attacks">
+  <h3>attacks<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://ns.inria.fr/ecocontrol/ontology/Attacks</p>
+  <div class="comment">
+   <span class="markdown">A pest (possibly at a development stage) attacks a target plant (or a plant part, possibly at a development stage) at a period of time.</span>
+  </div>
+  <dl>
+   <dt>
+    Example
+   </dt>
+   <dd>
+    <pre>The larvae of the Eastern pine shoot borer feed on Pinus species, mainly Pinus strobus and Pinus sylvestris.</pre>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#hostPlant" title="http://ns.inria.fr/ecocontrol/ontology/hostPlant">host plant</a> <sup class="type-op" title="object property">op</sup>, <a href="#periodicity" title="http://ns.inria.fr/ecocontrol/ontology/periodicity">periodicity</a> <sup class="type-op" title="object property">op</sup>, <a href="#pest" title="http://ns.inria.fr/ecocontrol/ontology/pest">pest</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="BioticDisorder">
+  <h3>biotic disorder<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://ns.inria.fr/ecocontrol/ontology/BioticDisorder</p>
+  <div class="comment">
+   <span class="markdown">An animal or a microbe (possibly at a development stage) causes a disease for a host plant (or a plant part, possibly at a development stage). Constraint: either the disease or the plant must be explicitly known (both cannot be anonymous at the same time).</span>
+  </div>
+  <dl>
+   <dt>
+    Example
+   </dt>
+   <dd>
+    <pre>The citrus mite causes acoriosis of the lemon tree.</pre>
+   </dd>
+   <dd>
+    <pre>Xylella fastidiosa causes Pierce's disease of the grapevine.</pre>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#agent" title="http://ns.inria.fr/ecocontrol/ontology/agent">agent</a> <sup class="type-op" title="object property">op</sup>, <a href="#disease" title="http://ns.inria.fr/ecocontrol/ontology/disease">disease</a> <sup class="type-op" title="object property">op</sup>, <a href="#hostPlant" title="http://ns.inria.fr/ecocontrol/ontology/hostPlant">host plant</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="DevelopmentStage">
+  <h3>development stage<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://ns.inria.fr/ecocontrol/ontology/DevelopmentStage</p>
+  <div class="comment">
+   <span class="markdown">A phase in the life cycle of an organism.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#hasStage" title="http://ns.inria.fr/ecocontrol/ontology/hasStage">has stage</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Disease">
+  <h3>disease<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://ns.inria.fr/ecocontrol/ontology/Disease</p>
+  <div class="comment">
+   <span class="markdown">Pathological state resulting from a biotic cause.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#Disorder" title="http://ns.inria.fr/ecocontrol/ontology/Disorder">disorder</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#disease" title="http://ns.inria.fr/ecocontrol/ontology/disease">disease</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Disorder">
+  <h3>disorder<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://ns.inria.fr/ecocontrol/ontology/Disorder</p>
+  <div class="comment">
+   <span class="markdown">Pathological state resulting from a biotic cause (disease) or an abiotic or physiological cause (nutritional disorder, drought).</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#Disease" title="http://ns.inria.fr/ecocontrol/ontology/Disease">disease</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#disorder" title="http://ns.inria.fr/ecocontrol/ontology/disorder">disorder</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasDiagnosis" title="http://ns.inria.fr/ecocontrol/ontology/hasDiagnosis">has diagnosis</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="IsAlternativeHostPlantOf">
+  <h3>is alternative host plant of<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://ns.inria.fr/ecocontrol/ontology/IsAlternativeHostPlantOf</p>
+  <div class="comment">
+   <span class="markdown">Secondary plant that supports a pest, a pathogen or an organism during at least one stage of its life cycle, in the absence of the primary host plant. Often used during an unfavorable period (e.g. winter) or for a specific phase of the cycle (e.g. sexual reproduction for some pathogens).</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#IsHostPlantOf" title="http://ns.inria.fr/ecocontrol/ontology/IsHostPlantOf">is host plant of</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="IsBeneficialPlantOf">
+  <h3>is beneficial plant of<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://ns.inria.fr/ecocontrol/ontology/IsBeneficialPlantOf</p>
+  <div class="comment">
+   <span class="markdown">Cultivated or non-cultivated plant, intentionally introduced or encouraged or maintained, providing an agronomic or ecological benefit for a crop (called beneficiary). Examples: protecting crops from a bioaggressor, either by directly attracting the bioaggressor (trap plant) to draw it away from the crops, or by attracting auxiliary insects (predators, parasitoids, food insects of vectors, etc.).</span>
+  </div>
+  <dl>
+   <dt>
+    Example
+   </dt>
+   <dd>
+    <pre>The flowers of yarrow (Achillea millefolium) provide nectar and pollen to various auxiliary insects, such as bees or hoverflies and some parasitoids. Hoverfly larvae can then consume aphids present on the crops. Bees allow the pollination of the beneficiary crop.</pre>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#IsHostPlantOf" title="http://ns.inria.fr/ecocontrol/ontology/IsHostPlantOf">is host plant of</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#beneficiary" title="http://ns.inria.fr/ecocontrol/ontology/beneficiary">beneficiary</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="IsCommensalOf">
+  <h3>is commensal of<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://ns.inria.fr/ecocontrol/ontology/IsCommensalOf</p>
+  <div class="comment">
+   <span class="markdown">An animal or microbe is a commensal of an animal. The commensal (the species that benefits from the association) may obtain from the host nutrients, shelter, support or a means of locomotion. The host is not significantly affected.</span>
+  </div>
+  <dl>
+   <dt>
+    Example
+   </dt>
+   <dd>
+    <pre>Some epiphytic bacteria, such as Pseudomonas spp., use the exudates present on the surface of the leaves of a cultivated plant as a source of nutrients and as a habitat, without significantly affecting the plant.</pre>
+   </dd>
+   <dd>
+    <pre>Vector insects are possibly hosts of commensal microbes (rare), actually more often mutualists or parasites, rather than strict commensals.</pre>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#IsVectorOf" title="http://ns.inria.fr/ecocontrol/ontology/IsVectorOf">is vector of</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#commensal" title="http://ns.inria.fr/ecocontrol/ontology/commensal">commensal</a> <sup class="type-op" title="object property">op</sup>, <a href="#hostAnimal" title="http://ns.inria.fr/ecocontrol/ontology/hostAnimal">host animal</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="IsHostPlantOf">
+  <h3>is host plant of<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://ns.inria.fr/ecocontrol/ontology/IsHostPlantOf</p>
+  <div class="comment">
+   <span class="markdown">Generic relation between a plant and the organism that it harbors.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#IsAlternativeHostPlantOf" title="http://ns.inria.fr/ecocontrol/ontology/IsAlternativeHostPlantOf">is alternative host plant of</a> <sup class="type-c" title="class">c</sup>, <a href="#IsBeneficialPlantOf" title="http://ns.inria.fr/ecocontrol/ontology/IsBeneficialPlantOf">is beneficial plant of</a> <sup class="type-c" title="class">c</sup>, <a href="#IsPrimaryHostPlantOf" title="http://ns.inria.fr/ecocontrol/ontology/IsPrimaryHostPlantOf">is primary host plant of</a> <sup class="type-c" title="class">c</sup>, <a href="#IsRefugeOf" title="http://ns.inria.fr/ecocontrol/ontology/IsRefugeOf">is refuge of</a> <sup class="type-c" title="class">c</sup>, <a href="#IsReservoirOf" title="http://ns.inria.fr/ecocontrol/ontology/IsReservoirOf">is reservoir of</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#harbored" title="http://ns.inria.fr/ecocontrol/ontology/harbored">harbored</a> <sup class="type-op" title="object property">op</sup>, <a href="#hostPlant" title="http://ns.inria.fr/ecocontrol/ontology/hostPlant">host plant</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="IsHyperParasiteOf">
+  <h3>is hyper-parasite of<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://ns.inria.fr/ecocontrol/ontology/IsHyperParasiteOf</p>
+  <div class="comment">
+   <span class="markdown">An animal (possibly at a development stage) is a parasite of an animal (possibly at a development stage), itself a parasite of another animal.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#IsParasiteOf" title="http://ns.inria.fr/ecocontrol/ontology/IsParasiteOf">is parasite of</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#hyperparasite" title="http://ns.inria.fr/ecocontrol/ontology/hyperparasite">hyperparasite</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="IsHyperParasitoidOf">
+  <h3>is hyper-parasitoid of<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://ns.inria.fr/ecocontrol/ontology/IsHyperParasitoidOf</p>
+  <div class="comment">
+   <span class="markdown">An animal (possibly at a development stage) is a parasitoid of an animal (possibly at a development stage) that is itself a parasitoid.</span>
+  </div>
+  <dl>
+   <dt>
+    Example
+   </dt>
+   <dd>
+    <pre>Dendrocerus carpenteri, a small wasp that parasitizes other parasitoid wasps, particularly Aphidius species, which are primary parasitoids of aphids.</pre>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#IsParasitoidOf" title="http://ns.inria.fr/ecocontrol/ontology/IsParasitoidOf">is parasitoid of</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#hyperparasitoid" title="http://ns.inria.fr/ecocontrol/ontology/hyperparasitoid">hyperparasitoid</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="IsNaturalEnemyOf">
+  <h3>is natural enemy of<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://ns.inria.fr/ecocontrol/ontology/IsNaturalEnemyOf</p>
+  <div class="comment">
+   <span class="markdown">An animal (possibly at a development stage) is a natural enemy of another animal (possibly at a development stage).</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#IsParasiteOf" title="http://ns.inria.fr/ecocontrol/ontology/IsParasiteOf">is parasite of</a> <sup class="type-c" title="class">c</sup>, <a href="#IsParasitoidOf" title="http://ns.inria.fr/ecocontrol/ontology/IsParasitoidOf">is parasitoid of</a> <sup class="type-c" title="class">c</sup>, <a href="#PreysOn" title="http://ns.inria.fr/ecocontrol/ontology/PreysOn">preys on</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#enemy" title="http://ns.inria.fr/ecocontrol/ontology/enemy">enemy</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasLethality" title="http://ns.inria.fr/ecocontrol/ontology/hasLethality">has lethality</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#hostAnimal" title="http://ns.inria.fr/ecocontrol/ontology/hostAnimal">host animal</a> <sup class="type-op" title="object property">op</sup>, <a href="#target" title="http://ns.inria.fr/ecocontrol/ontology/target">target</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="IsParasiteOf">
+  <h3>is parasite of<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://ns.inria.fr/ecocontrol/ontology/IsParasiteOf</p>
+  <div class="comment">
+   <span class="markdown">An animal (possibly at a development stage) is a parasite of an animal (possibly at a development stage). Lethality is not necessary for the parasite (unlike parasitoidism), even though the host may die in some cases.</span>
+  </div>
+  <dl>
+   <dt>
+    Example
+   </dt>
+   <dd>
+    <pre>Trichogramma brassicae, a small parasitoid wasp, which parasitizes the eggs of certain pest insects, notably the corn borer (Ostrinia nubilalis).</pre>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#IsNaturalEnemyOf" title="http://ns.inria.fr/ecocontrol/ontology/IsNaturalEnemyOf">is natural enemy of</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#IsHyperParasiteOf" title="http://ns.inria.fr/ecocontrol/ontology/IsHyperParasiteOf">is hyper-parasite of</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#parasite" title="http://ns.inria.fr/ecocontrol/ontology/parasite">parasite</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="IsParasitoidOf">
+  <h3>is parasitoid of<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://ns.inria.fr/ecocontrol/ontology/IsParasitoidOf</p>
+  <div class="comment">
+   <span class="markdown">An animal (possibly at a development stage) is a parasitoid of an animal (possibly at a development stage) that it inevitably kills during or at the end of its development. An insect is said to be host of its parasitoid. Likewise, a parasitoid is host of its hyperparasitoid. Parasitoidism is a special case of parasitism in conjunction with predation (but different from PreysOn, which implies a brief relation). Lethality is the norm (majority of cases). If the host does not die, this usually means the death of the parasitoid.</span>
+  </div>
+  <dl>
+   <dt>
+    Example
+   </dt>
+   <dd>
+    <pre>Ageniaspis citricola is a wasp parasite of the citrus leafminer larva, Phyllocnistis citrella.</pre>
+   </dd>
+   <dd>
+    <pre>Trichogramma wasps are released in crops to control the corn borer.</pre>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#IsNaturalEnemyOf" title="http://ns.inria.fr/ecocontrol/ontology/IsNaturalEnemyOf">is natural enemy of</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#IsHyperParasitoidOf" title="http://ns.inria.fr/ecocontrol/ontology/IsHyperParasitoidOf">is hyper-parasitoid of</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#parasitoid" title="http://ns.inria.fr/ecocontrol/ontology/parasitoid">parasitoid</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="IsPrimaryHostPlantOf">
+  <h3>is primary host plant of<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://ns.inria.fr/ecocontrol/ontology/IsPrimaryHostPlantOf</p>
+  <div class="comment">
+   <span class="markdown">Main cultivated plant on which a pest, a pathogen or an organism develops, reproduces or causes damage in an optimal way. Often the target crop or the most susceptible plant.</span>
+  </div>
+  <dl>
+   <dt>
+    Example
+   </dt>
+   <dd>
+    <pre>For Candidatus Phytoplasma vitis, the flavescence dorée phytoplasma, the primary host is the cultivated grapevine (Vitis vinifera).</pre>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#IsHostPlantOf" title="http://ns.inria.fr/ecocontrol/ontology/IsHostPlantOf">is host plant of</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="IsRefugeOf">
+  <h3>is refuge of<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://ns.inria.fr/ecocontrol/ontology/IsRefugeOf</p>
+  <div class="comment">
+   <span class="markdown">A refuge plant is a non-cultivated plant, offering habitat, food (sap, alternative prey) or protection (egg-laying site) to a harmful or beneficial insect, during unfavorable conditions (cold, drought, temporary absence of the crop). The insect can be a pest, a vector (itself host of the pest or pathogen of something else), or a parasitoid of a pest.</span>
+  </div>
+  <dl>
+   <dt>
+    Example
+   </dt>
+   <dd>
+    <pre>During winter, the hazel (Corylus avellana) is a refuge for predatory mites (Phytoseiidae) of phytophagous mites such as the red mite (Panonychus ulmi); in spring, the predatory mites can colonize the grapevine (Vitis vinifera) and take part in regulation.</pre>
+   </dd>
+   <dd>
+    <pre>The psyllid Cacopsylla pruni, vector of the phytoplasma 'Candidatus Phytoplasma prunorum', leaves Prunus in summer and uses conifers such as Norway spruce (Picea abies) as overwintering hosts; in early spring, adults return to fruit trees of the genus Prunus, such as plum (Prunus domestica), where they reproduce and can transmit the phytoplasma.</pre>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#IsHostPlantOf" title="http://ns.inria.fr/ecocontrol/ontology/IsHostPlantOf">is host plant of</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#periodicity" title="http://ns.inria.fr/ecocontrol/ontology/periodicity">periodicity</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="IsReservoirOf">
+  <h3>is reservoir of<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://ns.inria.fr/ecocontrol/ontology/IsReservoirOf</p>
+  <div class="comment">
+   <span class="markdown">A reservoir plant is a non-cultivated plant: wild, become wild (e.g. abandoned vine crop), or adventice, which harbors and maintains (often permanently or cyclically) a potential source of contamination for cultivated plants. This excludes auxiliary plants, which have a positive role and are used for it. In ecology, the term alternative host plant is rather used (more general than refuge or reservoir).</span>
+  </div>
+  <dl>
+   <dt>
+    Example
+   </dt>
+   <dd>
+    <pre>Wild, abandoned vines or infected vine regrowth (Vitis vinifera subsp. sylvestris): they can constitute reservoirs of the flavescence dorée phytoplasma Candidatus Phytoplasma vitis and harbor its vector insect, Scaphoideus titanus.</pre>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#IsHostPlantOf" title="http://ns.inria.fr/ecocontrol/ontology/IsHostPlantOf">is host plant of</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="IsVectorOf">
+  <h3>is vector of<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://ns.inria.fr/ecocontrol/ontology/IsVectorOf</p>
+  <div class="comment">
+   <span class="markdown">An animal is a vector of an animal/microbe (transmitted) for a host plant. The transmitted organism may be pathogenic (but not necessarily) for the host plant. Vector is understood here in the biotic sense, not to be confused with an abiotic vector, which is a means of dissemination (of a pest or pathogen). Vector is a type of commensalism: the transmitted animal is commensal of the vector animal.</span>
+  </div>
+  <dl>
+   <dt>
+    Example
+   </dt>
+   <dd>
+    <pre>Xylella fastidiosa is a bacterium that spreads from one plant to another through sap-sucking insects, such as leafhoppers, which feed on plant sap and transmit the bacterium as they move between plants.</pre>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#IsCommensalOf" title="http://ns.inria.fr/ecocontrol/ontology/IsCommensalOf">is commensal of</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#hostPlant" title="http://ns.inria.fr/ecocontrol/ontology/hostPlant">host plant</a> <sup class="type-op" title="object property">op</sup>, <a href="#transmitted" title="http://ns.inria.fr/ecocontrol/ontology/transmitted">transmitted</a> <sup class="type-op" title="object property">op</sup>, <a href="#vector" title="http://ns.inria.fr/ecocontrol/ontology/vector">vector</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Manifestation">
+  <h3>manifestation<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://ns.inria.fr/ecocontrol/ontology/Manifestation</p>
+  <div class="comment">
+   <span class="markdown">A symptom is the manifestation of a disorder or disease for a particular plant (or a plant part, possibly at a development stage).</span>
+  </div>
+  <dl>
+   <dt>
+    Example
+   </dt>
+   <dd>
+    <pre>Leaf chlorosis affects the leaf of the grapevine.</pre>
+   </dd>
+   <dd>
+    <pre>Symptoms manifest as the appearance of punctiform spots visible on both sides of the orange tree leaf.</pre>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#affects" title="http://ns.inria.fr/ecocontrol/ontology/affects">affects</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasDiagnosis" title="http://ns.inria.fr/ecocontrol/ontology/hasDiagnosis">has diagnosis</a> <sup class="type-op" title="object property">op</sup>, <a href="#sign" title="http://ns.inria.fr/ecocontrol/ontology/sign">sign</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="PlantPart">
+  <h3>plant part<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://ns.inria.fr/ecocontrol/ontology/PlantPart</p>
+  <div class="comment">
+   <span class="markdown">A part of a plant.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#partOf" title="http://ns.inria.fr/ecocontrol/ontology/partOf">part of</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#affects" title="http://ns.inria.fr/ecocontrol/ontology/affects">affects</a> <sup class="type-op" title="object property">op</sup>, <a href="#hostPlant" title="http://ns.inria.fr/ecocontrol/ontology/hostPlant">host plant</a> <sup class="type-op" title="object property">op</sup>, <a href="#object" title="http://ns.inria.fr/ecocontrol/ontology/object">object</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="PreysOn">
+  <h3>preys on<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://ns.inria.fr/ecocontrol/ontology/PreysOn</p>
+  <div class="comment">
+   <span class="markdown">An animal (possibly at a development stage) is a predator of an animal (possibly at a development stage). The relation is brief, unlike parasitoidism, which lasts for the duration of the parasitoid's stage.</span>
+  </div>
+  <dl>
+   <dt>
+    Example
+   </dt>
+   <dd>
+    <pre>Aeolothrips intermedius Bagnall, a cosmopolitan insect whose larvae and adults consume phytophagous thrips.</pre>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#IsNaturalEnemyOf" title="http://ns.inria.fr/ecocontrol/ontology/IsNaturalEnemyOf">is natural enemy of</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#predator" title="http://ns.inria.fr/ecocontrol/ontology/predator">predator</a> <sup class="type-op" title="object property">op</sup>, <a href="#prey" title="http://ns.inria.fr/ecocontrol/ontology/prey">prey</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Symptom">
+  <h3>symptom<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://ns.inria.fr/ecocontrol/ontology/Symptom</p>
+  <div class="comment">
+   <span class="markdown">A sign of a disease or disorder.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#sign" title="http://ns.inria.fr/ecocontrol/ontology/sign">sign</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Taxon">
+  <h3>taxon<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://ns.inria.fr/ecocontrol/ontology/Taxon</p>
+  <div class="comment">
+   <span class="markdown">Set of organisms grouped based on their shared characteristics.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#TaxonInStage" title="http://ns.inria.fr/ecocontrol/ontology/TaxonInStage">taxon in stage</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#affects" title="http://ns.inria.fr/ecocontrol/ontology/affects">affects</a> <sup class="type-op" title="object property">op</sup>, <a href="#agent" title="http://ns.inria.fr/ecocontrol/ontology/agent">agent</a> <sup class="type-op" title="object property">op</sup>, <a href="#beneficiary" title="http://ns.inria.fr/ecocontrol/ontology/beneficiary">beneficiary</a> <sup class="type-op" title="object property">op</sup>, <a href="#commensal" title="http://ns.inria.fr/ecocontrol/ontology/commensal">commensal</a> <sup class="type-op" title="object property">op</sup>, <a href="#enemy" title="http://ns.inria.fr/ecocontrol/ontology/enemy">enemy</a> <sup class="type-op" title="object property">op</sup>, <a href="#harbored" title="http://ns.inria.fr/ecocontrol/ontology/harbored">harbored</a> <sup class="type-op" title="object property">op</sup>, <a href="#hostAnimal" title="http://ns.inria.fr/ecocontrol/ontology/hostAnimal">host animal</a> <sup class="type-op" title="object property">op</sup>, <a href="#hostPlant" title="http://ns.inria.fr/ecocontrol/ontology/hostPlant">host plant</a> <sup class="type-op" title="object property">op</sup>, <a href="#hyperparasite" title="http://ns.inria.fr/ecocontrol/ontology/hyperparasite">hyperparasite</a> <sup class="type-op" title="object property">op</sup>, <a href="#hyperparasitoid" title="http://ns.inria.fr/ecocontrol/ontology/hyperparasitoid">hyperparasitoid</a> <sup class="type-op" title="object property">op</sup>, <a href="#object" title="http://ns.inria.fr/ecocontrol/ontology/object">object</a> <sup class="type-op" title="object property">op</sup>, <a href="#parasite" title="http://ns.inria.fr/ecocontrol/ontology/parasite">parasite</a> <sup class="type-op" title="object property">op</sup>, <a href="#parasitoid" title="http://ns.inria.fr/ecocontrol/ontology/parasitoid">parasitoid</a> <sup class="type-op" title="object property">op</sup>, <a href="#partOf" title="http://ns.inria.fr/ecocontrol/ontology/partOf">part of</a> <sup class="type-op" title="object property">op</sup>, <a href="#pest" title="http://ns.inria.fr/ecocontrol/ontology/pest">pest</a> <sup class="type-op" title="object property">op</sup>, <a href="#predator" title="http://ns.inria.fr/ecocontrol/ontology/predator">predator</a> <sup class="type-op" title="object property">op</sup>, <a href="#prey" title="http://ns.inria.fr/ecocontrol/ontology/prey">prey</a> <sup class="type-op" title="object property">op</sup>, <a href="#stageOf" title="http://ns.inria.fr/ecocontrol/ontology/stageOf">stage of</a> <sup class="type-op" title="object property">op</sup>, <a href="#target" title="http://ns.inria.fr/ecocontrol/ontology/target">target</a> <sup class="type-op" title="object property">op</sup>, <a href="#transmitted" title="http://ns.inria.fr/ecocontrol/ontology/transmitted">transmitted</a> <sup class="type-op" title="object property">op</sup>, <a href="#vector" title="http://ns.inria.fr/ecocontrol/ontology/vector">vector</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="TaxonInStage">
+  <h3>taxon in stage<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://ns.inria.fr/ecocontrol/ontology/TaxonInStage</p>
+  <div class="comment">
+   <span class="markdown">A subset of a taxon with only individuals at a certain development stage.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#Taxon" title="http://ns.inria.fr/ecocontrol/ontology/Taxon">taxon</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#hasStage" title="http://ns.inria.fr/ecocontrol/ontology/hasStage">has stage</a> <sup class="type-op" title="object property">op</sup>, <a href="#stageOf" title="http://ns.inria.fr/ecocontrol/ontology/stageOf">stage of</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#affects" title="http://ns.inria.fr/ecocontrol/ontology/affects">affects</a> <sup class="type-op" title="object property">op</sup>, <a href="#agent" title="http://ns.inria.fr/ecocontrol/ontology/agent">agent</a> <sup class="type-op" title="object property">op</sup>, <a href="#commensal" title="http://ns.inria.fr/ecocontrol/ontology/commensal">commensal</a> <sup class="type-op" title="object property">op</sup>, <a href="#enemy" title="http://ns.inria.fr/ecocontrol/ontology/enemy">enemy</a> <sup class="type-op" title="object property">op</sup>, <a href="#harbored" title="http://ns.inria.fr/ecocontrol/ontology/harbored">harbored</a> <sup class="type-op" title="object property">op</sup>, <a href="#hostAnimal" title="http://ns.inria.fr/ecocontrol/ontology/hostAnimal">host animal</a> <sup class="type-op" title="object property">op</sup>, <a href="#hostPlant" title="http://ns.inria.fr/ecocontrol/ontology/hostPlant">host plant</a> <sup class="type-op" title="object property">op</sup>, <a href="#hyperparasite" title="http://ns.inria.fr/ecocontrol/ontology/hyperparasite">hyperparasite</a> <sup class="type-op" title="object property">op</sup>, <a href="#hyperparasitoid" title="http://ns.inria.fr/ecocontrol/ontology/hyperparasitoid">hyperparasitoid</a> <sup class="type-op" title="object property">op</sup>, <a href="#object" title="http://ns.inria.fr/ecocontrol/ontology/object">object</a> <sup class="type-op" title="object property">op</sup>, <a href="#parasite" title="http://ns.inria.fr/ecocontrol/ontology/parasite">parasite</a> <sup class="type-op" title="object property">op</sup>, <a href="#parasitoid" title="http://ns.inria.fr/ecocontrol/ontology/parasitoid">parasitoid</a> <sup class="type-op" title="object property">op</sup>, <a href="#pest" title="http://ns.inria.fr/ecocontrol/ontology/pest">pest</a> <sup class="type-op" title="object property">op</sup>, <a href="#predator" title="http://ns.inria.fr/ecocontrol/ontology/predator">predator</a> <sup class="type-op" title="object property">op</sup>, <a href="#prey" title="http://ns.inria.fr/ecocontrol/ontology/prey">prey</a> <sup class="type-op" title="object property">op</sup>, <a href="#target" title="http://ns.inria.fr/ecocontrol/ontology/target">target</a> <sup class="type-op" title="object property">op</sup>, <a href="#transmitted" title="http://ns.inria.fr/ecocontrol/ontology/transmitted">transmitted</a> <sup class="type-op" title="object property">op</sup>, <a href="#vector" title="http://ns.inria.fr/ecocontrol/ontology/vector">vector</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Periodicity">
+  <h3>time periodicity<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://ns.inria.fr/ecocontrol/ontology/Periodicity</p>
+  <div class="comment">
+   <span class="markdown">A period of time, e.g. a seasonal, a month of the year, or other type of repetition.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#periodicity" title="http://ns.inria.fr/ecocontrol/ontology/periodicity">periodicity</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="objectproperties">
+ <h3 id="properties" class="list">Object Properties</h3>
+ <ul class="hlist">
+  <li><a href="#affects" title="http://ns.inria.fr/ecocontrol/ontology/affects">affects</a></li>
+  <li><a href="#agent" title="http://ns.inria.fr/ecocontrol/ontology/agent">agent</a></li>
+  <li><a href="#beneficiary" title="http://ns.inria.fr/ecocontrol/ontology/beneficiary">beneficiary</a></li>
+  <li><a href="#cause" title="http://ns.inria.fr/ecocontrol/ontology/cause">cause</a></li>
+  <li><a href="#commensal" title="http://ns.inria.fr/ecocontrol/ontology/commensal">commensal</a></li>
+  <li><a href="#disease" title="http://ns.inria.fr/ecocontrol/ontology/disease">disease</a></li>
+  <li><a href="#disorder" title="http://ns.inria.fr/ecocontrol/ontology/disorder">disorder</a></li>
+  <li><a href="#enemy" title="http://ns.inria.fr/ecocontrol/ontology/enemy">enemy</a></li>
+  <li><a href="#harbored" title="http://ns.inria.fr/ecocontrol/ontology/harbored">harbored</a></li>
+  <li><a href="#hasDiagnosis" title="http://ns.inria.fr/ecocontrol/ontology/hasDiagnosis">has diagnosis</a></li>
+  <li><a href="#hasStage" title="http://ns.inria.fr/ecocontrol/ontology/hasStage">has stage</a></li>
+  <li><a href="#host" title="http://ns.inria.fr/ecocontrol/ontology/host">host</a></li>
+  <li><a href="#hostAnimal" title="http://ns.inria.fr/ecocontrol/ontology/hostAnimal">host animal</a></li>
+  <li><a href="#hostPlant" title="http://ns.inria.fr/ecocontrol/ontology/hostPlant">host plant</a></li>
+  <li><a href="#hyperparasite" title="http://ns.inria.fr/ecocontrol/ontology/hyperparasite">hyperparasite</a></li>
+  <li><a href="#hyperparasitoid" title="http://ns.inria.fr/ecocontrol/ontology/hyperparasitoid">hyperparasitoid</a></li>
+  <li><a href="#object" title="http://ns.inria.fr/ecocontrol/ontology/object">object</a></li>
+  <li><a href="#parasite" title="http://ns.inria.fr/ecocontrol/ontology/parasite">parasite</a></li>
+  <li><a href="#parasitoid" title="http://ns.inria.fr/ecocontrol/ontology/parasitoid">parasitoid</a></li>
+  <li><a href="#partOf" title="http://ns.inria.fr/ecocontrol/ontology/partOf">part of</a></li>
+  <li><a href="#periodicity" title="http://ns.inria.fr/ecocontrol/ontology/periodicity">periodicity</a></li>
+  <li><a href="#pest" title="http://ns.inria.fr/ecocontrol/ontology/pest">pest</a></li>
+  <li><a href="#predator" title="http://ns.inria.fr/ecocontrol/ontology/predator">predator</a></li>
+  <li><a href="#prey" title="http://ns.inria.fr/ecocontrol/ontology/prey">prey</a></li>
+  <li><a href="#sign" title="http://ns.inria.fr/ecocontrol/ontology/sign">sign</a></li>
+  <li><a href="#stageOf" title="http://ns.inria.fr/ecocontrol/ontology/stageOf">stage of</a></li>
+  <li><a href="#target" title="http://ns.inria.fr/ecocontrol/ontology/target">target</a></li>
+  <li><a href="#transmitted" title="http://ns.inria.fr/ecocontrol/ontology/transmitted">transmitted</a></li>
+  <li><a href="#vector" title="http://ns.inria.fr/ecocontrol/ontology/vector">vector</a></li>
+ </ul>
+ <div class="entity" id="affects">
+  <h3>affects<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://ns.inria.fr/ecocontrol/ontology/affects</p>
+  <div class="comment">
+   <span class="markdown">The plant (or a plant part, possibly at a development stage) that is affected by an affliction or manifestation.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Affliction" title="http://ns.inria.fr/ecocontrol/ontology/Affliction">affliction</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#Manifestation" title="http://ns.inria.fr/ecocontrol/ontology/Manifestation">manifestation</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#PlantPart" title="http://ns.inria.fr/ecocontrol/ontology/PlantPart">plant part</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#Taxon" title="http://ns.inria.fr/ecocontrol/ontology/Taxon">taxon</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#TaxonInStage" title="http://ns.inria.fr/ecocontrol/ontology/TaxonInStage">taxon in stage</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="agent">
+  <h3>agent<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://ns.inria.fr/ecocontrol/ontology/agent</p>
+  <div class="comment">
+   <span class="markdown">The organism causing a disease.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#BioticDisorder" title="http://ns.inria.fr/ecocontrol/ontology/BioticDisorder">biotic disorder</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#Taxon" title="http://ns.inria.fr/ecocontrol/ontology/Taxon">taxon</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#TaxonInStage" title="http://ns.inria.fr/ecocontrol/ontology/TaxonInStage">taxon in stage</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="beneficiary">
+  <h3>beneficiary<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://ns.inria.fr/ecocontrol/ontology/beneficiary</p>
+  <div class="comment">
+   <span class="markdown">The (other) crop that receives the agronomic or ecological benefit.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#IsBeneficialPlantOf" title="http://ns.inria.fr/ecocontrol/ontology/IsBeneficialPlantOf">is beneficial plant of</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#Taxon" title="http://ns.inria.fr/ecocontrol/ontology/Taxon">taxon</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="cause">
+  <h3>cause<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://ns.inria.fr/ecocontrol/ontology/cause</p>
+  <div class="comment">
+   <span class="markdown">The abiotic factor that causes a disorder.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#AbioticDisorder" title="http://ns.inria.fr/ecocontrol/ontology/AbioticDisorder">abiotic disorder</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#AbioticFactor" title="http://ns.inria.fr/ecocontrol/ontology/AbioticFactor">abiotic factor</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="commensal">
+  <h3>commensal<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://ns.inria.fr/ecocontrol/ontology/commensal</p>
+  <div class="comment">
+   <span class="markdown">The organism that benefits from the relationship.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#IsCommensalOf" title="http://ns.inria.fr/ecocontrol/ontology/IsCommensalOf">is commensal of</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#Taxon" title="http://ns.inria.fr/ecocontrol/ontology/Taxon">taxon</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#TaxonInStage" title="http://ns.inria.fr/ecocontrol/ontology/TaxonInStage">taxon in stage</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="disease">
+  <h3>disease<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://ns.inria.fr/ecocontrol/ontology/disease</p>
+  <div class="comment">
+   <span class="markdown">The disease caused by an organism to a plant.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#BioticDisorder" title="http://ns.inria.fr/ecocontrol/ontology/BioticDisorder">biotic disorder</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#Disease" title="http://ns.inria.fr/ecocontrol/ontology/Disease">disease</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="disorder">
+  <h3>disorder<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://ns.inria.fr/ecocontrol/ontology/disorder</p>
+  <div class="comment">
+   <span class="markdown">A disorder resulting from an affliction or abiotic factor.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#AbioticDisorder" title="http://ns.inria.fr/ecocontrol/ontology/AbioticDisorder">abiotic disorder</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#Affliction" title="http://ns.inria.fr/ecocontrol/ontology/Affliction">affliction</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#Disorder" title="http://ns.inria.fr/ecocontrol/ontology/Disorder">disorder</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="enemy">
+  <h3>enemy<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://ns.inria.fr/ecocontrol/ontology/enemy</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#IsNaturalEnemyOf" title="http://ns.inria.fr/ecocontrol/ontology/IsNaturalEnemyOf">is natural enemy of</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#Taxon" title="http://ns.inria.fr/ecocontrol/ontology/Taxon">taxon</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#TaxonInStage" title="http://ns.inria.fr/ecocontrol/ontology/TaxonInStage">taxon in stage</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="harbored">
+  <h3>harbored<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://ns.inria.fr/ecocontrol/ontology/harbored</p>
+  <div class="comment">
+   <span class="markdown">The organism that is harbored.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#IsHostPlantOf" title="http://ns.inria.fr/ecocontrol/ontology/IsHostPlantOf">is host plant of</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#Taxon" title="http://ns.inria.fr/ecocontrol/ontology/Taxon">taxon</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#TaxonInStage" title="http://ns.inria.fr/ecocontrol/ontology/TaxonInStage">taxon in stage</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasDiagnosis">
+  <h3>has diagnosis<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://ns.inria.fr/ecocontrol/ontology/hasDiagnosis</p>
+  <div class="comment">
+   <span class="markdown">A disorder or disease diagnosed for the manifestation of a symptom.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Manifestation" title="http://ns.inria.fr/ecocontrol/ontology/Manifestation">manifestation</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#Disorder" title="http://ns.inria.fr/ecocontrol/ontology/Disorder">disorder</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasStage">
+  <h3>has stage<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://ns.inria.fr/ecocontrol/ontology/hasStage</p>
+  <div class="comment">
+   <span class="markdown">The development stage that applies to the taxon.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#TaxonInStage" title="http://ns.inria.fr/ecocontrol/ontology/TaxonInStage">taxon in stage</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#DevelopmentStage" title="http://ns.inria.fr/ecocontrol/ontology/DevelopmentStage">development stage</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="host">
+  <h3>host<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://ns.inria.fr/ecocontrol/ontology/host</p>
+  <div class="comment">
+   <span class="markdown">The organism that harbors another organism.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has sub-properties
+    </dt>
+    <dd>
+     <a href="#hostAnimal" title="http://ns.inria.fr/ecocontrol/ontology/hostAnimal">host animal</a> <sup class="type-op" title="object property">op</sup>, <a href="#hostPlant" title="http://ns.inria.fr/ecocontrol/ontology/hostPlant">host plant</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hostAnimal">
+  <h3>host animal<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://ns.inria.fr/ecocontrol/ontology/hostAnimal</p>
+  <div class="comment">
+   <span class="markdown">The animal that harbors another organism.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has super-properties
+    </dt>
+    <dd>
+     <a href="#host" title="http://ns.inria.fr/ecocontrol/ontology/host">host</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#IsCommensalOf" title="http://ns.inria.fr/ecocontrol/ontology/IsCommensalOf">is commensal of</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#IsNaturalEnemyOf" title="http://ns.inria.fr/ecocontrol/ontology/IsNaturalEnemyOf">is natural enemy of</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#Taxon" title="http://ns.inria.fr/ecocontrol/ontology/Taxon">taxon</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#TaxonInStage" title="http://ns.inria.fr/ecocontrol/ontology/TaxonInStage">taxon in stage</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hostPlant">
+  <h3>host plant<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://ns.inria.fr/ecocontrol/ontology/hostPlant</p>
+  <div class="comment">
+   <span class="markdown">The plant that harbors another organism.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has super-properties
+    </dt>
+    <dd>
+     <a href="#host" title="http://ns.inria.fr/ecocontrol/ontology/host">host</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Attacks" title="http://ns.inria.fr/ecocontrol/ontology/Attacks">attacks</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#BioticDisorder" title="http://ns.inria.fr/ecocontrol/ontology/BioticDisorder">biotic disorder</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#IsHostPlantOf" title="http://ns.inria.fr/ecocontrol/ontology/IsHostPlantOf">is host plant of</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#IsVectorOf" title="http://ns.inria.fr/ecocontrol/ontology/IsVectorOf">is vector of</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#PlantPart" title="http://ns.inria.fr/ecocontrol/ontology/PlantPart">plant part</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#Taxon" title="http://ns.inria.fr/ecocontrol/ontology/Taxon">taxon</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#TaxonInStage" title="http://ns.inria.fr/ecocontrol/ontology/TaxonInStage">taxon in stage</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hyperparasite">
+  <h3>hyperparasite<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://ns.inria.fr/ecocontrol/ontology/hyperparasite</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#IsHyperParasiteOf" title="http://ns.inria.fr/ecocontrol/ontology/IsHyperParasiteOf">is hyper-parasite of</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#Taxon" title="http://ns.inria.fr/ecocontrol/ontology/Taxon">taxon</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#TaxonInStage" title="http://ns.inria.fr/ecocontrol/ontology/TaxonInStage">taxon in stage</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hyperparasitoid">
+  <h3>hyperparasitoid<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://ns.inria.fr/ecocontrol/ontology/hyperparasitoid</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#IsHyperParasitoidOf" title="http://ns.inria.fr/ecocontrol/ontology/IsHyperParasitoidOf">is hyper-parasitoid of</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#Taxon" title="http://ns.inria.fr/ecocontrol/ontology/Taxon">taxon</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#TaxonInStage" title="http://ns.inria.fr/ecocontrol/ontology/TaxonInStage">taxon in stage</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="object">
+  <h3>object<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://ns.inria.fr/ecocontrol/ontology/object</p>
+  <div class="comment">
+   <span class="markdown">The plant (or a plant part) that is affected by an abiotic factor.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#AbioticDisorder" title="http://ns.inria.fr/ecocontrol/ontology/AbioticDisorder">abiotic disorder</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#PlantPart" title="http://ns.inria.fr/ecocontrol/ontology/PlantPart">plant part</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#Taxon" title="http://ns.inria.fr/ecocontrol/ontology/Taxon">taxon</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#TaxonInStage" title="http://ns.inria.fr/ecocontrol/ontology/TaxonInStage">taxon in stage</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="parasite">
+  <h3>parasite<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://ns.inria.fr/ecocontrol/ontology/parasite</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#IsParasiteOf" title="http://ns.inria.fr/ecocontrol/ontology/IsParasiteOf">is parasite of</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#Taxon" title="http://ns.inria.fr/ecocontrol/ontology/Taxon">taxon</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#TaxonInStage" title="http://ns.inria.fr/ecocontrol/ontology/TaxonInStage">taxon in stage</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="parasitoid">
+  <h3>parasitoid<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://ns.inria.fr/ecocontrol/ontology/parasitoid</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#IsParasitoidOf" title="http://ns.inria.fr/ecocontrol/ontology/IsParasitoidOf">is parasitoid of</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#Taxon" title="http://ns.inria.fr/ecocontrol/ontology/Taxon">taxon</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#TaxonInStage" title="http://ns.inria.fr/ecocontrol/ontology/TaxonInStage">taxon in stage</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="partOf">
+  <h3>part of<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://ns.inria.fr/ecocontrol/ontology/partOf</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#PlantPart" title="http://ns.inria.fr/ecocontrol/ontology/PlantPart">plant part</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#Taxon" title="http://ns.inria.fr/ecocontrol/ontology/Taxon">taxon</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="periodicity">
+  <h3>periodicity<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://ns.inria.fr/ecocontrol/ontology/periodicity</p>
+  <div class="comment">
+   <span class="markdown">The frequency or regularity of an event or process.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Attacks" title="http://ns.inria.fr/ecocontrol/ontology/Attacks">attacks</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#IsRefugeOf" title="http://ns.inria.fr/ecocontrol/ontology/IsRefugeOf">is refuge of</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#Periodicity" title="http://ns.inria.fr/ecocontrol/ontology/Periodicity">time periodicity</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="pest">
+  <h3>pest<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://ns.inria.fr/ecocontrol/ontology/pest</p>
+  <div class="comment">
+   <span class="markdown">The organism that attacks a plant.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Attacks" title="http://ns.inria.fr/ecocontrol/ontology/Attacks">attacks</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#Taxon" title="http://ns.inria.fr/ecocontrol/ontology/Taxon">taxon</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#TaxonInStage" title="http://ns.inria.fr/ecocontrol/ontology/TaxonInStage">taxon in stage</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="predator">
+  <h3>predator<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://ns.inria.fr/ecocontrol/ontology/predator</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#PreysOn" title="http://ns.inria.fr/ecocontrol/ontology/PreysOn">preys on</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#Taxon" title="http://ns.inria.fr/ecocontrol/ontology/Taxon">taxon</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#TaxonInStage" title="http://ns.inria.fr/ecocontrol/ontology/TaxonInStage">taxon in stage</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="prey">
+  <h3>prey<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://ns.inria.fr/ecocontrol/ontology/prey</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#PreysOn" title="http://ns.inria.fr/ecocontrol/ontology/PreysOn">preys on</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#Taxon" title="http://ns.inria.fr/ecocontrol/ontology/Taxon">taxon</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#TaxonInStage" title="http://ns.inria.fr/ecocontrol/ontology/TaxonInStage">taxon in stage</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="sign">
+  <h3>sign<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://ns.inria.fr/ecocontrol/ontology/sign</p>
+  <div class="comment">
+   <span class="markdown">A symptom associated with a disorder or disease.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Manifestation" title="http://ns.inria.fr/ecocontrol/ontology/Manifestation">manifestation</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#Symptom" title="http://ns.inria.fr/ecocontrol/ontology/Symptom">symptom</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="stageOf">
+  <h3>stage of<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://ns.inria.fr/ecocontrol/ontology/stageOf</p>
+  <div class="comment">
+   <span class="markdown">The taxon to which the development stage applies.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#TaxonInStage" title="http://ns.inria.fr/ecocontrol/ontology/TaxonInStage">taxon in stage</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#Taxon" title="http://ns.inria.fr/ecocontrol/ontology/Taxon">taxon</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="target">
+  <h3>target<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://ns.inria.fr/ecocontrol/ontology/target</p>
+  <div class="comment">
+   <span class="markdown">To be completed</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#IsNaturalEnemyOf" title="http://ns.inria.fr/ecocontrol/ontology/IsNaturalEnemyOf">is natural enemy of</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#Taxon" title="http://ns.inria.fr/ecocontrol/ontology/Taxon">taxon</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#TaxonInStage" title="http://ns.inria.fr/ecocontrol/ontology/TaxonInStage">taxon in stage</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="transmitted">
+  <h3>transmitted<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://ns.inria.fr/ecocontrol/ontology/transmitted</p>
+  <div class="comment">
+   <span class="markdown">The organism that is transmitted by a vector.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#IsVectorOf" title="http://ns.inria.fr/ecocontrol/ontology/IsVectorOf">is vector of</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#Taxon" title="http://ns.inria.fr/ecocontrol/ontology/Taxon">taxon</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#TaxonInStage" title="http://ns.inria.fr/ecocontrol/ontology/TaxonInStage">taxon in stage</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="vector">
+  <h3>vector<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://ns.inria.fr/ecocontrol/ontology/vector</p>
+  <div class="comment">
+   <span class="markdown">Transmitting organism.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#IsVectorOf" title="http://ns.inria.fr/ecocontrol/ontology/IsVectorOf">is vector of</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#Taxon" title="http://ns.inria.fr/ecocontrol/ontology/Taxon">taxon</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#TaxonInStage" title="http://ns.inria.fr/ecocontrol/ontology/TaxonInStage">taxon in stage</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="dataproperties">
+ <h3 id="dataproperties-headline" class="list">Data Properties</h3>
+ <ul class="hlist">
+  <li><a href="#hasLethality" title="http://ns.inria.fr/ecocontrol/ontology/hasLethality">has lethality</a></li>
+ </ul>
+ <div class="entity" id="hasLethality">
+  <h3>has lethality<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://ns.inria.fr/ecocontrol/ontology/hasLethality</p>
+  <div class="comment">
+   <span class="markdown">To be completed</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Affliction" title="http://ns.inria.fr/ecocontrol/ontology/Affliction">affliction</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#IsNaturalEnemyOf" title="http://ns.inria.fr/ecocontrol/ontology/IsNaturalEnemyOf">is natural enemy of</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+</div><div id="legend">
+<h2>Legend <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<div   class="entity">
+<sup class="type-c" title="Classes">c</sup>: Classes <br/>
+<sup class="type-op" title="Object Properties">op</sup>: Object Properties <br/>
+<sup class="type-dp" title="Data Properties">dp</sup>: Data Properties <br/>
+</div>
+</div>
+</div>
+    
+
+<!--REFERENCES SECTION-->
+  <div id="references">
+<h2 id="ref" class="list">References <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown">
+Add your references here. It is recommended to have them as a list.</span>
+
+</div>
+<div id="acknowledgments">
+<h2 id="ack" class="list">Acknowledgments <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<p>
+The authors would like to thank <a href="http://www.essepuntato.it/">Silvio Peroni</a> for developing <a href="http://www.essepuntato.it/lode">LODE</a>, a Live OWL Documentation Environment, which is used for representing the Cross Referencing Section of this document and <a href="https://w3id.org/people/dgarijo">Daniel Garijo</a> for developing <a href="https://github.com/dgarijo/Widoco">Widoco</a>, the program used to create the template used in this documentation.</p>
+</div>
+
+
+</div>
+</body>
+</html>

@@ -1,0 +1,568 @@
+@prefix : <http://ns.inria.fr/ecocontrol/ontology/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://ns.inria.fr/ecocontrol/ontology/> .
+
+<http://ns.inria.fr/ecocontrol/ontology/> rdf:type owl:Ontology .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://www.w3.org/2004/02/skos/core#example
+<http://www.w3.org/2004/02/skos/core#example> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://ns.inria.fr/ecocontrol/ontology/affects
+:affects rdf:type owl:ObjectProperty ;
+         rdfs:domain [ rdf:type owl:Class ;
+                       owl:unionOf ( :Affliction
+                                     :Manifestation
+                                   )
+                     ] ;
+         rdfs:range [ rdf:type owl:Class ;
+                      owl:unionOf ( :PlantPart
+                                    :Taxon
+                                    :TaxonInStage
+                                  )
+                    ] ;
+         rdfs:comment "The plant (or a plant part, possibly at a development stage) that is affected by an affliction or manifestation." ;
+         rdfs:label "affects" .
+
+
+###  http://ns.inria.fr/ecocontrol/ontology/agent
+:agent rdf:type owl:ObjectProperty ;
+       rdfs:domain :BioticDisorder ;
+       rdfs:range [ rdf:type owl:Class ;
+                    owl:unionOf ( :Taxon
+                                  :TaxonInStage
+                                )
+                  ] ;
+       rdfs:comment "The organism causing a disease." ;
+       rdfs:label "agent" .
+
+
+###  http://ns.inria.fr/ecocontrol/ontology/beneficiary
+:beneficiary rdf:type owl:ObjectProperty ;
+             rdfs:domain :IsBeneficialPlantOf ;
+             rdfs:range :Taxon ;
+             rdfs:comment "The (other) crop that receives the agronomic or ecological benefit." ;
+             rdfs:label "beneficiary" .
+
+
+###  http://ns.inria.fr/ecocontrol/ontology/cause
+:cause rdf:type owl:ObjectProperty ;
+       rdfs:domain :AbioticDisorder ;
+       rdfs:range :AbioticFactor ;
+       rdfs:comment "The abiotic factor that causes a disorder." ;
+       rdfs:label "cause" .
+
+
+###  http://ns.inria.fr/ecocontrol/ontology/commensal
+:commensal rdf:type owl:ObjectProperty ;
+           rdfs:domain :IsCommensalOf ;
+           rdfs:range [ rdf:type owl:Class ;
+                        owl:unionOf ( :Taxon
+                                      :TaxonInStage
+                                    )
+                      ] ;
+           rdfs:comment "The organism that benefits from the relationship." ;
+           rdfs:label "commensal" .
+
+
+###  http://ns.inria.fr/ecocontrol/ontology/disease
+:disease rdf:type owl:ObjectProperty ;
+         rdfs:domain :BioticDisorder ;
+         rdfs:range :Disease ;
+         rdfs:comment "The disease caused by an organism to a plant." ;
+         rdfs:label "disease" .
+
+
+###  http://ns.inria.fr/ecocontrol/ontology/disorder
+:disorder rdf:type owl:ObjectProperty ;
+          rdfs:domain [ rdf:type owl:Class ;
+                        owl:unionOf ( :AbioticDisorder
+                                      :Affliction
+                                    )
+                      ] ;
+          rdfs:range :Disorder ;
+          rdfs:comment "A disorder resulting from an affliction or abiotic factor." ;
+          rdfs:label "disorder" .
+
+
+###  http://ns.inria.fr/ecocontrol/ontology/enemy
+:enemy rdf:type owl:ObjectProperty ;
+       rdfs:domain :IsNaturalEnemyOf ;
+       rdfs:range [ rdf:type owl:Class ;
+                    owl:unionOf ( :Taxon
+                                  :TaxonInStage
+                                )
+                  ] ;
+       rdfs:label "enemy" .
+
+
+###  http://ns.inria.fr/ecocontrol/ontology/harbored
+:harbored rdf:type owl:ObjectProperty ;
+          rdfs:domain :IsHostPlantOf ;
+          rdfs:range [ rdf:type owl:Class ;
+                       owl:unionOf ( :Taxon
+                                     :TaxonInStage
+                                   )
+                     ] ;
+          rdfs:comment "The organism that is harbored." ;
+          rdfs:label "harbored" .
+
+
+###  http://ns.inria.fr/ecocontrol/ontology/hasDiagnosis
+:hasDiagnosis rdf:type owl:ObjectProperty ;
+              rdfs:domain :Manifestation ;
+              rdfs:range :Disorder ;
+              rdfs:comment "A disorder or disease diagnosed for the manifestation of a symptom." ;
+              rdfs:label "has diagnosis" .
+
+
+###  http://ns.inria.fr/ecocontrol/ontology/hasStage
+:hasStage rdf:type owl:ObjectProperty ;
+          rdfs:domain :TaxonInStage ;
+          rdfs:range :DevelopmentStage ;
+          rdfs:comment "The development stage that applies to the taxon." ;
+          rdfs:label "has stage" .
+
+
+###  http://ns.inria.fr/ecocontrol/ontology/host
+:host rdf:type owl:ObjectProperty ;
+      rdfs:comment "The organism that harbors another organism." ;
+      rdfs:label "host" .
+
+
+###  http://ns.inria.fr/ecocontrol/ontology/hostAnimal
+:hostAnimal rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf :host ;
+            rdfs:domain [ rdf:type owl:Class ;
+                          owl:unionOf ( :IsCommensalOf
+                                        :IsNaturalEnemyOf
+                                      )
+                        ] ;
+            rdfs:range [ rdf:type owl:Class ;
+                         owl:unionOf ( :Taxon
+                                       :TaxonInStage
+                                     )
+                       ] ;
+            rdfs:comment "The animal that harbors another organism." ;
+            rdfs:label "host animal" .
+
+
+###  http://ns.inria.fr/ecocontrol/ontology/hostPlant
+:hostPlant rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf :host ;
+           rdfs:domain [ rdf:type owl:Class ;
+                         owl:unionOf ( :Attacks
+                                       :BioticDisorder
+                                       :IsHostPlantOf
+                                       :IsVectorOf
+                                     )
+                       ] ;
+           rdfs:range [ rdf:type owl:Class ;
+                        owl:unionOf ( :PlantPart
+                                      :Taxon
+                                      :TaxonInStage
+                                    )
+                      ] ;
+           rdfs:comment "The plant that harbors another organism." ;
+           rdfs:label "host plant" .
+
+
+###  http://ns.inria.fr/ecocontrol/ontology/hyperparasite
+:hyperparasite rdf:type owl:ObjectProperty ;
+               rdfs:domain :IsHyperParasiteOf ;
+               rdfs:range [ rdf:type owl:Class ;
+                            owl:unionOf ( :Taxon
+                                          :TaxonInStage
+                                        )
+                          ] ;
+               rdfs:label "hyperparasite" .
+
+
+###  http://ns.inria.fr/ecocontrol/ontology/hyperparasitoid
+:hyperparasitoid rdf:type owl:ObjectProperty ;
+                 rdfs:domain :IsHyperParasitoidOf ;
+                 rdfs:range [ rdf:type owl:Class ;
+                              owl:unionOf ( :Taxon
+                                            :TaxonInStage
+                                          )
+                            ] ;
+                 rdfs:label "hyperparasitoid" .
+
+
+###  http://ns.inria.fr/ecocontrol/ontology/object
+:object rdf:type owl:ObjectProperty ;
+        rdfs:domain :AbioticDisorder ;
+        rdfs:range [ rdf:type owl:Class ;
+                     owl:unionOf ( :PlantPart
+                                   :Taxon
+                                   :TaxonInStage
+                                 )
+                   ] ;
+        rdfs:comment "The plant (or a plant part) that is affected by an abiotic factor." ;
+        rdfs:label "object" .
+
+
+###  http://ns.inria.fr/ecocontrol/ontology/parasite
+:parasite rdf:type owl:ObjectProperty ;
+          rdfs:domain :IsParasiteOf ;
+          rdfs:range [ rdf:type owl:Class ;
+                       owl:unionOf ( :Taxon
+                                     :TaxonInStage
+                                   )
+                     ] ;
+          rdfs:label "parasite" .
+
+
+###  http://ns.inria.fr/ecocontrol/ontology/parasitoid
+:parasitoid rdf:type owl:ObjectProperty ;
+            rdfs:domain :IsParasitoidOf ;
+            rdfs:range [ rdf:type owl:Class ;
+                         owl:unionOf ( :Taxon
+                                       :TaxonInStage
+                                     )
+                       ] ;
+            rdfs:label "parasitoid" .
+
+
+###  http://ns.inria.fr/ecocontrol/ontology/partOf
+:partOf rdf:type owl:ObjectProperty ;
+        rdfs:domain :PlantPart ;
+        rdfs:range :Taxon ;
+        rdfs:label "part of" .
+
+
+###  http://ns.inria.fr/ecocontrol/ontology/periodicity
+:periodicity rdf:type owl:ObjectProperty ;
+             rdfs:domain [ rdf:type owl:Class ;
+                           owl:unionOf ( :Attacks
+                                         :IsRefugeOf
+                                       )
+                         ] ;
+             rdfs:range :Periodicity ;
+             rdfs:comment "The frequency or regularity of an event or process." ;
+             rdfs:label "periodicity" .
+
+
+###  http://ns.inria.fr/ecocontrol/ontology/pest
+:pest rdf:type owl:ObjectProperty ;
+      rdfs:domain :Attacks ;
+      rdfs:range [ rdf:type owl:Class ;
+                   owl:unionOf ( :Taxon
+                                 :TaxonInStage
+                               )
+                 ] ;
+      rdfs:comment "The organism that attacks a plant." ;
+      rdfs:label "pest" .
+
+
+###  http://ns.inria.fr/ecocontrol/ontology/predator
+:predator rdf:type owl:ObjectProperty ;
+          rdfs:domain :PreysOn ;
+          rdfs:range [ rdf:type owl:Class ;
+                       owl:unionOf ( :Taxon
+                                     :TaxonInStage
+                                   )
+                     ] ;
+          rdfs:label "predator" .
+
+
+###  http://ns.inria.fr/ecocontrol/ontology/prey
+:prey rdf:type owl:ObjectProperty ;
+      rdfs:domain :PreysOn ;
+      rdfs:range [ rdf:type owl:Class ;
+                   owl:unionOf ( :Taxon
+                                 :TaxonInStage
+                               )
+                 ] ;
+      rdfs:label "prey" .
+
+
+###  http://ns.inria.fr/ecocontrol/ontology/sign
+:sign rdf:type owl:ObjectProperty ;
+      rdfs:domain :Manifestation ;
+      rdfs:range :Symptom ;
+      rdfs:comment "A symptom associated with a disorder or disease." ;
+      rdfs:label "sign" .
+
+
+###  http://ns.inria.fr/ecocontrol/ontology/stageOf
+:stageOf rdf:type owl:ObjectProperty ;
+         rdfs:domain :TaxonInStage ;
+         rdfs:range :Taxon ;
+         rdfs:comment "The taxon to which the development stage applies." ;
+         rdfs:label "stage of" .
+
+
+###  http://ns.inria.fr/ecocontrol/ontology/target
+:target rdf:type owl:ObjectProperty ;
+        rdfs:domain :IsNaturalEnemyOf ;
+        rdfs:range [ rdf:type owl:Class ;
+                     owl:unionOf ( :Taxon
+                                   :TaxonInStage
+                                 )
+                   ] ;
+        rdfs:comment "To be completed" ;
+        rdfs:label "target" .
+
+
+###  http://ns.inria.fr/ecocontrol/ontology/transmitted
+:transmitted rdf:type owl:ObjectProperty ;
+             rdfs:domain :IsVectorOf ;
+             rdfs:range [ rdf:type owl:Class ;
+                          owl:unionOf ( :Taxon
+                                        :TaxonInStage
+                                      )
+                        ] ;
+             rdfs:comment "The organism that is transmitted by a vector." ;
+             rdfs:label "transmitted" .
+
+
+###  http://ns.inria.fr/ecocontrol/ontology/vector
+:vector rdf:type owl:ObjectProperty ;
+        rdfs:domain :IsVectorOf ;
+        rdfs:range [ rdf:type owl:Class ;
+                     owl:unionOf ( :Taxon
+                                   :TaxonInStage
+                                 )
+                   ] ;
+        rdfs:comment "Transmitting organism." ;
+        rdfs:label "vector" .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://ns.inria.fr/ecocontrol/ontology/hasLethality
+:hasLethality rdf:type owl:DatatypeProperty ;
+              rdfs:domain [ rdf:type owl:Class ;
+                            owl:unionOf ( :Affliction
+                                          :IsNaturalEnemyOf
+                                        )
+                          ] ;
+              rdfs:range xsd:decimal ;
+              rdfs:comment "To be completed" ;
+              rdfs:label "has lethality" .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://ns.inria.fr/ecocontrol/ontology/AbioticDisorder
+:AbioticDisorder rdf:type owl:Class ;
+                 rdfs:comment "An abiotic factor causes a disorder for a plant (or a plant part, possibly at a development stage)." ;
+                 rdfs:label "abiotic disorder" ;
+                 <http://www.w3.org/2004/02/skos/core#example> "The leaves burned/dried because of frost." ,
+                                                               "The plants are affected by leaf chlorosis, it is due to lack of sunlight." .
+
+
+###  http://ns.inria.fr/ecocontrol/ontology/AbioticFactor
+:AbioticFactor rdf:type owl:Class ;
+               rdfs:comment "A non-biological factor affecting an organism or ecosystem." ;
+               rdfs:label "abiotic factor" .
+
+
+###  http://ns.inria.fr/ecocontrol/ontology/Affliction
+:Affliction rdf:type owl:Class ;
+            rdfs:comment "An affliction is the result of a disorder or disease that affects a plant (or a plant part, possibly at a development stage) and eventually kills it or not." ;
+            rdfs:label "affliction" ;
+            <http://www.w3.org/2004/02/skos/core#example> "Brown spot is a harmful disease caused by Alternaria alternata, a pathogenic fungus. It is moderately infectious but not lethal for potato (Solanum tuberosum)." ,
+                                                          "Rose leaf affected by black spot disease." ,
+                                                          "Septoriosis affects soft wheat." .
+
+
+###  http://ns.inria.fr/ecocontrol/ontology/Attacks
+:Attacks rdf:type owl:Class ;
+         rdfs:comment "A pest (possibly at a development stage) attacks a target plant (or a plant part, possibly at a development stage) at a period of time." ;
+         rdfs:label "attacks" ;
+         <http://www.w3.org/2004/02/skos/core#example> "The larvae of the Eastern pine shoot borer feed on Pinus species, mainly Pinus strobus and Pinus sylvestris." .
+
+
+###  http://ns.inria.fr/ecocontrol/ontology/BioticDisorder
+:BioticDisorder rdf:type owl:Class ;
+                rdfs:comment "An animal or a microbe (possibly at a development stage) causes a disease for a host plant (or a plant part, possibly at a development stage). Constraint: either the disease or the plant must be explicitly known (both cannot be anonymous at the same time)." ;
+                rdfs:label "biotic disorder" ;
+                <http://www.w3.org/2004/02/skos/core#example> "The citrus mite causes acoriosis of the lemon tree." ,
+                                                              "Xylella fastidiosa causes Pierce's disease of the grapevine." .
+
+
+###  http://ns.inria.fr/ecocontrol/ontology/DevelopmentStage
+:DevelopmentStage rdf:type owl:Class ;
+                  rdfs:comment "A phase in the life cycle of an organism." ;
+                  rdfs:label "development stage" .
+
+
+###  http://ns.inria.fr/ecocontrol/ontology/Disease
+:Disease rdf:type owl:Class ;
+         rdfs:subClassOf :Disorder ;
+         rdfs:comment "Pathological state resulting from a biotic cause." ;
+         rdfs:label "disease" .
+
+
+###  http://ns.inria.fr/ecocontrol/ontology/Disorder
+:Disorder rdf:type owl:Class ;
+          rdfs:comment "Pathological state resulting from a biotic cause (disease) or an abiotic or physiological cause (nutritional disorder, drought)." ;
+          rdfs:label "disorder" .
+
+
+###  http://ns.inria.fr/ecocontrol/ontology/IsAlternativeHostPlantOf
+:IsAlternativeHostPlantOf rdf:type owl:Class ;
+                          rdfs:subClassOf :IsHostPlantOf ;
+                          rdfs:comment "Secondary plant that supports a pest, a pathogen or an organism during at least one stage of its life cycle, in the absence of the primary host plant. Often used during an unfavorable period (e.g. winter) or for a specific phase of the cycle (e.g. sexual reproduction for some pathogens)." ;
+                          rdfs:label "is alternative host plant of" .
+
+
+###  http://ns.inria.fr/ecocontrol/ontology/IsBeneficialPlantOf
+:IsBeneficialPlantOf rdf:type owl:Class ;
+                     rdfs:subClassOf :IsHostPlantOf ;
+                     rdfs:comment "Cultivated or non-cultivated plant, intentionally introduced or encouraged or maintained, providing an agronomic or ecological benefit for a crop (called beneficiary). Examples: protecting crops from a bioaggressor, either by directly attracting the bioaggressor (trap plant) to draw it away from the crops, or by attracting auxiliary insects (predators, parasitoids, food insects of vectors, etc.)." ;
+                     rdfs:label "is beneficial plant of" ;
+                     <http://www.w3.org/2004/02/skos/core#example> "The flowers of yarrow (Achillea millefolium) provide nectar and pollen to various auxiliary insects, such as bees or hoverflies and some parasitoids. Hoverfly larvae can then consume aphids present on the crops. Bees allow the pollination of the beneficiary crop." .
+
+
+###  http://ns.inria.fr/ecocontrol/ontology/IsCommensalOf
+:IsCommensalOf rdf:type owl:Class ;
+               rdfs:comment "An animal or microbe is a commensal of an animal. The commensal (the species that benefits from the association) may obtain from the host nutrients, shelter, support or a means of locomotion. The host is not significantly affected." ;
+               rdfs:label "is commensal of" ;
+               <http://www.w3.org/2004/02/skos/core#example> "Some epiphytic bacteria, such as Pseudomonas spp., use the exudates present on the surface of the leaves of a cultivated plant as a source of nutrients and as a habitat, without significantly affecting the plant." ,
+                                                             "Vector insects are possibly hosts of commensal microbes (rare), actually more often mutualists or parasites, rather than strict commensals." .
+
+
+###  http://ns.inria.fr/ecocontrol/ontology/IsHostPlantOf
+:IsHostPlantOf rdf:type owl:Class ;
+               rdfs:comment "Generic relation between a plant and the organism that it harbors." ;
+               rdfs:label "is host plant of" .
+
+
+###  http://ns.inria.fr/ecocontrol/ontology/IsHyperParasiteOf
+:IsHyperParasiteOf rdf:type owl:Class ;
+                   rdfs:subClassOf :IsParasiteOf ;
+                   rdfs:comment "An animal (possibly at a development stage) is a parasite of an animal (possibly at a development stage), itself a parasite of another animal." ;
+                   rdfs:label "is hyper-parasite of" .
+
+
+###  http://ns.inria.fr/ecocontrol/ontology/IsHyperParasitoidOf
+:IsHyperParasitoidOf rdf:type owl:Class ;
+                     rdfs:subClassOf :IsParasitoidOf ;
+                     rdfs:comment "An animal (possibly at a development stage) is a parasitoid of an animal (possibly at a development stage) that is itself a parasitoid." ;
+                     rdfs:label "is hyper-parasitoid of" ;
+                     <http://www.w3.org/2004/02/skos/core#example> "Dendrocerus carpenteri, a small wasp that parasitizes other parasitoid wasps, particularly Aphidius species, which are primary parasitoids of aphids." .
+
+
+###  http://ns.inria.fr/ecocontrol/ontology/IsNaturalEnemyOf
+:IsNaturalEnemyOf rdf:type owl:Class ;
+                  rdfs:comment "An animal (possibly at a development stage) is a natural enemy of another animal (possibly at a development stage)." ;
+                  rdfs:label "is natural enemy of" .
+
+
+###  http://ns.inria.fr/ecocontrol/ontology/IsParasiteOf
+:IsParasiteOf rdf:type owl:Class ;
+              rdfs:subClassOf :IsNaturalEnemyOf ;
+              rdfs:comment "An animal (possibly at a development stage) is a parasite of an animal (possibly at a development stage). Lethality is not necessary for the parasite (unlike parasitoidism), even though the host may die in some cases." ;
+              rdfs:label "is parasite of" ;
+              <http://www.w3.org/2004/02/skos/core#example> "Trichogramma brassicae, a small parasitoid wasp, which parasitizes the eggs of certain pest insects, notably the corn borer (Ostrinia nubilalis)." .
+
+
+###  http://ns.inria.fr/ecocontrol/ontology/IsParasitoidOf
+:IsParasitoidOf rdf:type owl:Class ;
+                rdfs:subClassOf :IsNaturalEnemyOf ;
+                rdfs:comment "An animal (possibly at a development stage) is a parasitoid of an animal (possibly at a development stage) that it inevitably kills during or at the end of its development. An insect is said to be host of its parasitoid. Likewise, a parasitoid is host of its hyperparasitoid. Parasitoidism is a special case of parasitism in conjunction with predation (but different from PreysOn, which implies a brief relation). Lethality is the norm (majority of cases). If the host does not die, this usually means the death of the parasitoid." ;
+                rdfs:label "is parasitoid of" ;
+                <http://www.w3.org/2004/02/skos/core#example> "Ageniaspis citricola is a wasp parasite of the citrus leafminer larva, Phyllocnistis citrella." ,
+                                                              "Trichogramma wasps are released in crops to control the corn borer." .
+
+
+###  http://ns.inria.fr/ecocontrol/ontology/IsPrimaryHostPlantOf
+:IsPrimaryHostPlantOf rdf:type owl:Class ;
+                      rdfs:subClassOf :IsHostPlantOf ;
+                      rdfs:comment "Main cultivated plant on which a pest, a pathogen or an organism develops, reproduces or causes damage in an optimal way. Often the target crop or the most susceptible plant." ;
+                      rdfs:label "is primary host plant of" ;
+                      <http://www.w3.org/2004/02/skos/core#example> "For Candidatus Phytoplasma vitis, the flavescence dorée phytoplasma, the primary host is the cultivated grapevine (Vitis vinifera)." .
+
+
+###  http://ns.inria.fr/ecocontrol/ontology/IsRefugeOf
+:IsRefugeOf rdf:type owl:Class ;
+            rdfs:subClassOf :IsHostPlantOf ;
+            rdfs:comment "A refuge plant is a non-cultivated plant, offering habitat, food (sap, alternative prey) or protection (egg-laying site) to a harmful or beneficial insect, during unfavorable conditions (cold, drought, temporary absence of the crop). The insect can be a pest, a vector (itself host of the pest or pathogen of something else), or a parasitoid of a pest." ;
+            rdfs:label "is refuge of" ;
+            <http://www.w3.org/2004/02/skos/core#example> "During winter, the hazel (Corylus avellana) is a refuge for predatory mites (Phytoseiidae) of phytophagous mites such as the red mite (Panonychus ulmi); in spring, the predatory mites can colonize the grapevine (Vitis vinifera) and take part in regulation." ,
+                                                          "The psyllid Cacopsylla pruni, vector of the phytoplasma 'Candidatus Phytoplasma prunorum', leaves Prunus in summer and uses conifers such as Norway spruce (Picea abies) as overwintering hosts; in early spring, adults return to fruit trees of the genus Prunus, such as plum (Prunus domestica), where they reproduce and can transmit the phytoplasma." .
+
+
+###  http://ns.inria.fr/ecocontrol/ontology/IsReservoirOf
+:IsReservoirOf rdf:type owl:Class ;
+               rdfs:subClassOf :IsHostPlantOf ;
+               rdfs:comment "A reservoir plant is a non-cultivated plant: wild, become wild (e.g. abandoned vine crop), or adventice, which harbors and maintains (often permanently or cyclically) a potential source of contamination for cultivated plants. This excludes auxiliary plants, which have a positive role and are used for it. In ecology, the term alternative host plant is rather used (more general than refuge or reservoir)." ;
+               rdfs:label "is reservoir of" ;
+               <http://www.w3.org/2004/02/skos/core#example> "Wild, abandoned vines or infected vine regrowth (Vitis vinifera subsp. sylvestris): they can constitute reservoirs of the flavescence dorée phytoplasma Candidatus Phytoplasma vitis and harbor its vector insect, Scaphoideus titanus." .
+
+
+###  http://ns.inria.fr/ecocontrol/ontology/IsVectorOf
+:IsVectorOf rdf:type owl:Class ;
+            rdfs:subClassOf :IsCommensalOf ;
+            rdfs:comment "An animal is a vector of an animal/microbe (transmitted) for a host plant. The transmitted organism may be pathogenic (but not necessarily) for the host plant. Vector is understood here in the biotic sense, not to be confused with an abiotic vector, which is a means of dissemination (of a pest or pathogen). Vector is a type of commensalism: the transmitted animal is commensal of the vector animal." ;
+            rdfs:label "is vector of" ;
+            <http://www.w3.org/2004/02/skos/core#example> "Xylella fastidiosa is a bacterium that spreads from one plant to another through sap-sucking insects, such as leafhoppers, which feed on plant sap and transmit the bacterium as they move between plants." .
+
+
+###  http://ns.inria.fr/ecocontrol/ontology/Manifestation
+:Manifestation rdf:type owl:Class ;
+               rdfs:comment "A symptom is the manifestation of a disorder or disease for a particular plant (or a plant part, possibly at a development stage)." ;
+               rdfs:label "manifestation" ;
+               <http://www.w3.org/2004/02/skos/core#example> "Leaf chlorosis affects the leaf of the grapevine." ,
+                                                             "Symptoms manifest as the appearance of punctiform spots visible on both sides of the orange tree leaf." .
+
+
+###  http://ns.inria.fr/ecocontrol/ontology/Periodicity
+:Periodicity rdf:type owl:Class ;
+             rdfs:comment "A period of time, e.g. a seasonal, a month of the year, or other type of repetition." ;
+             rdfs:label "time periodicity" .
+
+
+###  http://ns.inria.fr/ecocontrol/ontology/PlantPart
+:PlantPart rdf:type owl:Class ;
+           rdfs:comment "A part of a plant." ;
+           rdfs:label "plant part" .
+
+
+###  http://ns.inria.fr/ecocontrol/ontology/PreysOn
+:PreysOn rdf:type owl:Class ;
+         rdfs:subClassOf :IsNaturalEnemyOf ;
+         rdfs:comment "An animal (possibly at a development stage) is a predator of an animal (possibly at a development stage). The relation is brief, unlike parasitoidism, which lasts for the duration of the parasitoid's stage." ;
+         rdfs:label "preys on" ;
+         <http://www.w3.org/2004/02/skos/core#example> "Aeolothrips intermedius Bagnall, a cosmopolitan insect whose larvae and adults consume phytophagous thrips." .
+
+
+###  http://ns.inria.fr/ecocontrol/ontology/Symptom
+:Symptom rdf:type owl:Class ;
+         rdfs:comment "A sign of a disease or disorder." ;
+         rdfs:label "symptom" .
+
+
+###  http://ns.inria.fr/ecocontrol/ontology/Taxon
+:Taxon rdf:type owl:Class ;
+       rdfs:comment "Set of organisms grouped based on their shared characteristics." ;
+       rdfs:label "taxon" .
+
+
+###  http://ns.inria.fr/ecocontrol/ontology/TaxonInStage
+:TaxonInStage rdf:type owl:Class ;
+              rdfs:subClassOf :Taxon ;
+              rdfs:comment "A subset of a taxon with only individuals at a certain development stage." ;
+              rdfs:label "taxon in stage" .
+
+
+###  Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/
