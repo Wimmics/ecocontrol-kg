@@ -13,12 +13,12 @@ ecoct: a owl:Ontology .
 
 ecoct:Affliction a owl:Class ;
     rdfs:label "affliction" ;
-    rdfs:comment "An affliction is the result of a disease that affects a plant (or a plant part, possibly at a development stage) and eventually kills it or not." ;
+    rdfs:comment "An affliction is the result of a disorder or disease that affects a plant (or a plant part, possibly at a development stage) and eventually kills it or not." ;
     skos:example "Septoriosis affects soft wheat.", "Rose leaf affected by black spot disease.", "Brown spot is a harmful disease caused by Alternaria alternata, a pathogenic fungus. It is moderately infectious but not lethal for potato (Solanum tuberosum)." .
 
 ecoct:Manifestation a owl:Class ;
     rdfs:label "manifestation" ;
-    rdfs:comment "A symptom is the manifestation of a disease for a particular plant (or a plant part, possibly at a development stage)." ;
+    rdfs:comment "A symptom is the manifestation of a disorder or disease for a particular plant (or a plant part, possibly at a development stage)." ;
     skos:example "Symptoms manifest as the appearance of punctiform spots visible on both sides of the orange tree leaf.", "Leaf chlorosis affects the leaf of the grapevine." .
 
 ecoct:BioticDisorder a owl:Class ;
@@ -31,15 +31,9 @@ ecoct:AbioticDisorder a owl:Class ;
     rdfs:comment "An abiotic factor causes a disorder for a plant (or a plant part, possibly at a development stage)." ;
     skos:example "The leaves burned/dried because of frost.", "The plants are affected by leaf chlorosis, it is due to lack of sunlight." .
 
-ecoct:Attacks a owl:Class ;
-    rdfs:label "attacks" ;
-    rdfs:comment "A pest (possibly at a development stage) attacks a target plant (or a plant part, possibly at a development stage)." ;
-    skos:example "The larvae of the Eastern pine shoot borer feed on Pinus species, mainly Pinus strobus and Pinus sylvestris." .
-
 # -----------------------------------------------------------
-# --- Interactions insect-insect and insect-plant
+# --- Interactions insect-insect
 # -----------------------------------------------------------
-
 ecoct:IsNaturalEnemyOf a owl:Class ;
     rdfs:label "is natural enemy of" ;
     rdfs:comment "An animal (possibly at a development stage) is a natural enemy of another animal (possibly at a development stage)." .
@@ -83,6 +77,15 @@ ecoct:IsVectorOf a owl:Class ;
     rdfs:label "is vector of" ;
     rdfs:comment "An animal is a vector of an animal/microbe (transmitted) for a host plant. The transmitted organism may be pathogenic (but not necessarily) for the host plant. Vector is understood here in the biotic sense, not to be confused with an abiotic vector, which is a means of dissemination (of a pest or pathogen). Vector is a type of commensalism: the transmitted animal is commensal of the vector animal." ;
     skos:example "Xylella fastidiosa is a bacterium that spreads from one plant to another through sap-sucking insects, such as leafhoppers, which feed on plant sap and transmit the bacterium as they move between plants." .
+
+
+# -----------------------------------------------------------
+# --- Interactions insect-plant
+# -----------------------------------------------------------
+ecoct:Attacks a owl:Class ;
+    rdfs:label "attacks" ;
+    rdfs:comment "A pest (possibly at a development stage) attacks a target plant (or a plant part, possibly at a development stage)." ;
+    skos:example "The larvae of the Eastern pine shoot borer feed on Pinus species, mainly Pinus strobus and Pinus sylvestris." .
 
 ecoct:IsHostPlantOf a owl:Class ;
     rdfs:label "is host plant of" ;
@@ -132,95 +135,89 @@ ecoct:Disease a owl:Class ;
 
 ecoct:Taxon a owl:Class ;
     rdfs:label "taxon" ;
-    rdfs:comment "To be completed" .
+    rdfs:comment "Set of organisms grouped based on their shared characteristics." .
 
 ecoct:TaxonInStage a owl:Class ;
     rdfs:subClassOf ecoct:Taxon ;
     rdfs:label "taxon in stage" ;
-    rdfs:comment "A taxon at a certain development stage." .
+    rdfs:comment "A subset of a taxon with only individuals at a certain development stage." .
 
 ecoct:DevelopmentStage a owl:Class ;
     rdfs:label "development stage" ;
-    rdfs:comment "To be completed" .
+    rdfs:comment "A phase in the life cycle of an organism." .
 
 ecoct:PlantPart a owl:Class ;
     rdfs:label "plant part" ;
-    rdfs:comment "To be completed" .
+    rdfs:comment "A part of a plant." .
 
 ecoct:Symptom a owl:Class ;
     rdfs:label "symptom" ;
-    rdfs:comment "To be completed" .
+    rdfs:comment "A sign of a disease or disorder." .
 
 ecoct:AbioticFactor a owl:Class ;
     rdfs:label "abiotic factor" ;
-    rdfs:comment "To be completed" .
+    rdfs:comment "A non-biological factor affecting an organism or ecosystem." .
 
 ecoct:TimeInterval a owl:Class ;
     rdfs:label "time interval" ;
-    rdfs:comment "To be completed" .
+    rdfs:comment "A period of time given by a start and end point." .
 
 ecoct:Season a owl:Class ;
     rdfs:label "season" ;
-    rdfs:comment "To be completed" .
+    rdfs:comment "A distinct period of the year characterized by specific weather conditions or natural phenomena." .
 
 ecoct:Period a owl:Class ;
     rdfs:label "period" ;
-    rdfs:comment "To be completed" .
+    rdfs:comment "A certain period of time." .
 
-###########################################################
-# Properties
-###########################################################
+# -----------------------------------------------------------
+# --- Object Properties
+# -----------------------------------------------------------
 
 ecoct:disorder a owl:ObjectProperty ;
     rdfs:label "disorder" ;
-    rdfs:comment "To be completed" ;
+    rdfs:comment "Disorder resulting from an affliction or abiotic." ;
     rdfs:domain [ a owl:Class ; owl:unionOf ( ecoct:Affliction ecoct:AbioticDisorder ) ] ;
     rdfs:range ecoct:Disorder .
 
 ecoct:affects a owl:ObjectProperty ;
     rdfs:label "affects" ;
-    rdfs:comment "To be completed" ;
+    rdfs:comment "Plant (or a plant part, possibly at a development stage) that is affected by an affliction or manifestation." ;
     rdfs:domain [ a owl:Class ; owl:unionOf ( ecoct:Affliction ecoct:Manifestation ) ] ;
     rdfs:range [ a owl:Class ; owl:unionOf ( ecoct:Taxon ecoct:PlantPart ecoct:TaxonInStage ) ] .
 
-ecoct:hasLethality a owl:DatatypeProperty ;
-    rdfs:label "has lethality" ;
-    rdfs:range xsd:decimal ;
-    rdfs:domain [ a owl:Class ; owl:unionOf ( ecoct:Affliction ecoct:IsNaturalEnemyOf ) ] ;
-    rdfs:comment "To be completed" .
-
 ecoct:sign a owl:ObjectProperty ;
     rdfs:label "sign" ;
-    rdfs:comment "To be completed" ;
+    rdfs:comment "Symptom associated with a disorder or disease." ;
     rdfs:domain ecoct:Manifestation ;
     rdfs:range ecoct:Symptom .
 
 ecoct:hasDiagnosis a owl:ObjectProperty ;
     rdfs:label "has diagnosis" ;
-    rdfs:comment "To be completed" ;
+    rdfs:comment "Disorder or disease diagnosed for the manifestation of a symptom." ;
     rdfs:domain ecoct:Manifestation ;
     rdfs:range ecoct:Disorder .
 
 ecoct:agent a owl:ObjectProperty ;
     rdfs:label "agent" ;
-    rdfs:comment "To be completed" ;
+    rdfs:comment "Living organism causing a disease." ;
     rdfs:domain ecoct:BioticDisorder ;
     rdfs:range [ a owl:Class ; owl:unionOf ( ecoct:Taxon ecoct:TaxonInStage ) ] .
 
 ecoct:disease a owl:ObjectProperty ;
     rdfs:label "disease" ;
-    rdfs:comment "To be completed" ;
+    rdfs:comment "Disease caused by a living organism to a plant." ;
     rdfs:domain ecoct:BioticDisorder ;
     rdfs:range ecoct:Disease .
 
 ecoct:host a owl:ObjectProperty ;
     rdfs:label "host" ;
-    rdfs:comment "To be completed" .
+    rdfs:comment "Organism that harbors another living organism." .
 
 ecoct:hostPlant a owl:ObjectProperty ;
     rdfs:label "host plant" ;
     rdfs:subPropertyOf ecoct:host ;
-    rdfs:comment "To be completed" ;
+    rdfs:comment "Plant that harbors another living organism." ;
     rdfs:domain [
         a owl:Class ;
         owl:unionOf ( ecoct:BioticDisorder ecoct:Attacks ecoct:IsVectorOf ecoct:IsHostPlantOf )
@@ -230,91 +227,85 @@ ecoct:hostPlant a owl:ObjectProperty ;
 ecoct:hostAnimal a owl:ObjectProperty ;
     rdfs:label "host animal" ;
     rdfs:subPropertyOf ecoct:host ;
-    rdfs:comment "To be completed" ;
+    rdfs:comment "Animal that harbors another living organism." ;
     rdfs:domain [ a owl:Class ; owl:unionOf ( ecoct:IsNaturalEnemyOf ecoct:IsCommensalOf ) ] ;
     rdfs:range [ a owl:Class ; owl:unionOf ( ecoct:Taxon ecoct:TaxonInStage ) ] .
 
 ecoct:cause a owl:ObjectProperty ;
     rdfs:label "cause" ;
-    rdfs:comment "To be completed" ;
+    rdfs:comment "Abiotic factor causing a disorder." ;
     rdfs:domain ecoct:AbioticDisorder ;
     rdfs:range ecoct:AbioticFactor .
 
 ecoct:object a owl:ObjectProperty ;
     rdfs:label "object" ;
-    rdfs:comment "To be completed" ;
+    rdfs:comment "Plant (or a plant part) that is affected by an abiotic factor." ;
     rdfs:domain ecoct:AbioticDisorder ;
     rdfs:range [ a owl:Class ; owl:unionOf ( ecoct:Taxon ecoct:PlantPart ecoct:TaxonInStage ) ] .
 
 ecoct:pest a owl:ObjectProperty ;
     rdfs:label "pest" ;
-    rdfs:comment "a species, strain or biotype of plant, animal, or pathogenic agent injurious to plants or plant products" ;
+    rdfs:comment "Living organism that is attacks a plant." ;
     rdfs:domain ecoct:Attacks ;
     rdfs:range [ a owl:Class ; owl:unionOf ( ecoct:Taxon ecoct:TaxonInStage ) ] .
 
 ecoct:predator a owl:ObjectProperty ;
     rdfs:label "predator" ;
-    rdfs:comment "To be completed" ;
     rdfs:domain ecoct:PreysOn ;
     rdfs:range [ a owl:Class ; owl:unionOf ( ecoct:Taxon ecoct:TaxonInStage ) ] .
 
 ecoct:prey a owl:ObjectProperty ;
     rdfs:label "prey" ;
-    rdfs:comment "To be completed" ;
     rdfs:domain ecoct:PreysOn ;
     rdfs:range [ a owl:Class ; owl:unionOf ( ecoct:Taxon ecoct:TaxonInStage ) ] .
 
 ecoct:parasite a owl:ObjectProperty ;
     rdfs:label "parasite" ;
-    rdfs:comment "To be completed" ;
     rdfs:domain ecoct:IsParasiteOf ;
     rdfs:range [ a owl:Class ; owl:unionOf ( ecoct:Taxon ecoct:TaxonInStage ) ] .
 
 ecoct:hyperparasite a owl:ObjectProperty ;
     rdfs:label "hyperparasite" ;
-    rdfs:comment "To be completed" ;
     rdfs:domain ecoct:IsHyperParasiteOf ;
     rdfs:range [ a owl:Class ; owl:unionOf ( ecoct:Taxon ecoct:TaxonInStage ) ] .
 
 ecoct:parasitoid a owl:ObjectProperty ;
     rdfs:label "parasitoid" ;
-    rdfs:comment "To be completed" ;
     rdfs:domain ecoct:IsParasitoidOf ;
     rdfs:range [ a owl:Class ; owl:unionOf ( ecoct:Taxon ecoct:TaxonInStage ) ] .
 
 ecoct:hyperparasitoid a owl:ObjectProperty ;
     rdfs:label "hyperparasitoid" ;
-    rdfs:comment "To be completed" ;
     rdfs:domain ecoct:IsHyperParasitoidOf ;
     rdfs:range [ a owl:Class ; owl:unionOf ( ecoct:Taxon ecoct:TaxonInStage ) ] .
 
 ecoct:commensal a owl:ObjectProperty ;
     rdfs:label "commensal" ;
-    rdfs:comment "To be completed" ;
+    rdfs:comment "Organism that benefits from the relationship." ;
     rdfs:domain ecoct:IsCommensalOf ;
     rdfs:range [ a owl:Class ; owl:unionOf ( ecoct:Taxon ecoct:TaxonInStage ) ] .
 
 ecoct:vector a owl:ObjectProperty ;
     rdfs:label "vector" ;
-    rdfs:comment "To be completed" ;
+    rdfs:comment "Transmitting organism." ;
     rdfs:domain ecoct:IsVectorOf ;
     rdfs:range [ a owl:Class ; owl:unionOf ( ecoct:Taxon ecoct:TaxonInStage ) ] .
 
 ecoct:transmitted a owl:ObjectProperty ;
     rdfs:label "transmitted" ;
-    rdfs:comment "To be completed" ;
+    rdfs:comment "Organism that is transmitted by a vector." ;
     rdfs:domain ecoct:IsVectorOf ;
     rdfs:range [ a owl:Class ; owl:unionOf ( ecoct:Taxon ecoct:TaxonInStage ) ] .
 
 ecoct:harbored a owl:ObjectProperty ;
     rdfs:label "harbored" ;
-    rdfs:comment "To be completed" ;
+    rdfs:comment "Organism that is harbored by a host." ;
     rdfs:domain ecoct:IsHostPlantOf ;
     rdfs:range [ a owl:Class ; owl:unionOf ( ecoct:Taxon ecoct:TaxonInStage ) ] .
 
 ecoct:periodicity a owl:ObjectProperty ;
     rdfs:label "periodicity" ;
-    rdfs:comment "To be completed" ;
+    rdfs:comment "The frequency or regularity of an event or process." ;
     rdfs:domain ecoct:IsRefugeOf ;
     rdfs:range [ a owl:Class ; owl:unionOf ( ecoct:TimeInterval ecoct:Season ecoct:Period ) ] .
 
@@ -353,3 +344,14 @@ ecoct:partOf a owl:ObjectProperty ;
     rdfs:comment "To be completed" ;
     rdfs:domain ecoct:PlantPart ;
     rdfs:range ecoct:Taxon .
+
+# -----------------------------------------------------------
+# --- Datatype Properties
+# -----------------------------------------------------------
+
+ecoct:hasLethality a owl:DatatypeProperty ;
+    rdfs:label "has lethality" ;
+    rdfs:range xsd:decimal ;
+    rdfs:domain [ a owl:Class ; owl:unionOf ( ecoct:Affliction ecoct:IsNaturalEnemyOf ) ] ;
+    rdfs:comment "To be completed" .
+
