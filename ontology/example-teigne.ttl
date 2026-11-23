@@ -1,0 +1,115 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+@prefix eco: <http://ns.inria.fr/ecocontrol/ontology/> .
+@prefix ecd: <http://ns.inria.fr/ecocontrol/data/> .
+
+# --- Taxa
+
+ecd:OleaEuropaea a eco:Taxon ;
+    rdfs:label "Olea europaea" ;
+    skos:altLabel "olive tree" .
+
+ecd:PraysOleae a eco:Taxon ;
+    rdfs:label "Prays oleae" ;
+    skos:altLabel "olive moth" ;
+    rdfs:comment "Pest moth of the olive tree." .
+
+ecd:AgeniaspisFuscicollis a eco:Taxon ;
+    rdfs:label "Ageniaspis fuscicollis" ;
+    rdfs:comment "A small wasp, parasitoid of the olive moth. It helps to control the olive moth." .
+
+ecd:AgeniaspisFuscicollisPraysincola a eco:Taxon ;
+    rdfs:label "Ageniaspis fuscicollis praysincola" ;
+    skos:broader ecd:AgeniaspisFuscicollis ;
+    rdfs:comment "Subspecies of Ageniaspis fuscicollis." .
+
+# --- Development stages
+
+ecd:Egg a eco:DevelopmentStage ;
+    rdfs:label "egg" .
+
+ecd:Caterpillar a eco:DevelopmentStage ;
+    rdfs:label "caterpillar" .
+
+ecd:Adult a eco:DevelopmentStage ;
+    rdfs:label "adult" .
+
+# --- Taxa in stage
+
+ecd:PraysOleae_Egg a eco:TaxonInStage ;
+    rdfs:label "Prays oleae, egg" ;
+    eco:stageOf ecd:PraysOleae ;
+    eco:hasStage ecd:Egg .
+
+ecd:PraysOleae_Caterpillar a eco:TaxonInStage ;
+    rdfs:label "Prays oleae, caterpillar" ;
+    eco:stageOf ecd:PraysOleae ;
+    eco:hasStage ecd:Caterpillar .
+
+ecd:PraysOleae_Adult a eco:TaxonInStage ;
+    rdfs:label "Prays oleae, adult moth" ;
+    eco:stageOf ecd:PraysOleae ;
+    eco:hasStage ecd:Adult .
+
+# --- Plant parts
+
+ecd:OliveBud a eco:PlantPart ;
+    rdfs:label "olive bud" ;
+    eco:partOf ecd:OleaEuropaea .
+
+ecd:OliveFlower a eco:PlantPart ;
+    rdfs:label "olive flower" ;
+    eco:partOf ecd:OleaEuropaea .
+
+ecd:OliveFruit a eco:PlantPart ;
+    rdfs:label "olive fruit" ;
+    eco:partOf ecd:OleaEuropaea .
+
+# --- Disease
+
+ecd:OliveMoth_Disease a eco:Disease ;
+    rdfs:label "olive moth"@en, "teigne de l'olivier"@fr ;
+    rdfs:comment "Disease of the olive tree resulting from an insect (Prays oleae)." .
+
+ecd:BioticDisorder_PraysOleae_OleaEuropaea a eco:BioticDisorder ;
+    rdfs:label "Prays oleae causes olive moth disease for the olive tree"@en, "Prays oleae provoque la teigne de l'olivier (chez l'olivier)"@fr ;
+    eco:agent ecd:PraysOleae ;
+    eco:disease ecd:OliveMoth_Disease ;
+    eco:hostPlant ecd:OleaEuropaea .
+
+ecd:Afflication_PraysOleae_OleaEuropaea a eco:Afflication ;
+    rdfs:label "The olive moth disease affects the olive tree", "La teigne de l'olivier affecte l'olivier"@fr ;
+    eco:disorder ecd:OliveMoth_Disease ;
+    eco:affects ecd:OleaEuropaea ;
+    eco:hasLethality "0.3"^^xsd:decimal .
+
+# --- Attack of the olive moth on the olive tree (3 steps)
+
+ecd:Attacks_Caterpillar_OliveBud a eco:Attacks ;
+    rdfs:label "In April, the caterpillars of Prays oleae gnaw the olive buds" ;
+    eco:pest ecd:PraysOleae_Caterpillar ;
+    eco:hostPlant ecd:OliveBud ;
+    eco:periodicity [ a eco:Periodicity ; rdfs:label "April" ] .
+
+ecd:Attacks_Caterpillar_OliveFlower a eco:Attacks ;
+    rdfs:label "In May, the caterpillars of Prays oleae nibble the olive flowers" ;
+    eco:pest ecd:PraysOleae_Caterpillar ;
+    eco:hostPlant ecd:OliveFlower ;
+    eco:periodicity [ a eco:Periodicity ; rdfs:label "May" ] .
+
+ecd:Attacks_Adult_OliveFruit a eco:Attacks ;
+    rdfs:label "In July, the adult moth of Prays oleae lays its eggs in the olive fruits" ;
+    eco:pest ecd:PraysOleae_Adult ;
+    eco:hostPlant ecd:OliveFruit ;
+    eco:periodicity [ a eco:Periodicity ; rdfs:label "July" ] .
+
+# --- Parasitoid of the olive moth
+
+ecd:IsParasitoidOf_AgeniaspisFuscicollis_PraysOleaeEgg a eco:IsParasitoidOf ;
+    rdfs:label "Ageniaspis fuscicollis is parasitoid of the egg of Prays oleae" ;
+    rdfs:comment "Ageniaspis fuscicollis (notably the subspecies praysincola) is a small wasp, parasitoid of the olive moth. It helps to control the olive moth. It lays its eggs in the egg of the olive moth." ;
+    eco:parasitoid ecd:AgeniaspisFuscicollis ;
+    eco:hostAnimal ecd:PraysOleae_Egg .
