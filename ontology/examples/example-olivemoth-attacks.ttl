@@ -1,0 +1,72 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+@prefix eco: <http://ns.inria.fr/ecocontrol/ontology/> .
+@prefix ecd: <http://ns.inria.fr/ecocontrol/data/> .
+
+# --- Taxa
+
+ecd:OleaEuropaea a eco:Taxon ;
+    rdfs:label "Olea europaea" ;
+    skos:altLabel "olive tree" .
+
+ecd:PraysOleae a eco:Taxon ;
+    rdfs:label "Prays oleae" ;
+    skos:altLabel "olive moth" ;
+    rdfs:comment "Pest moth of the olive tree." .
+
+# --- Development stages
+
+ecd:Caterpillar a eco:DevelopmentStage ;
+    rdfs:label "caterpillar" .
+
+ecd:Adult a eco:DevelopmentStage ;
+    rdfs:label "adult" .
+
+# --- Taxa in stage
+
+ecd:PraysOleae_Caterpillar a eco:TaxonInStage ;
+    rdfs:label "Prays oleae, caterpillar" ;
+    eco:stageOf ecd:PraysOleae ;
+    eco:hasStage ecd:Caterpillar .
+
+ecd:PraysOleae_Adult a eco:TaxonInStage ;
+    rdfs:label "Prays oleae, adult moth" ;
+    eco:stageOf ecd:PraysOleae ;
+    eco:hasStage ecd:Adult .
+
+# --- Plant parts
+
+ecd:OliveBud a eco:PlantPart ;
+    rdfs:label "olive bud" ;
+    eco:partOf ecd:OleaEuropaea .
+
+ecd:OliveFlower a eco:PlantPart ;
+    rdfs:label "olive flower" ;
+    eco:partOf ecd:OleaEuropaea .
+
+ecd:OliveFruit a eco:PlantPart ;
+    rdfs:label "olive fruit" ;
+    eco:partOf ecd:OleaEuropaea .
+
+# --- Attack of the olive moth on the olive tree (3 steps)
+
+ecd:Attacks_Caterpillar_OliveBud a eco:Attacks ;
+    rdfs:label "In April, the caterpillars of Prays oleae gnaw the olive buds" ;
+    eco:pest ecd:PraysOleae_Caterpillar ;
+    eco:hostPlant ecd:OliveBud ;
+    eco:periodicity [ a eco:Periodicity ; rdfs:label "April" ] .
+
+ecd:Attacks_Caterpillar_OliveFlower a eco:Attacks ;
+    rdfs:label "In May, the caterpillars of Prays oleae nibble the olive flowers" ;
+    eco:pest ecd:PraysOleae_Caterpillar ;
+    eco:hostPlant ecd:OliveFlower ;
+    eco:periodicity [ a eco:Periodicity ; rdfs:label "May" ] .
+
+ecd:Attacks_Adult_OliveFruit a eco:Attacks ;
+    rdfs:label "In July, the adult moth of Prays oleae lays its eggs in the olive fruits" ;
+    eco:pest ecd:PraysOleae_Adult ;
+    eco:hostPlant ecd:OliveFruit ;
+    eco:periodicity [ a eco:Periodicity ; rdfs:label "July" ] .

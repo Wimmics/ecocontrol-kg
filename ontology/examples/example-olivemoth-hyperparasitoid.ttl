@@ -1,0 +1,43 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+@prefix eco: <http://ns.inria.fr/ecocontrol/ontology/> .
+@prefix ecd: <http://ns.inria.fr/ecocontrol/data/> .
+
+# --- Taxa
+
+ecd:PraysOleae a eco:Taxon ;
+    rdfs:label "Prays oleae" ;
+    skos:altLabel "olive moth" ;
+    rdfs:comment "Pest moth of the olive tree." .
+
+ecd:AgeniaspisFuscicollis a eco:Taxon ;
+    rdfs:label "Ageniaspis fuscicollis" ;
+    rdfs:comment "A small wasp, parasitoid of the olive moth. It helps to control the olive moth." .
+
+ecd:AgeniaspisFuscicollisPraysincola a eco:Taxon ;
+    rdfs:label "Ageniaspis fuscicollis praysincola" ;
+    skos:broader ecd:AgeniaspisFuscicollis ;
+    rdfs:comment "Subspecies of Ageniaspis fuscicollis." .
+
+# --- Development stages
+
+ecd:Egg a eco:DevelopmentStage ;
+    rdfs:label "egg" .
+
+# --- Taxa in stage
+
+ecd:PraysOleae_Egg a eco:TaxonInStage ;
+    rdfs:label "Prays oleae, egg" ;
+    eco:stageOf ecd:PraysOleae ;
+    eco:hasStage ecd:Egg .
+
+# --- Parasitoid of the olive moth
+
+ecd:IsParasitoidOf_AgeniaspisFuscicollis_PraysOleaeEgg a eco:IsParasitoidOf ;
+    rdfs:label "Ageniaspis fuscicollis is parasitoid of the egg of Prays oleae" ;
+    rdfs:comment "Ageniaspis fuscicollis (notably the subspecies praysincola) is a small wasp, parasitoid of the olive moth. It helps to control the olive moth. It lays its eggs in the egg of the olive moth." ;
+    eco:parasitoid ecd:AgeniaspisFuscicollisPraysincola ;
+    eco:hostAnimal ecd:PraysOleae_Egg .

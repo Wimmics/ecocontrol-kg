@@ -1,0 +1,225 @@
+{
+  "ontoink_view": 1,
+  "saved": "2026-11-25T08:46:55.961Z",
+  "ontology": {
+    "fingerprint": "6nv05-32",
+    "nodes": 32,
+    "title": ""
+  },
+  "level": 6,
+  "show": {
+    "classes": true,
+    "hierarchy": true,
+    "rdfType": true,
+    "instances": true,
+    "objectProps": true,
+    "annotations": true,
+    "restrictions": true,
+    "shacl": true,
+    "dataProps": false,
+    "inferred": true
+  },
+  "group": true,
+  "style": "ontoink",
+  "layout": {
+    "algorithm": "dagre",
+    "params": {
+      "stratified": {
+        "aspect": "fit",
+        "hierarchy": "rdfs:subClassOf, skos:broader, ^skos:narrower",
+        "instances": "under-class",
+        "floor": 9,
+        "maxCols": 0,
+        "nodeGap": 14,
+        "levelGap": 34,
+        "bandGap": 60
+      },
+      "dagre": {
+        "rankDir": "TB",
+        "ranker": "network-simplex",
+        "nodeSep": 60,
+        "rankSep": 80,
+        "edgeSep": 20
+      },
+      "cose": {
+        "nodeRepulsion": 8000,
+        "idealEdgeLength": 80,
+        "gravity": 1,
+        "numIter": 1000,
+        "componentSpacing": 40
+      },
+      "circle": {
+        "spacingFactor": 1,
+        "avoidOverlap": true
+      },
+      "concentric": {
+        "levelWidth": 2,
+        "minNodeSpacing": 10,
+        "spacingFactor": 1
+      },
+      "breadthfirst": {
+        "directed": false,
+        "circle": false,
+        "spacingFactor": 1.25
+      },
+      "grid": {
+        "spacingFactor": 1,
+        "avoidOverlap": true,
+        "condense": false
+      }
+    }
+  },
+  "pinned": {
+    "http://ns.inria.fr/ecocontrol/data/Attacks_Adult_OliveFruit": [
+      911,
+      -70
+    ],
+    "http://ns.inria.fr/ecocontrol/data/Attacks_Caterpillar_OliveBud": [
+      627,
+      -66
+    ],
+    "http://ns.inria.fr/ecocontrol/data/Attacks_Caterpillar_OliveFlower": [
+      353,
+      -61
+    ],
+    "http://ns.inria.fr/ecocontrol/ontology/DevelopmentStage": [
+      660,
+      441
+    ],
+    "http://ns.inria.fr/ecocontrol/data/Adult": [
+      913,
+      358
+    ],
+    "http://ns.inria.fr/ecocontrol/ontology/Taxon": [
+      796,
+      189
+    ],
+    "http://ns.inria.fr/ecocontrol/data/Caterpillar": [
+      357,
+      356
+    ],
+    "http://ns.inria.fr/ecocontrol/ontology/Attacks": [
+      624,
+      -177
+    ],
+    "http://ns.inria.fr/ecocontrol/data/PraysOleae": [
+      653,
+      311
+    ],
+    "http://ns.inria.fr/ecocontrol/data/OliveFlower": [
+      561,
+      94
+    ],
+    "http://ns.inria.fr/ecocontrol/ontology/PlantPart": [
+      737,
+      -3
+    ],
+    "http://ns.inria.fr/ecocontrol/ontology/TaxonInStage": [
+      662,
+      378
+    ],
+    "http://ns.inria.fr/ecocontrol/data/PraysOleae_Caterpillar": [
+      356,
+      231
+    ],
+    "http://ns.inria.fr/ecocontrol/data/OleaEuropaea": [
+      633,
+      233
+    ],
+    "http://ns.inria.fr/ecocontrol/data/OliveBud": [
+      664,
+      93
+    ],
+    "http://ns.inria.fr/ecocontrol/data/PraysOleae_Adult": [
+      912,
+      232
+    ],
+    "http://ns.inria.fr/ecocontrol/data/OliveFruit": [
+      764,
+      88
+    ]
+  },
+  "pinnedByLayout": {
+    "dagre": {
+      "http://ns.inria.fr/ecocontrol/data/Attacks_Adult_OliveFruit": [
+        911,
+        -70
+      ],
+      "http://ns.inria.fr/ecocontrol/data/Attacks_Caterpillar_OliveBud": [
+        627,
+        -66
+      ],
+      "http://ns.inria.fr/ecocontrol/data/Attacks_Caterpillar_OliveFlower": [
+        353,
+        -61
+      ],
+      "http://ns.inria.fr/ecocontrol/ontology/DevelopmentStage": [
+        660,
+        441
+      ],
+      "http://ns.inria.fr/ecocontrol/data/Adult": [
+        913,
+        358
+      ],
+      "http://ns.inria.fr/ecocontrol/ontology/Taxon": [
+        796,
+        189
+      ],
+      "http://ns.inria.fr/ecocontrol/data/Caterpillar": [
+        357,
+        356
+      ],
+      "http://ns.inria.fr/ecocontrol/ontology/Attacks": [
+        624,
+        -177
+      ],
+      "http://ns.inria.fr/ecocontrol/data/PraysOleae": [
+        653,
+        311
+      ],
+      "http://ns.inria.fr/ecocontrol/data/OliveFlower": [
+        561,
+        94
+      ],
+      "http://ns.inria.fr/ecocontrol/ontology/PlantPart": [
+        737,
+        -3
+      ],
+      "http://ns.inria.fr/ecocontrol/ontology/TaxonInStage": [
+        662,
+        378
+      ],
+      "http://ns.inria.fr/ecocontrol/data/PraysOleae_Caterpillar": [
+        356,
+        231
+      ],
+      "http://ns.inria.fr/ecocontrol/data/OleaEuropaea": [
+        633,
+        233
+      ],
+      "http://ns.inria.fr/ecocontrol/data/OliveBud": [
+        664,
+        93
+      ],
+      "http://ns.inria.fr/ecocontrol/data/PraysOleae_Adult": [
+        912,
+        232
+      ],
+      "http://ns.inria.fr/ecocontrol/data/OliveFruit": [
+        764,
+        88
+      ]
+    }
+  },
+  "folded": [],
+  "unfolded": [],
+  "satFolded": [],
+  "manualFolds": false,
+  "viewport": {
+    "zoom": 0.91202,
+    "pan": {
+      "x": -83,
+      "y": 177
+    }
+  }
+}

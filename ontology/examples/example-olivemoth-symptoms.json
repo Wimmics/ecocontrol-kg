@@ -1,0 +1,226 @@
+{
+  "ontoink_view": 1,
+  "saved": "2026-11-25T10:09:33.790Z",
+  "ontology": {
+    "fingerprint": "1mep9k9-34",
+    "nodes": 34,
+    "title": ""
+  },
+  "level": 6,
+  "show": {
+    "classes": true,
+    "hierarchy": true,
+    "rdfType": true,
+    "instances": true,
+    "objectProps": true,
+    "annotations": true,
+    "restrictions": true,
+    "shacl": true,
+    "dataProps": false,
+    "inferred": true
+  },
+  "group": true,
+  "style": "ontoink",
+  "layout": {
+    "algorithm": "breadthfirst",
+    "params": {
+      "stratified": {
+        "aspect": "fit",
+        "hierarchy": "rdfs:subClassOf, skos:broader, ^skos:narrower",
+        "instances": "under-class",
+        "floor": 9,
+        "maxCols": 0,
+        "nodeGap": 14,
+        "levelGap": 34,
+        "bandGap": 60
+      },
+      "dagre": {
+        "rankDir": "BT",
+        "ranker": "network-simplex",
+        "nodeSep": 60,
+        "rankSep": 80,
+        "edgeSep": 20
+      },
+      "cose": {
+        "nodeRepulsion": 8000,
+        "idealEdgeLength": 80,
+        "gravity": 1,
+        "numIter": 1000,
+        "componentSpacing": 40
+      },
+      "circle": {
+        "spacingFactor": 1,
+        "avoidOverlap": true
+      },
+      "concentric": {
+        "levelWidth": 2,
+        "minNodeSpacing": 10,
+        "spacingFactor": 1
+      },
+      "breadthfirst": {
+        "directed": false,
+        "circle": false,
+        "spacingFactor": 1.25
+      },
+      "grid": {
+        "spacingFactor": 1,
+        "avoidOverlap": true,
+        "condense": false
+      }
+    }
+  },
+  "pinned": {
+    "http://ns.inria.fr/ecocontrol/data/OliveMoth_Disease": [
+      289,
+      -46
+    ],
+    "http://ns.inria.fr/ecocontrol/data/Manifestation_FlowerFeeding": [
+      229,
+      132
+    ],
+    "http://ns.inria.fr/ecocontrol/data/Manifestation_FruitFeeding": [
+      471,
+      128
+    ],
+    "http://ns.inria.fr/ecocontrol/ontology/Manifestation": [
+      636,
+      -44
+    ],
+    "http://ns.inria.fr/ecocontrol/data/Manifestation_LeafFeeding": [
+      731,
+      118
+    ],
+    "http://ns.inria.fr/ecocontrol/data/OleaEuropaea": [
+      376,
+      543
+    ],
+    "http://ns.inria.fr/ecocontrol/ontology/Taxon": [
+      213,
+      543
+    ],
+    "http://ns.inria.fr/ecocontrol/data/Symptom_LeafFeeding": [
+      641,
+      256
+    ],
+    "http://ns.inria.fr/ecocontrol/ontology/Disease": [
+      112,
+      -46
+    ],
+    "http://ns.inria.fr/ecocontrol/data/Symptom_FlowerFeeding": [
+      204,
+      260
+    ],
+    "http://ns.inria.fr/ecocontrol/ontology/Symptom": [
+      159,
+      370
+    ],
+    "http://ns.inria.fr/ecocontrol/data/OliveBud": [
+      347,
+      377
+    ],
+    "http://ns.inria.fr/ecocontrol/data/Symptom_FruitFeeding": [
+      448,
+      260
+    ],
+    "http://ns.inria.fr/ecocontrol/data/OliveFlower": [
+      474,
+      377
+    ],
+    "http://ns.inria.fr/ecocontrol/ontology/PlantPart": [
+      729,
+      544
+    ],
+    "http://ns.inria.fr/ecocontrol/data/OliveLeaf": [
+      725,
+      380
+    ],
+    "http://ns.inria.fr/ecocontrol/data/OliveFruit": [
+      604,
+      378
+    ]
+  },
+  "pinnedByLayout": {
+    "dagre": {},
+    "breadthfirst": {
+      "http://ns.inria.fr/ecocontrol/data/OliveMoth_Disease": [
+        289,
+        -46
+      ],
+      "http://ns.inria.fr/ecocontrol/data/Manifestation_FlowerFeeding": [
+        229,
+        132
+      ],
+      "http://ns.inria.fr/ecocontrol/data/Manifestation_FruitFeeding": [
+        471,
+        128
+      ],
+      "http://ns.inria.fr/ecocontrol/ontology/Manifestation": [
+        636,
+        -44
+      ],
+      "http://ns.inria.fr/ecocontrol/data/Manifestation_LeafFeeding": [
+        731,
+        118
+      ],
+      "http://ns.inria.fr/ecocontrol/data/OleaEuropaea": [
+        376,
+        543
+      ],
+      "http://ns.inria.fr/ecocontrol/ontology/Taxon": [
+        213,
+        543
+      ],
+      "http://ns.inria.fr/ecocontrol/data/Symptom_LeafFeeding": [
+        641,
+        256
+      ],
+      "http://ns.inria.fr/ecocontrol/ontology/Disease": [
+        112,
+        -46
+      ],
+      "http://ns.inria.fr/ecocontrol/data/Symptom_FlowerFeeding": [
+        204,
+        260
+      ],
+      "http://ns.inria.fr/ecocontrol/ontology/Symptom": [
+        159,
+        370
+      ],
+      "http://ns.inria.fr/ecocontrol/data/OliveBud": [
+        347,
+        377
+      ],
+      "http://ns.inria.fr/ecocontrol/data/Symptom_FruitFeeding": [
+        448,
+        260
+      ],
+      "http://ns.inria.fr/ecocontrol/data/OliveFlower": [
+        474,
+        377
+      ],
+      "http://ns.inria.fr/ecocontrol/ontology/PlantPart": [
+        729,
+        544
+      ],
+      "http://ns.inria.fr/ecocontrol/data/OliveLeaf": [
+        725,
+        380
+      ],
+      "http://ns.inria.fr/ecocontrol/data/OliveFruit": [
+        604,
+        378
+      ]
+    }
+  },
+  "folded": [],
+  "unfolded": [],
+  "satFolded": [],
+  "manualFolds": false,
+  "viewport": {
+    "zoom": 0.85203,
+    "pan": {
+      "x": 202,
+      "y": 88
+    }
+  }
+}

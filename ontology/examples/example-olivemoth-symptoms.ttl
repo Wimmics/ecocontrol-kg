@@ -1,0 +1,69 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+@prefix eco: <http://ns.inria.fr/ecocontrol/ontology/> .
+@prefix ecd: <http://ns.inria.fr/ecocontrol/data/> .
+
+# --- Taxa
+
+ecd:OleaEuropaea a eco:Taxon ;
+    rdfs:label "Olea europaea" ;
+    skos:altLabel "olive tree" .
+
+# --- Plant parts
+
+ecd:OliveLeaf a eco:PlantPart ;
+    rdfs:label "olive leaf" ;
+    eco:partOf ecd:OleaEuropaea .
+
+ecd:OliveBud a eco:PlantPart ;
+    rdfs:label "olive bud" ;
+    eco:partOf ecd:OleaEuropaea .
+
+ecd:OliveFlower a eco:PlantPart ;
+    rdfs:label "olive flower" ;
+    eco:partOf ecd:OleaEuropaea .
+
+ecd:OliveFruit a eco:PlantPart ;
+    rdfs:label "olive fruit" ;
+    eco:partOf ecd:OleaEuropaea .
+
+# --- Disease, affliction, and disorder
+
+ecd:OliveMoth_Disease a eco:Disease ;
+    rdfs:label "olive moth disease" ;
+    rdfs:comment "Disease of the olive tree resulting from an insect (Prays oleae)." .
+
+# --- Symptoms and manifestations
+
+ecd:Symptom_LeafFeeding a eco:Symptom ;
+    rdfs:label "leaf-feeding" ;
+    rdfs:comment "Caterpillars bore tunnels ('mines') inside leaves, creating transparent patches or 'window-feeding' patterns, along with small bites, partial leaf curling, and visible frass (droppings) on the underside of leaves." .
+
+ecd:Manifestation_LeafFeeding a eco:Manifestation ;
+    rdfs:label "olive moth leaf-feeding" ;
+    eco:sign ecd:Symptom_LeafFeeding ;
+    eco:hasDiagnosis ecd:OliveMoth_Disease ;
+    eco:affects ecd:OliveLeaf .
+
+ecd:Symptom_FlowerFeeding a eco:Symptom ;
+    rdfs:label "flower-feeding" ;
+    rdfs:comment "Caterpillars eat flower buds and blossoms, spin silk threads that bind flower clusters together into a nest, and leave grains of frass behind, reducing fruit set." .
+
+ecd:Manifestation_FlowerFeeding a eco:Manifestation ;
+    rdfs:label "olive moth flower-feeding" ;
+    eco:sign ecd:Symptom_FlowerFeeding ;
+    eco:hasDiagnosis ecd:OliveMoth_Disease ;
+    eco:affects ecd:OliveFlower, ecd:OliveBud .
+
+ecd:Symptom_FruitFeeding a eco:Symptom ;
+    rdfs:label "fruit-feeding" ;
+    rdfs:comment "Caterpillars bore into young olives to feed near the pit/seed, leaving small entry or exit holes, internal galleries, and premature fruit drop (often as larvae exit the fruit or with the fruit stem/pedicel attached)." .
+
+ecd:Manifestation_FruitFeeding a eco:Manifestation ;
+    rdfs:label "olive moth fruit-feeding" ;
+    eco:sign ecd:Symptom_FruitFeeding ;
+    eco:hasDiagnosis ecd:OliveMoth_Disease ;
+    eco:affects ecd:OliveFruit .

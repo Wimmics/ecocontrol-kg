@@ -1,0 +1,162 @@
+{
+  "ontoink_view": 1,
+  "saved": "2026-11-25T08:45:44.500Z",
+  "ontology": {
+    "fingerprint": "151ed19-20",
+    "nodes": 20,
+    "title": ""
+  },
+  "level": 6,
+  "show": {
+    "classes": true,
+    "hierarchy": true,
+    "rdfType": true,
+    "instances": true,
+    "objectProps": true,
+    "annotations": true,
+    "restrictions": true,
+    "shacl": true,
+    "dataProps": false,
+    "inferred": true
+  },
+  "group": true,
+  "style": "ontoink",
+  "layout": {
+    "algorithm": "breadthfirst",
+    "params": {
+      "stratified": {
+        "aspect": "fit",
+        "hierarchy": "rdfs:subClassOf, skos:broader, ^skos:narrower",
+        "instances": "under-class",
+        "floor": 9,
+        "maxCols": 0,
+        "nodeGap": 14,
+        "levelGap": 34,
+        "bandGap": 60
+      },
+      "dagre": {
+        "rankDir": "BT",
+        "ranker": "network-simplex",
+        "nodeSep": 60,
+        "rankSep": 80,
+        "edgeSep": 20
+      },
+      "cose": {
+        "nodeRepulsion": 8000,
+        "idealEdgeLength": 80,
+        "gravity": 1,
+        "numIter": 1000,
+        "componentSpacing": 40
+      },
+      "circle": {
+        "spacingFactor": 1,
+        "avoidOverlap": true
+      },
+      "concentric": {
+        "levelWidth": 2,
+        "minNodeSpacing": 10,
+        "spacingFactor": 1
+      },
+      "breadthfirst": {
+        "directed": false,
+        "circle": false,
+        "spacingFactor": 1.25
+      },
+      "grid": {
+        "spacingFactor": 1,
+        "avoidOverlap": true,
+        "condense": false
+      }
+    }
+  },
+  "pinned": {
+    "http://ns.inria.fr/ecocontrol/data/Afflication_PraysOleae_OleaEuropaea": [
+      240,
+      593
+    ],
+    "http://ns.inria.fr/ecocontrol/data/OliveMoth_Disease": [
+      424,
+      469
+    ],
+    "http://ns.inria.fr/ecocontrol/ontology/Disease": [
+      592,
+      471
+    ],
+    "http://ns.inria.fr/ecocontrol/ontology/Taxon": [
+      63,
+      605
+    ],
+    "http://ns.inria.fr/ecocontrol/data/PraysOleae": [
+      245,
+      489
+    ],
+    "http://ns.inria.fr/ecocontrol/data/OleaEuropaea": [
+      32,
+      458
+    ],
+    "http://ns.inria.fr/ecocontrol/data/BioticDisorder_PraysOleae_OleaEuropaea": [
+      243,
+      342
+    ],
+    "http://ns.inria.fr/ecocontrol/ontology/BioticDisorder": [
+      501,
+      340
+    ],
+    "http://ns.inria.fr/ecocontrol/ontology/Afflication": [
+      485,
+      589
+    ]
+  },
+  "pinnedByLayout": {
+    "dagre": {},
+    "breadthfirst": {
+      "http://ns.inria.fr/ecocontrol/data/Afflication_PraysOleae_OleaEuropaea": [
+        240,
+        593
+      ],
+      "http://ns.inria.fr/ecocontrol/data/OliveMoth_Disease": [
+        424,
+        469
+      ],
+      "http://ns.inria.fr/ecocontrol/ontology/Disease": [
+        592,
+        471
+      ],
+      "http://ns.inria.fr/ecocontrol/ontology/Taxon": [
+        63,
+        605
+      ],
+      "http://ns.inria.fr/ecocontrol/data/PraysOleae": [
+        245,
+        489
+      ],
+      "http://ns.inria.fr/ecocontrol/data/OleaEuropaea": [
+        32,
+        458
+      ],
+      "http://ns.inria.fr/ecocontrol/data/BioticDisorder_PraysOleae_OleaEuropaea": [
+        243,
+        342
+      ],
+      "http://ns.inria.fr/ecocontrol/ontology/BioticDisorder": [
+        501,
+        340
+      ],
+      "http://ns.inria.fr/ecocontrol/ontology/Afflication": [
+        485,
+        589
+      ]
+    }
+  },
+  "folded": [],
+  "unfolded": [],
+  "satFolded": [],
+  "manualFolds": false,
+  "viewport": {
+    "zoom": 1.1055,
+    "pan": {
+      "x": 191,
+      "y": -316
+    }
+  }
+}

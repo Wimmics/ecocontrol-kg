@@ -1,0 +1,169 @@
+{
+  "ontoink_view": 1,
+  "saved": "2026-11-25T08:47:54.316Z",
+  "ontology": {
+    "fingerprint": "10v7an3-21",
+    "nodes": 21,
+    "title": ""
+  },
+  "level": 6,
+  "show": {
+    "classes": true,
+    "hierarchy": true,
+    "rdfType": true,
+    "instances": true,
+    "objectProps": true,
+    "annotations": true,
+    "restrictions": true,
+    "shacl": true,
+    "dataProps": false,
+    "inferred": true
+  },
+  "group": true,
+  "style": "ontoink",
+  "layout": {
+    "algorithm": "dagre",
+    "params": {
+      "stratified": {
+        "aspect": "fit",
+        "hierarchy": "rdfs:subClassOf, skos:broader, ^skos:narrower",
+        "instances": "under-class",
+        "floor": 9,
+        "maxCols": 0,
+        "nodeGap": 14,
+        "levelGap": 34,
+        "bandGap": 60
+      },
+      "dagre": {
+        "rankDir": "TB",
+        "ranker": "network-simplex",
+        "nodeSep": 60,
+        "rankSep": 80,
+        "edgeSep": 20
+      },
+      "cose": {
+        "nodeRepulsion": 8000,
+        "idealEdgeLength": 80,
+        "gravity": 1,
+        "numIter": 1000,
+        "componentSpacing": 40
+      },
+      "circle": {
+        "spacingFactor": 1,
+        "avoidOverlap": true
+      },
+      "concentric": {
+        "levelWidth": 2,
+        "minNodeSpacing": 10,
+        "spacingFactor": 1
+      },
+      "breadthfirst": {
+        "directed": false,
+        "circle": false,
+        "spacingFactor": 1.25
+      },
+      "grid": {
+        "spacingFactor": 1,
+        "avoidOverlap": true,
+        "condense": false
+      }
+    }
+  },
+  "pinned": {
+    "http://ns.inria.fr/ecocontrol/data/IsParasitoidOf_AgeniaspisFuscicollis_PraysOleaeEgg": [
+      314,
+      7
+    ],
+    "http://ns.inria.fr/ecocontrol/ontology/IsParasitoidOf": [
+      99,
+      7
+    ],
+    "http://ns.inria.fr/ecocontrol/data/AgeniaspisFuscicollis": [
+      11,
+      203
+    ],
+    "http://ns.inria.fr/ecocontrol/data/AgeniaspisFuscicollisPraysincola": [
+      229,
+      201
+    ],
+    "http://ns.inria.fr/ecocontrol/data/PraysOleae": [
+      386,
+      200
+    ],
+    "http://ns.inria.fr/ecocontrol/ontology/Taxon": [
+      230,
+      325
+    ],
+    "http://ns.inria.fr/ecocontrol/data/PraysOleae_Egg": [
+      510,
+      101
+    ],
+    "http://ns.inria.fr/ecocontrol/ontology/TaxonInStage": [
+      690,
+      98
+    ],
+    "http://ns.inria.fr/ecocontrol/data/Egg": [
+      511,
+      243
+    ],
+    "http://ns.inria.fr/ecocontrol/ontology/DevelopmentStage": [
+      512,
+      331
+    ]
+  },
+  "pinnedByLayout": {
+    "dagre": {
+      "http://ns.inria.fr/ecocontrol/data/IsParasitoidOf_AgeniaspisFuscicollis_PraysOleaeEgg": [
+        314,
+        7
+      ],
+      "http://ns.inria.fr/ecocontrol/ontology/IsParasitoidOf": [
+        99,
+        7
+      ],
+      "http://ns.inria.fr/ecocontrol/data/AgeniaspisFuscicollis": [
+        11,
+        203
+      ],
+      "http://ns.inria.fr/ecocontrol/data/AgeniaspisFuscicollisPraysincola": [
+        229,
+        201
+      ],
+      "http://ns.inria.fr/ecocontrol/data/PraysOleae": [
+        386,
+        200
+      ],
+      "http://ns.inria.fr/ecocontrol/ontology/Taxon": [
+        230,
+        325
+      ],
+      "http://ns.inria.fr/ecocontrol/data/PraysOleae_Egg": [
+        510,
+        101
+      ],
+      "http://ns.inria.fr/ecocontrol/ontology/TaxonInStage": [
+        690,
+        98
+      ],
+      "http://ns.inria.fr/ecocontrol/data/Egg": [
+        511,
+        243
+      ],
+      "http://ns.inria.fr/ecocontrol/ontology/DevelopmentStage": [
+        512,
+        331
+      ]
+    }
+  },
+  "folded": [],
+  "unfolded": [],
+  "satFolded": [],
+  "manualFolds": false,
+  "viewport": {
+    "zoom": 1.04764,
+    "pan": {
+      "x": 133,
+      "y": 74
+    }
+  }
+}

@@ -1,0 +1,36 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+@prefix eco: <http://ns.inria.fr/ecocontrol/ontology/> .
+@prefix ecd: <http://ns.inria.fr/ecocontrol/data/> .
+
+# --- Taxa
+
+ecd:OleaEuropaea a eco:Taxon ;
+    rdfs:label "Olea europaea" ;
+    skos:altLabel "olive tree" .
+
+ecd:PraysOleae a eco:Taxon ;
+    rdfs:label "Prays oleae" ;
+    skos:altLabel "olive moth" ;
+    rdfs:comment "Pest moth of the olive tree." .
+
+# --- Disease
+
+ecd:OliveMoth_Disease a eco:Disease ;
+    rdfs:label "olive moth disease" ;
+    rdfs:comment "Disease of the olive tree resulting from an insect (Prays oleae)." .
+
+ecd:BioticDisorder_PraysOleae_OleaEuropaea a eco:BioticDisorder ;
+    rdfs:label "Prays oleae causes olive moth disease for the olive tree" ;
+    eco:agent ecd:PraysOleae ;
+    eco:disease ecd:OliveMoth_Disease ;
+    eco:hostPlant ecd:OleaEuropaea .
+
+ecd:Afflication_PraysOleae_OleaEuropaea a eco:Afflication ;
+    rdfs:label "The olive moth disease affects the olive tree", "La teigne de l'olivier affecte l'olivier"@fr ;
+    eco:disorder ecd:OliveMoth_Disease ;
+    eco:affects ecd:OleaEuropaea ;
+    eco:hasLethality "0.3"^^xsd:decimal .

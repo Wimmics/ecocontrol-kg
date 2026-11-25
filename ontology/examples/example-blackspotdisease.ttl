@@ -1,0 +1,36 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+@prefix eco: <http://ns.inria.fr/ecocontrol/ontology/> .
+@prefix ecd: <http://ns.inria.fr/ecocontrol/data> .
+
+ecd:black_spot_affection a eco:Affliction ;
+    eco:disorder ecd:BlackSpotDisease ; # CABI ?
+    eco:affects ecd:Rosier ; # NCBI ?
+    eco:affects ecd:RoseLeaf ;
+    eco:hasLethality "0.3"^^xsd:decimal .
+
+ecd:black_spot_manifestation a eco:Manifestation ;
+    eco:sign ecd:BlackSpotSymptom ;
+    eco:hasDiagnosis ecd:BlackSpotDisease ;
+    eco:affects ecd:RoseLeaf ;
+    eco:affects ecd:RosierVegetativeGrowth .
+
+ecd:BlackSpotDisease a eco:Disease .
+
+ecd:BlackSpotSymptom a eco:Symptom .
+
+ecd:Rosier a eco:Taxon .
+
+ecd:RoseLeaf a eco:PlantPart ;
+    eco:partOf ecd:Rosier ;
+    skos:broader ecd:Leaf .
+
+ecd:Leaf a skos:Concept .
+
+ecd:RosierVegetativeGrowth a eco:TaxonInStage ;
+    eco:stageOf ecd:Rosier ;
+    eco:hasStage ecd:VegetativeGrowth .
+
+ecd:VegetativeGrowth a eco:DevelopmentStage .
